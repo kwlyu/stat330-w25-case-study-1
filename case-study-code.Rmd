@@ -1,0 +1,26 @@
+---
+title: "Case Study Code"
+author: "Kunwu Lyu"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, eval = T, 
+                      prompt = FALSE, 
+                      cache = T,
+                      message = FALSE, warning = FALSE, 
+                      fig.height = 3, 
+                      # fig.width = 3.5, 
+                      fig.align = "center")
+library(tidyverse)
+library(lme4)
+library(HLMdiag)
+library(gridExtra)
+library(broom.mixed)
+library(knitr)
+library(patchwork)
+```
+
+
+
