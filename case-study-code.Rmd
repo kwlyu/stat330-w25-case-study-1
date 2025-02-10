@@ -8,7 +8,6 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE, eval = T, 
                       prompt = FALSE, 
-                      cache = T,
                       message = FALSE, warning = FALSE, 
                       fig.height = 3, 
                       # fig.width = 3.5, 

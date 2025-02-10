@@ -5,7 +5,6 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE, eval = F, 
                       prompt = FALSE, 
-                      cache = T,
                       message = FALSE, warning = FALSE, 
                       fig.height = 3, 
                       # fig.width = 3.5, 
