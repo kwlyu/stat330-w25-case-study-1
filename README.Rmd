@@ -1,12 +1,9 @@
 ---
-title: "Case Study Code"
-author: "Kunwu Lyu"
-date: "`r Sys.Date()`"
-output: pdf_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE, eval = T, 
+knitr::opts_chunk$set(collapse = TRUE, eval = F, 
                       prompt = FALSE, 
                       cache = T,
                       message = FALSE, warning = FALSE, 
