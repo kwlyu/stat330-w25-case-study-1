@@ -1,0 +1,1085 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{decker_sheeple_nodate}{unpublished}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=215028b5a81fc20a6c585c252d05d5df}{%
+           family={Decker},
+           familyi={D\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{215028b5a81fc20a6c585c252d05d5df}
+      \strng{fullhash}{215028b5a81fc20a6c585c252d05d5df}
+      \strng{bibnamehash}{215028b5a81fc20a6c585c252d05d5df}
+      \strng{authorbibnamehash}{215028b5a81fc20a6c585c252d05d5df}
+      \strng{authornamehash}{215028b5a81fc20a6c585c252d05d5df}
+      \strng{authorfullhash}{215028b5a81fc20a6c585c252d05d5df}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished manuscript}
+      \field{title}{Sheeple}
+    \endentry
+    \entry{eva_principles_2019}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b3246b66ec425ed310dc867ef1100787}{%
+           family={Eva},
+           familyi={E\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b3246b66ec425ed310dc867ef1100787}
+      \strng{fullhash}{b3246b66ec425ed310dc867ef1100787}
+      \strng{bibnamehash}{b3246b66ec425ed310dc867ef1100787}
+      \strng{authorbibnamehash}{b3246b66ec425ed310dc867ef1100787}
+      \strng{authornamehash}{b3246b66ec425ed310dc867ef1100787}
+      \strng{authorfullhash}{b3246b66ec425ed310dc867ef1100787}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The principle of indifference ({PI}) states that in the absence of any relevant evidence, a rational agent will distribute their credence equally among all the possible outcomes under consideration. Despite its intuitive plausibility, {PI} famously falls prey to paradox, and so is widely rejected as a principle of ideal rationality. In this article, I present a novel rehabilitation of {PI} in terms of the epistemology of comparative confidence judgments. In particular, I consider two natural comparative reformulations of {PI} and argue that while one of them prescribes the adoption of patently irrational epistemic states, the other (which is only available when we drop the standard but controversial “Opinionation” assumption from the comparative confidence framework) provides a consistent formulation of {PI} that overcomes the most salient limitations of existing formulations.}
+      \field{day}{13}
+      \field{journaltitle}{The Journal of Philosophy}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{number}{7}
+      \field{title}{Principles of Indifference}
+      \field{urlday}{30}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{116}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{390\bibrangedash 411}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.5840/jphil2019116724
+      \endverb
+      \verb{file}
+      \verb Submitted Version:/Users/kwlyu/Zotero/storage/Q8D95F5P/Eva - 2019 - Principles of Indifference.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.pdcnet.org/pdc/bvdb.nsf/purchase?openform&fp=jphil&id=jphil_2019_0116_0007_0390_0411
+      \endverb
+      \verb{url}
+      \verb https://www.pdcnet.org/pdc/bvdb.nsf/purchase?openform&fp=jphil&id=jphil_2019_0116_0007_0390_0411
+      \endverb
+    \endentry
+    \entry{fisher_design_1935}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=565b1403c3b3172839fa752390fdd3bf}{%
+           family={Fisher},
+           familyi={F\bibinitperiod},
+           given={R.\bibnamedelimi A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Oxford, England}%
+      }
+      \list{publisher}{1}{%
+        {Oliver \& Boyd}%
+      }
+      \strng{namehash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{fullhash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{bibnamehash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{authorbibnamehash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{authornamehash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{authorfullhash}{565b1403c3b3172839fa752390fdd3bf}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Different types of experimentation are considered with reference to their logical structure, to show that valid conclusions may be drawn from them without using the disputed theory of inductive inferences, i.e., of arguing from observation to explanatory theory. This is possible if a null hypothesis is explicitly formulated when the experiment is designed; this hypothesis can never be proved, but may be disproved with whatever probability one will accept as demonstrating a positive result. Chapters {II}, {III}, and {IV} illustrate simple applications of the principles involved in sensitiveness, significance, tests of wider hypotheses, validity, and estimation and elimination of error. More elaborate structures are treated in later chapters. Chapter titles are: (V) the Latin square; ({VI}) factorial design in experimentation; ({VII}) confounding; ({VIII}) special cases of partial confounding; ({IX}) increase of precision by concomitant measurements: statistical control; (X) generalization of null hypotheses: fiducial probability; ({XI}) measurement of amount of information in general. ({PsycINFO} Database Record (c) 2016 {APA}, all rights reserved)}
+      \field{note}{Pages: xi, 251}
+      \field{pagetotal}{xi, 251}
+      \field{series}{The design of experiments}
+      \field{title}{The Design of Experiments}
+      \field{year}{1935}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/kwlyu/Zotero/storage/VF83XV4H/1939-04964-000.html:text/html
+      \endverb
+    \endentry
+    \entry{goodman_new_1983}{inbook}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=69de5a1450433cb926b8b88d275347b0}{%
+           family={Goodman},
+           familyi={G\bibinitperiod},
+           given={Nelson},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{69de5a1450433cb926b8b88d275347b0}
+      \strng{fullhash}{69de5a1450433cb926b8b88d275347b0}
+      \strng{bibnamehash}{69de5a1450433cb926b8b88d275347b0}
+      \strng{authorbibnamehash}{69de5a1450433cb926b8b88d275347b0}
+      \strng{authornamehash}{69de5a1450433cb926b8b88d275347b0}
+      \strng{authorfullhash}{69de5a1450433cb926b8b88d275347b0}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Fact, Fiction, and Forecast}
+      \field{edition}{Fourth}
+      \field{title}{The New Riddle of Induction}
+      \field{year}{1983}
+      \field{dateera}{ce}
+      \field{pages}{59\bibrangedash 83}
+      \range{pages}{25}
+    \endentry
+    \entry{hanson_infectious_2021}{article}{}
+      \name{author}{19}{}{%
+        {{un=0,uniquepart=base,hash=e617cf60f21e0fc74770c17cc35528a7}{%
+           family={Hanson},
+           familyi={H\bibinitperiod},
+           given={Kimberly\bibnamedelima E},
+           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2740a91bb9f019076ff7fd76f96009b5}{%
+           family={Altayar},
+           familyi={A\bibinitperiod},
+           given={Osama},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=03368b0e6a91c65e487575054adefb37}{%
+           family={Caliendo},
+           familyi={C\bibinitperiod},
+           given={Angela\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ed08cef49f3e730ee4d68485d00748d}{%
+           family={Arias},
+           familyi={A\bibinitperiod},
+           given={Cesar\bibnamedelima A},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=012582c403fde38400be5b2d27322eef}{%
+           family={Englund},
+           familyi={E\bibinitperiod},
+           given={Janet\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7072437b2f31ce1c3ed7f5936e23172e}{%
+           family={Hayden},
+           familyi={H\bibinitperiod},
+           given={Mary\bibnamedelima K},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=35259d35ef4672d2a532a7e33f15d56a}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Mark\bibnamedelima J},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d0cc207f488cc46e6241d70b94d5741}{%
+           family={Loeb},
+           familyi={L\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f75fb1d6ee29134605f28afc12bf7258}{%
+           family={Patel},
+           familyi={P\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=37d2b157a9a27b6c1cd0583eb62b249b}{%
+           family={El\bibnamedelima Alayli},
+           familyi={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Abdallah},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bfd55c0a1f63b3eb960d5f7996976b76}{%
+           family={Sultan},
+           familyi={S\bibinitperiod},
+           given={Shahnaz},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=48c89535d20aff94f174f039785a1b14}{%
+           family={Falck-Ytter},
+           familyi={F\bibinithyphendelim Y\bibinitperiod},
+           given={Yngve},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18e35ff7c6a71790097f495ed6e00124}{%
+           family={Lavergne},
+           familyi={L\bibinitperiod},
+           given={Valery},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f28df696f717ee45c47fc9d272fe308}{%
+           family={Mansour},
+           familyi={M\bibinitperiod},
+           given={Razan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6968e22c7999f767439d1caa2ffffb3d}{%
+           family={Morgan},
+           familyi={M\bibinitperiod},
+           given={Rebecca\bibnamedelima L},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b0d3dc8dfbd955894a95b636cde41cb9}{%
+           family={Murad},
+           familyi={M\bibinitperiod},
+           given={M\bibnamedelima Hassan},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93c10b909bf6ac5c2d6e4c2c229646d1}{%
+           family={Patel},
+           familyi={P\bibinitperiod},
+           given={Payal},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ff3c8878e711a52319deb0c97125a9f0}{%
+           family={Bhimraj},
+           familyi={B\bibinitperiod},
+           given={Adarsh},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6d85f41d610f5c0c25f3bee9c36600a9}{%
+           family={Mustafa},
+           familyi={M\bibinitperiod},
+           given={Reem\bibnamedelima A},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d637b960402957c19f7a184e0b355543}
+      \strng{fullhash}{0bb6a8475b52ad6d8e2722a6a7ff32d8}
+      \strng{bibnamehash}{0bb6a8475b52ad6d8e2722a6a7ff32d8}
+      \strng{authorbibnamehash}{0bb6a8475b52ad6d8e2722a6a7ff32d8}
+      \strng{authornamehash}{d637b960402957c19f7a184e0b355543}
+      \strng{authorfullhash}{0bb6a8475b52ad6d8e2722a6a7ff32d8}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Immunoassays designed to detect {SARS}-{CoV}-2 protein antigens are now commercially available. The most widely used tests are rapid lateral flow assays that generate results in {\textasciitilde}15 minutes for diagnosis at the point-of-care. Higher throughput, laboratory-based {SARS}-{CoV}-2 antigen (Ag) assays have also been developed. The overall accuracy of {SARS}-{CoV}-2 Ag tests, however, is not well defined. The Infectious Diseases Society of America ({IDSA}) convened an expert panel to perform a systematic review of the literature and develop best-practice guidance related to {SARS}-{CoV}-2 Ag testing. This guideline is the third in a series of rapid, frequently updated {COVID}-19 diagnostic guidelines developed by {IDSA}. {IDSA}’s goal was to develop evidence-based recommendations or suggestions that assist clinicians, clinical laboratories, patients, public health authorities, administrators, and policymakers in decisions related to the optimal use of {SARS}-{CoV}-2 Ag tests in both medical and nonmedical settings. A multidisciplinary panel of infectious diseases clinicians, clinical microbiologists, and experts in systematic literature review identified and prioritized clinical questions related to the use of {SARS}-{CoV}-2 Ag tests. Grading of Recommendations Assessment, Development, and Evaluation ({GRADE}) methodology was used to assess the certainty of evidence and make testing recommendations. The panel agreed on 5 diagnostic recommendations. These recommendations address Ag testing in symptomatic and asymptomatic individuals as well as assess single versus repeat testing strategies. Data on the clinical performance of {US} Food and Drug Administration {SARS}-{CoV}-2 Ag tests with Emergency Use Authorization are mostly limited to single, one-time testing versus standard nucleic acid amplification testing ({NAAT}) as the reference standard. Rapid Ag tests have high specificity and low to modest sensitivity compared with reference {NAAT} methods. Antigen test sensitivity is heavily dependent on viral load, with differences observed between symptomatic compared with asymptomatic individuals and the time of testing post-onset of symptoms. Based on these observations, rapid reverse transcriptase–polymerase chain reaction ({RT}-{PCR}) or laboratory-based {NAAT} remain the diagnostic methods of choice for diagnosing {SARS}-{CoV}-2 infection. However, when molecular testing is not readily available or is logistically infeasible, Ag testing can help identify some individuals with {SARS}-{CoV}-2 infection. The overall quality of available evidence supporting use of Ag testing was graded as very low to moderate.}
+      \field{day}{23}
+      \field{issn}{1058-4838}
+      \field{journaltitle}{Clinical Infectious Diseases}
+      \field{month}{6}
+      \field{number}{7}
+      \field{shortjournal}{Clinical Infectious Diseases}
+      \field{shorttitle}{The Infectious Diseases Society of America Guidelines on the Diagnosis of {COVID}-19}
+      \field{title}{The Infectious Diseases Society of America Guidelines on the Diagnosis of {COVID}-19: Antigen Testing (June 2021)}
+      \field{urlday}{29}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{78}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{e208\bibrangedash e229}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1093/cid/ciab557
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/kwlyu/Zotero/storage/9UNFNWYN/Hanson et al. - 2024 - The Infectious Diseases Society of America Guidelines on the Diagnosis of COVID-19 Antigen Testing.pdf:application/pdf;Snapshot:/Users/kwlyu/Zotero/storage/2V8GTXUZ/6308396.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/cid/ciab557
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/cid/ciab557
+      \endverb
+    \endentry
+    \entry{henderson_problem_2022}{inbook}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=017f06eee308eacddc926b1cbf07882f}{%
+           family={Henderson},
+           familyi={H\bibinitperiod},
+           given={Leah},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=5ff1c29ff1cc8f6336533b0ffd842a79}{%
+           family={Zalta},
+           familyi={Z\bibinitperiod},
+           given={Edward\bibnamedelima N.},
+           giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=47603970fcd579d567acd0cb66cdb242}{%
+           family={Nodelman},
+           familyi={N\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metaphysics Research Lab, Stanford University}%
+      }
+      \strng{namehash}{017f06eee308eacddc926b1cbf07882f}
+      \strng{fullhash}{017f06eee308eacddc926b1cbf07882f}
+      \strng{bibnamehash}{017f06eee308eacddc926b1cbf07882f}
+      \strng{authorbibnamehash}{017f06eee308eacddc926b1cbf07882f}
+      \strng{authornamehash}{017f06eee308eacddc926b1cbf07882f}
+      \strng{authorfullhash}{017f06eee308eacddc926b1cbf07882f}
+      \strng{editorbibnamehash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editornamehash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editorfullhash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We generally think that the observations we make are able to justifysome expectations or predictions about observations we have not yetmade, as well as general claims that go beyond the observed. Forexample, the observation that bread of a certain appearance has thusfar been nourishing seems to justify the expectation that the nextsimilar piece of bread I eat will also be nourishing, as well as theclaim that bread of this sort is generally nourishing. Such inferencesfrom the observed to the unobserved, or to general laws, are known as“inductive inferences”.}
+      \field{booktitle}{The Stanford Encyclopedia of Philosophy}
+      \field{edition}{Winter 2022}
+      \field{title}{The Problem of Induction}
+      \field{urlday}{19}
+      \field{urlmonth}{11}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb SEP - Snapshot:/Users/kwlyu/Zotero/storage/IMXH2NXJ/induction-problem.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/archives/win2022/entries/induction-problem/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/archives/win2022/entries/induction-problem/
+      \endverb
+      \keyw{Bayes’ Theorem,belief,formal representations of,confirmation,epistemology,formal,Feigl,Herbert,Goodman,Nelson,Hume,David,Kant,Immanuel: and Hume on causality,laws of nature,learning theory,formal,logic: inductive,Popper,Karl,probability,interpretations of,Reichenbach,Hans,simplicity,skepticism,statistics,philosophy of,Strawson,Peter Frederick}
+    \endentry
+    \entry{hume_inference_1739}{inbook}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8fd91102ac431dcdcc4641419cdfb8f0}{%
+           family={Hume},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=422b6dcfd689782720a5a801db86768d}{%
+           family={Selby-Bigge},
+           familyi={S\bibinithyphendelim B\bibinitperiod},
+           given={Lewis\bibnamedelima Amherst},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \list{publisher}{1}{%
+        {Clarendon Press}%
+      }
+      \strng{namehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{fullhash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{bibnamehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{authorbibnamehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{authornamehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{authorfullhash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{editorbibnamehash}{422b6dcfd689782720a5a801db86768d}
+      \strng{editornamehash}{422b6dcfd689782720a5a801db86768d}
+      \strng{editorfullhash}{422b6dcfd689782720a5a801db86768d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Hume’s first major work of philosophy published in 1739 when he was just 29 yeas old. It is made up of three books entitled “Of the Understanding”, “Of the Passions”, and “Of Morals”. In the book he uses his sceptical rationalism to create an ambitious “science of man”.}
+      \field{booktitle}{A Treatise of Human Nature}
+      \field{title}{Of The Inference From The Impression To The Idea}
+      \field{urlday}{30}
+      \field{urlmonth}{9}
+      \field{urlyear}{2024}
+      \field{year}{1739}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{72}
+      \range{pages}{1}
+      \verb{file}
+      \verb Snapshot:/Users/kwlyu/Zotero/storage/VQKP24VN/bigge-a-treatise-of-human-nature.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://oll.libertyfund.org/titles/bigge-a-treatise-of-human-nature
+      \endverb
+      \verb{url}
+      \verb https://oll.libertyfund.org/titles/bigge-a-treatise-of-human-nature
+      \endverb
+    \endentry
+    \entry{strevens_notes_2017}{unpublished}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c726363b82569042dcb9ab1c6479e9c9}{%
+           family={Strevens},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c726363b82569042dcb9ab1c6479e9c9}
+      \strng{fullhash}{c726363b82569042dcb9ab1c6479e9c9}
+      \strng{bibnamehash}{c726363b82569042dcb9ab1c6479e9c9}
+      \strng{authorbibnamehash}{c726363b82569042dcb9ab1c6479e9c9}
+      \strng{authornamehash}{c726363b82569042dcb9ab1c6479e9c9}
+      \strng{authorfullhash}{c726363b82569042dcb9ab1c6479e9c9}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished manuscript}
+      \field{title}{Notes on Bayesian Confirmation Theory}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/kwlyu/Zotero/storage/YNJVX82E/STRNOB.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://philpapers.org/go.pl?id=STRNOB&proxyId=&u=http%3A%2F%2Fwww.strevens.org%2Fbct%2FBCT.pdf
+      \endverb
+      \verb{url}
+      \verb https://philpapers.org/go.pl?id=STRNOB&proxyId=&u=http%3A%2F%2Fwww.strevens.org%2Fbct%2FBCT.pdf
+      \endverb
+    \endentry
+    \entry{van_fraassen_indifference_1989}{inbook}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=38b0d6ffefe9c0115de90c6397d3449b}{%
+           family={Fraassen},
+           familyi={F\bibinitperiod},
+           given={Bas\bibnamedelima C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=38b0d6ffefe9c0115de90c6397d3449b}{%
+           family={Fraassen},
+           familyi={F\bibinitperiod},
+           given={Bas\bibnamedelima C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{fullhash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{bibnamehash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{authorbibnamehash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{authornamehash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{authorfullhash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{editorbibnamehash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{editornamehash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{editorfullhash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \field{sortinit}{v}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Basic to the idea of logical probability is the principle of indifference: equal possibilities are to be assigned equal probabilities. This principle appeared on the one hand to yield surprisingly fruitful results and on the other hand to engender paradoxes—the first, for example, in eighteenth‐ century empirical examples (Buffon's needle problem) and cosmological explanations (data concerning planets and comets), and the second, richly displayed by Joseph Bertrand. It is argued here, with reference to work by Henri Poincaré, Edwin Jaynes, Roger Rosencrantz, and others, that though refinable and restrictable in various useful ways, the principle of indifference cannot be salvaged so as to yield a foundation for probability judgements.}
+      \field{booktitle}{Laws and Symmetry}
+      \field{day}{2}
+      \field{isbn}{978-0-19-824860-6}
+      \field{month}{11}
+      \field{shorttitle}{Indifference}
+      \field{title}{Indifference: The Symmetries of Probability}
+      \field{urlday}{30}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{1989}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{0}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1093/0198248601.003.0012
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/kwlyu/Zotero/storage/T5DZWSV6/Fraassen - 1989 - Indifference The Symmetries of Probability.pdf:application/pdf;Snapshot:/Users/kwlyu/Zotero/storage/KP6B57LW/162077430.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/0198248601.003.0012
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/0198248601.003.0012
+      \endverb
+      \warn{\item Range field 'pages' in entry 'van_fraassen_indifference_1989' is malformed, falling back to literal}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{decker_sheeple_nodate}{unpublished}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=215028b5a81fc20a6c585c252d05d5df}{%
+           family={Decker},
+           familyi={D\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{215028b5a81fc20a6c585c252d05d5df}
+      \strng{fullhash}{215028b5a81fc20a6c585c252d05d5df}
+      \strng{bibnamehash}{215028b5a81fc20a6c585c252d05d5df}
+      \strng{authorbibnamehash}{215028b5a81fc20a6c585c252d05d5df}
+      \strng{authornamehash}{215028b5a81fc20a6c585c252d05d5df}
+      \strng{authorfullhash}{215028b5a81fc20a6c585c252d05d5df}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished manuscript}
+      \field{title}{Sheeple}
+    \endentry
+    \entry{eva_principles_2019}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b3246b66ec425ed310dc867ef1100787}{%
+           family={Eva},
+           familyi={E\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b3246b66ec425ed310dc867ef1100787}
+      \strng{fullhash}{b3246b66ec425ed310dc867ef1100787}
+      \strng{bibnamehash}{b3246b66ec425ed310dc867ef1100787}
+      \strng{authorbibnamehash}{b3246b66ec425ed310dc867ef1100787}
+      \strng{authornamehash}{b3246b66ec425ed310dc867ef1100787}
+      \strng{authorfullhash}{b3246b66ec425ed310dc867ef1100787}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The principle of indifference ({PI}) states that in the absence of any relevant evidence, a rational agent will distribute their credence equally among all the possible outcomes under consideration. Despite its intuitive plausibility, {PI} famously falls prey to paradox, and so is widely rejected as a principle of ideal rationality. In this article, I present a novel rehabilitation of {PI} in terms of the epistemology of comparative confidence judgments. In particular, I consider two natural comparative reformulations of {PI} and argue that while one of them prescribes the adoption of patently irrational epistemic states, the other (which is only available when we drop the standard but controversial “Opinionation” assumption from the comparative confidence framework) provides a consistent formulation of {PI} that overcomes the most salient limitations of existing formulations.}
+      \field{day}{13}
+      \field{journaltitle}{The Journal of Philosophy}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{number}{7}
+      \field{title}{Principles of Indifference}
+      \field{urlday}{30}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{116}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{390\bibrangedash 411}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.5840/jphil2019116724
+      \endverb
+      \verb{file}
+      \verb Submitted Version:/Users/kwlyu/Zotero/storage/Q8D95F5P/Eva - 2019 - Principles of Indifference.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.pdcnet.org/pdc/bvdb.nsf/purchase?openform&fp=jphil&id=jphil_2019_0116_0007_0390_0411
+      \endverb
+      \verb{url}
+      \verb https://www.pdcnet.org/pdc/bvdb.nsf/purchase?openform&fp=jphil&id=jphil_2019_0116_0007_0390_0411
+      \endverb
+    \endentry
+    \entry{fisher_design_1935}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=565b1403c3b3172839fa752390fdd3bf}{%
+           family={Fisher},
+           familyi={F\bibinitperiod},
+           given={R.\bibnamedelimi A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Oxford, England}%
+      }
+      \list{publisher}{1}{%
+        {Oliver \& Boyd}%
+      }
+      \strng{namehash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{fullhash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{bibnamehash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{authorbibnamehash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{authornamehash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{authorfullhash}{565b1403c3b3172839fa752390fdd3bf}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Different types of experimentation are considered with reference to their logical structure, to show that valid conclusions may be drawn from them without using the disputed theory of inductive inferences, i.e., of arguing from observation to explanatory theory. This is possible if a null hypothesis is explicitly formulated when the experiment is designed; this hypothesis can never be proved, but may be disproved with whatever probability one will accept as demonstrating a positive result. Chapters {II}, {III}, and {IV} illustrate simple applications of the principles involved in sensitiveness, significance, tests of wider hypotheses, validity, and estimation and elimination of error. More elaborate structures are treated in later chapters. Chapter titles are: (V) the Latin square; ({VI}) factorial design in experimentation; ({VII}) confounding; ({VIII}) special cases of partial confounding; ({IX}) increase of precision by concomitant measurements: statistical control; (X) generalization of null hypotheses: fiducial probability; ({XI}) measurement of amount of information in general. ({PsycINFO} Database Record (c) 2016 {APA}, all rights reserved)}
+      \field{note}{Pages: xi, 251}
+      \field{pagetotal}{xi, 251}
+      \field{series}{The design of experiments}
+      \field{title}{The Design of Experiments}
+      \field{year}{1935}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/kwlyu/Zotero/storage/VF83XV4H/1939-04964-000.html:text/html
+      \endverb
+    \endentry
+    \entry{goodman_new_1983}{inbook}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=69de5a1450433cb926b8b88d275347b0}{%
+           family={Goodman},
+           familyi={G\bibinitperiod},
+           given={Nelson},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{69de5a1450433cb926b8b88d275347b0}
+      \strng{fullhash}{69de5a1450433cb926b8b88d275347b0}
+      \strng{bibnamehash}{69de5a1450433cb926b8b88d275347b0}
+      \strng{authorbibnamehash}{69de5a1450433cb926b8b88d275347b0}
+      \strng{authornamehash}{69de5a1450433cb926b8b88d275347b0}
+      \strng{authorfullhash}{69de5a1450433cb926b8b88d275347b0}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Fact, Fiction, and Forecast}
+      \field{edition}{Fourth}
+      \field{title}{The New Riddle of Induction}
+      \field{year}{1983}
+      \field{dateera}{ce}
+      \field{pages}{59\bibrangedash 83}
+      \range{pages}{25}
+    \endentry
+    \entry{hanson_infectious_2021}{article}{}
+      \name{author}{19}{}{%
+        {{un=0,uniquepart=base,hash=e617cf60f21e0fc74770c17cc35528a7}{%
+           family={Hanson},
+           familyi={H\bibinitperiod},
+           given={Kimberly\bibnamedelima E},
+           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2740a91bb9f019076ff7fd76f96009b5}{%
+           family={Altayar},
+           familyi={A\bibinitperiod},
+           given={Osama},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=03368b0e6a91c65e487575054adefb37}{%
+           family={Caliendo},
+           familyi={C\bibinitperiod},
+           given={Angela\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ed08cef49f3e730ee4d68485d00748d}{%
+           family={Arias},
+           familyi={A\bibinitperiod},
+           given={Cesar\bibnamedelima A},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=012582c403fde38400be5b2d27322eef}{%
+           family={Englund},
+           familyi={E\bibinitperiod},
+           given={Janet\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7072437b2f31ce1c3ed7f5936e23172e}{%
+           family={Hayden},
+           familyi={H\bibinitperiod},
+           given={Mary\bibnamedelima K},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=35259d35ef4672d2a532a7e33f15d56a}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Mark\bibnamedelima J},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d0cc207f488cc46e6241d70b94d5741}{%
+           family={Loeb},
+           familyi={L\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f75fb1d6ee29134605f28afc12bf7258}{%
+           family={Patel},
+           familyi={P\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=37d2b157a9a27b6c1cd0583eb62b249b}{%
+           family={El\bibnamedelima Alayli},
+           familyi={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Abdallah},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bfd55c0a1f63b3eb960d5f7996976b76}{%
+           family={Sultan},
+           familyi={S\bibinitperiod},
+           given={Shahnaz},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=48c89535d20aff94f174f039785a1b14}{%
+           family={Falck-Ytter},
+           familyi={F\bibinithyphendelim Y\bibinitperiod},
+           given={Yngve},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18e35ff7c6a71790097f495ed6e00124}{%
+           family={Lavergne},
+           familyi={L\bibinitperiod},
+           given={Valery},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f28df696f717ee45c47fc9d272fe308}{%
+           family={Mansour},
+           familyi={M\bibinitperiod},
+           given={Razan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6968e22c7999f767439d1caa2ffffb3d}{%
+           family={Morgan},
+           familyi={M\bibinitperiod},
+           given={Rebecca\bibnamedelima L},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b0d3dc8dfbd955894a95b636cde41cb9}{%
+           family={Murad},
+           familyi={M\bibinitperiod},
+           given={M\bibnamedelima Hassan},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93c10b909bf6ac5c2d6e4c2c229646d1}{%
+           family={Patel},
+           familyi={P\bibinitperiod},
+           given={Payal},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ff3c8878e711a52319deb0c97125a9f0}{%
+           family={Bhimraj},
+           familyi={B\bibinitperiod},
+           given={Adarsh},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6d85f41d610f5c0c25f3bee9c36600a9}{%
+           family={Mustafa},
+           familyi={M\bibinitperiod},
+           given={Reem\bibnamedelima A},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d637b960402957c19f7a184e0b355543}
+      \strng{fullhash}{0bb6a8475b52ad6d8e2722a6a7ff32d8}
+      \strng{bibnamehash}{0bb6a8475b52ad6d8e2722a6a7ff32d8}
+      \strng{authorbibnamehash}{0bb6a8475b52ad6d8e2722a6a7ff32d8}
+      \strng{authornamehash}{d637b960402957c19f7a184e0b355543}
+      \strng{authorfullhash}{0bb6a8475b52ad6d8e2722a6a7ff32d8}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Immunoassays designed to detect {SARS}-{CoV}-2 protein antigens are now commercially available. The most widely used tests are rapid lateral flow assays that generate results in {\textasciitilde}15 minutes for diagnosis at the point-of-care. Higher throughput, laboratory-based {SARS}-{CoV}-2 antigen (Ag) assays have also been developed. The overall accuracy of {SARS}-{CoV}-2 Ag tests, however, is not well defined. The Infectious Diseases Society of America ({IDSA}) convened an expert panel to perform a systematic review of the literature and develop best-practice guidance related to {SARS}-{CoV}-2 Ag testing. This guideline is the third in a series of rapid, frequently updated {COVID}-19 diagnostic guidelines developed by {IDSA}. {IDSA}’s goal was to develop evidence-based recommendations or suggestions that assist clinicians, clinical laboratories, patients, public health authorities, administrators, and policymakers in decisions related to the optimal use of {SARS}-{CoV}-2 Ag tests in both medical and nonmedical settings. A multidisciplinary panel of infectious diseases clinicians, clinical microbiologists, and experts in systematic literature review identified and prioritized clinical questions related to the use of {SARS}-{CoV}-2 Ag tests. Grading of Recommendations Assessment, Development, and Evaluation ({GRADE}) methodology was used to assess the certainty of evidence and make testing recommendations. The panel agreed on 5 diagnostic recommendations. These recommendations address Ag testing in symptomatic and asymptomatic individuals as well as assess single versus repeat testing strategies. Data on the clinical performance of {US} Food and Drug Administration {SARS}-{CoV}-2 Ag tests with Emergency Use Authorization are mostly limited to single, one-time testing versus standard nucleic acid amplification testing ({NAAT}) as the reference standard. Rapid Ag tests have high specificity and low to modest sensitivity compared with reference {NAAT} methods. Antigen test sensitivity is heavily dependent on viral load, with differences observed between symptomatic compared with asymptomatic individuals and the time of testing post-onset of symptoms. Based on these observations, rapid reverse transcriptase–polymerase chain reaction ({RT}-{PCR}) or laboratory-based {NAAT} remain the diagnostic methods of choice for diagnosing {SARS}-{CoV}-2 infection. However, when molecular testing is not readily available or is logistically infeasible, Ag testing can help identify some individuals with {SARS}-{CoV}-2 infection. The overall quality of available evidence supporting use of Ag testing was graded as very low to moderate.}
+      \field{day}{23}
+      \field{issn}{1058-4838}
+      \field{journaltitle}{Clinical Infectious Diseases}
+      \field{month}{6}
+      \field{number}{7}
+      \field{shortjournal}{Clinical Infectious Diseases}
+      \field{shorttitle}{The Infectious Diseases Society of America Guidelines on the Diagnosis of {COVID}-19}
+      \field{title}{The Infectious Diseases Society of America Guidelines on the Diagnosis of {COVID}-19: Antigen Testing (June 2021)}
+      \field{urlday}{29}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{78}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{e208\bibrangedash e229}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1093/cid/ciab557
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/kwlyu/Zotero/storage/9UNFNWYN/Hanson et al. - 2024 - The Infectious Diseases Society of America Guidelines on the Diagnosis of COVID-19 Antigen Testing.pdf:application/pdf;Snapshot:/Users/kwlyu/Zotero/storage/2V8GTXUZ/6308396.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/cid/ciab557
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/cid/ciab557
+      \endverb
+    \endentry
+    \entry{henderson_problem_2022}{inbook}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=017f06eee308eacddc926b1cbf07882f}{%
+           family={Henderson},
+           familyi={H\bibinitperiod},
+           given={Leah},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=5ff1c29ff1cc8f6336533b0ffd842a79}{%
+           family={Zalta},
+           familyi={Z\bibinitperiod},
+           given={Edward\bibnamedelima N.},
+           giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=47603970fcd579d567acd0cb66cdb242}{%
+           family={Nodelman},
+           familyi={N\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metaphysics Research Lab, Stanford University}%
+      }
+      \strng{namehash}{017f06eee308eacddc926b1cbf07882f}
+      \strng{fullhash}{017f06eee308eacddc926b1cbf07882f}
+      \strng{bibnamehash}{017f06eee308eacddc926b1cbf07882f}
+      \strng{authorbibnamehash}{017f06eee308eacddc926b1cbf07882f}
+      \strng{authornamehash}{017f06eee308eacddc926b1cbf07882f}
+      \strng{authorfullhash}{017f06eee308eacddc926b1cbf07882f}
+      \strng{editorbibnamehash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editornamehash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \strng{editorfullhash}{ab8d8ffb26096a29ec1c38ef9e4911c6}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We generally think that the observations we make are able to justifysome expectations or predictions about observations we have not yetmade, as well as general claims that go beyond the observed. Forexample, the observation that bread of a certain appearance has thusfar been nourishing seems to justify the expectation that the nextsimilar piece of bread I eat will also be nourishing, as well as theclaim that bread of this sort is generally nourishing. Such inferencesfrom the observed to the unobserved, or to general laws, are known as“inductive inferences”.}
+      \field{booktitle}{The Stanford Encyclopedia of Philosophy}
+      \field{edition}{Winter 2022}
+      \field{title}{The Problem of Induction}
+      \field{urlday}{19}
+      \field{urlmonth}{11}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb SEP - Snapshot:/Users/kwlyu/Zotero/storage/IMXH2NXJ/induction-problem.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://plato.stanford.edu/archives/win2022/entries/induction-problem/
+      \endverb
+      \verb{url}
+      \verb https://plato.stanford.edu/archives/win2022/entries/induction-problem/
+      \endverb
+      \keyw{Bayes’ Theorem,belief,formal representations of,confirmation,epistemology,formal,Feigl,Herbert,Goodman,Nelson,Hume,David,Kant,Immanuel: and Hume on causality,laws of nature,learning theory,formal,logic: inductive,Popper,Karl,probability,interpretations of,Reichenbach,Hans,simplicity,skepticism,statistics,philosophy of,Strawson,Peter Frederick}
+    \endentry
+    \entry{hume_inference_1739}{inbook}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8fd91102ac431dcdcc4641419cdfb8f0}{%
+           family={Hume},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=422b6dcfd689782720a5a801db86768d}{%
+           family={Selby-Bigge},
+           familyi={S\bibinithyphendelim B\bibinitperiod},
+           given={Lewis\bibnamedelima Amherst},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \list{publisher}{1}{%
+        {Clarendon Press}%
+      }
+      \strng{namehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{fullhash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{bibnamehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{authorbibnamehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{authornamehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{authorfullhash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{editorbibnamehash}{422b6dcfd689782720a5a801db86768d}
+      \strng{editornamehash}{422b6dcfd689782720a5a801db86768d}
+      \strng{editorfullhash}{422b6dcfd689782720a5a801db86768d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Hume’s first major work of philosophy published in 1739 when he was just 29 yeas old. It is made up of three books entitled “Of the Understanding”, “Of the Passions”, and “Of Morals”. In the book he uses his sceptical rationalism to create an ambitious “science of man”.}
+      \field{booktitle}{A Treatise of Human Nature}
+      \field{title}{Of The Inference From The Impression To The Idea}
+      \field{urlday}{30}
+      \field{urlmonth}{9}
+      \field{urlyear}{2024}
+      \field{year}{1739}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{72}
+      \range{pages}{1}
+      \verb{file}
+      \verb Snapshot:/Users/kwlyu/Zotero/storage/VQKP24VN/bigge-a-treatise-of-human-nature.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://oll.libertyfund.org/titles/bigge-a-treatise-of-human-nature
+      \endverb
+      \verb{url}
+      \verb https://oll.libertyfund.org/titles/bigge-a-treatise-of-human-nature
+      \endverb
+    \endentry
+    \entry{strevens_notes_2017}{unpublished}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c726363b82569042dcb9ab1c6479e9c9}{%
+           family={Strevens},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c726363b82569042dcb9ab1c6479e9c9}
+      \strng{fullhash}{c726363b82569042dcb9ab1c6479e9c9}
+      \strng{bibnamehash}{c726363b82569042dcb9ab1c6479e9c9}
+      \strng{authorbibnamehash}{c726363b82569042dcb9ab1c6479e9c9}
+      \strng{authornamehash}{c726363b82569042dcb9ab1c6479e9c9}
+      \strng{authorfullhash}{c726363b82569042dcb9ab1c6479e9c9}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished manuscript}
+      \field{title}{Notes on Bayesian Confirmation Theory}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/kwlyu/Zotero/storage/YNJVX82E/STRNOB.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://philpapers.org/go.pl?id=STRNOB&proxyId=&u=http%3A%2F%2Fwww.strevens.org%2Fbct%2FBCT.pdf
+      \endverb
+      \verb{url}
+      \verb https://philpapers.org/go.pl?id=STRNOB&proxyId=&u=http%3A%2F%2Fwww.strevens.org%2Fbct%2FBCT.pdf
+      \endverb
+    \endentry
+    \entry{van_fraassen_indifference_1989}{inbook}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=38b0d6ffefe9c0115de90c6397d3449b}{%
+           family={Fraassen},
+           familyi={F\bibinitperiod},
+           given={Bas\bibnamedelima C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=38b0d6ffefe9c0115de90c6397d3449b}{%
+           family={Fraassen},
+           familyi={F\bibinitperiod},
+           given={Bas\bibnamedelima C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{fullhash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{bibnamehash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{authorbibnamehash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{authornamehash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{authorfullhash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{editorbibnamehash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{editornamehash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \strng{editorfullhash}{38b0d6ffefe9c0115de90c6397d3449b}
+      \field{sortinit}{v}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Basic to the idea of logical probability is the principle of indifference: equal possibilities are to be assigned equal probabilities. This principle appeared on the one hand to yield surprisingly fruitful results and on the other hand to engender paradoxes—the first, for example, in eighteenth‐ century empirical examples (Buffon's needle problem) and cosmological explanations (data concerning planets and comets), and the second, richly displayed by Joseph Bertrand. It is argued here, with reference to work by Henri Poincaré, Edwin Jaynes, Roger Rosencrantz, and others, that though refinable and restrictable in various useful ways, the principle of indifference cannot be salvaged so as to yield a foundation for probability judgements.}
+      \field{booktitle}{Laws and Symmetry}
+      \field{day}{2}
+      \field{isbn}{978-0-19-824860-6}
+      \field{month}{11}
+      \field{shorttitle}{Indifference}
+      \field{title}{Indifference: The Symmetries of Probability}
+      \field{urlday}{30}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{1989}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{0}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1093/0198248601.003.0012
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/kwlyu/Zotero/storage/T5DZWSV6/Fraassen - 1989 - Indifference The Symmetries of Probability.pdf:application/pdf;Snapshot:/Users/kwlyu/Zotero/storage/KP6B57LW/162077430.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/0198248601.003.0012
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/0198248601.003.0012
+      \endverb
+      \warn{\item Range field 'pages' in entry 'van_fraassen_indifference_1989' is malformed, falling back to literal}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

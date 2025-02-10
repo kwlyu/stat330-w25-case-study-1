@@ -1,0 +1,214 @@
+% Style file to format Carleton papers
+% Author: Andrew Gainer-Dewar, 2013
+% This work is licensed under the Creative Commons Attribution 4.0 International License.
+% To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+\ProvidesPackage{ccpaper}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage[justification=centering]{caption}
+\usepackage{preamble2}
+%% LOAD SUPPORTING PACKAGES
+
+% We want to use US letter paper with one-inch margins
+\RequirePackage{geometry}
+\geometry{letterpaper, margin=1.0in}
+% We should support UTF-8 in the input file (since it is the twenty-first
+% century, after all)
+\RequirePackage[utf8]{inputenc}
+
+% And we should use T1 for the output encoding, because the default results
+% in a big mess with accented characters in the PDF
+\RequirePackage[T1]{fontenc}
+
+% The Babel package modernizes the hyphenation routines.
+% Here, we configure it to use US English.
+\RequirePackage[american]{babel}
+
+% The microtype package fixes a lot of small typographical things.
+% They're hard to see, but your eyes will thank you!
+\RequirePackage{microtype}
+
+% The graphicx package is used for handling graphics and colors.
+\RequirePackage{graphicx}
+
+% The titling package allows us to rewrite the \maketitle command easily.
+\RequirePackage{titling}
+
+% The setspace package lets us adjust line spacing
+\RequirePackage{setspace}
+
+% The enumerate package is used to enhance enumerated lists
+% \RequirePackage{enumerate}
+
+% The csquotes package provides nice facilities for quotations.
+\RequirePackage[babel]{csquotes}
+
+% The mathtools and amssymb packages provide some important mathematical support
+\RequirePackage{mathtools,amssymb}
+
+% The amsthm package lets us set up theorem-like environments
+\RequirePackage{amsthm}
+
+% The booktabs package facilitates high-quality table formatting.
+\RequirePackage{booktabs}
+
+% The hyperref package sets up PDF hyperlinks and other fanciness.
+% WARNING: THIS MUST BE THE LAST PACKAGE LOAD
+% \RequirePackage{hyperref}
+\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+%\usepackage[notref,notcite]{showkeys} %adds useful marginal notes
+\usepackage[capitalize,nameinlink,noabbrev]{cleveref}
+% The cleveref package handles a lot of fanciness with internal cross-references.
+% Curiously, it has to come *after* hyperref.
+% \RequirePackage[capitalize]{cleveref}
+\crefname{equation}{equation}{equations}
+\Crefname{equation}{Equation}{Equations}
+
+%% DEFINE COMMANDS
+
+% We create some theorem-like environments
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{observation}[theorem]{Observation}
+
+%\newtheorem*{theorem*}{Theorem}
+%\newtheorem*{corollary*}{Corollary}
+%\newtheorem*{lemma*}{Lemma}
+\newtheorem*{proposition*}{Proposition}
+\newtheorem*{observation*}{Observation}
+
+%\theoremstyle{definition}
+%\newtheorem{definition}[theorem]{Definition}
+%\newtheorem*{definition*}{Definition}
+
+\theoremstyle{remark}
+%\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{remark*}{Remark}
+
+%\newtheorem{example}[theorem]{Example}
+\newtheorem*{example*}{Example}
+
+%\newtheorem{note}[theorem]{Note}
+\newtheorem*{note*}{Note}
+
+% The mathtools package provides facilities for many mathematical tasks.
+% In particular, it sets up nice commands for formatting braces.
+\DeclarePairedDelimiter{\pbrac}{(}{)}
+\DeclarePairedDelimiter{\sbrac}{[}{]}
+\DeclarePairedDelimiter{\cbrac}{\{}{\}}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+\usepackage[linesnumbered]{algorithm2e}
+\newcommand\mycommfont[1]{\scriptsize\ttfamily\textcolor{blue}{#1}}
+\SetCommentSty{mycommfont}
+
+%% CONFIGURE LAYOUTS
+
+% % Define a command to include professor name in the header
+% \newcommand{\prof}[1]{\gdef\@prof{#1}}
+
+% % And another for the course
+% \newcommand{\course}[1]{\gdef\@course{#1}}
+
+% % Also define a command for a subtitle
+% \newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
+
+% % and use it
+% \pretitle{\begin{center}\LARGE}
+% \posttitle{\par\end{center}
+%   \ifdefined\@subtitle
+%     \begin{center}\large\@subtitle\par\end{center}%
+%   \fi
+% }
+% \predate{\begin{center}\large\@prof\par\@course\\[.0\baselineskip]}
+% \postdate{\par\end{center}}
+
+% % Make sure that title is properly space even when double-spacing paper
+% \renewcommand{\maketitlehooka}{\begin{singlespace}}
+% \renewcommand{\maketitlehookd}{\end{singlespace}}
+
+% % The default article title is set down the page a bit, which is silly.
+% \setlength{\droptitle}{-8em}
+
+% Define commands for professor, course, and subtitle
+\newcommand{\prof}[1]{\gdef\@prof{#1}}
+\newcommand{\course}[1]{\gdef\@course{#1}}
+\newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
+
+% Title formatting
+\pretitle{\begin{center}\LARGE} % Large title
+\posttitle{\end{center}
+  \ifdefined\@subtitle
+    \begin{center}\large\@subtitle\end{center} % Center subtitle if defined
+  \fi
+}
+\predate{\begin{center}\large\@prof, \@course\\[-.1\baselineskip]} % Reduce space between prof and course
+\postdate{\par\end{center}}
+
+% Adjust for proper spacing even with double-spacing enabled
+\renewcommand{\maketitlehooka}{\begin{singlespace}} % Single space for the title
+\renewcommand{\maketitlehookd}{\end{singlespace}}
+
+% Reduce the drop space (vertical space before title)
+\setlength{\droptitle}{-8em}  % Adjust as needed to reduce the gap before title
+
+
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2}]}{\end{trivlist}}
+
+\usepackage{subcaption,mwe,mhchem}
+
+
+\usepackage{etoolbox}
+
+\makeatletter
+% count citations
+\pretocmd{\NAT@citex}{%
+  \let\NAT@hyper@\NAT@hyper@citex
+  \def\NAT@postnote{#2}%
+  \setcounter{NAT@total@cites}{0}%
+  \setcounter{NAT@count@cites}{0}%
+  \forcsvlist{\stepcounter{NAT@total@cites}\@gobble}{#3}}{}{}
+\newcounter{NAT@total@cites}
+\newcounter{NAT@count@cites}
+\def\NAT@postnote{}
+
+% include postnote and \citet closing bracket in hyperlink
+\def\NAT@hyper@citex#1{%
+  \stepcounter{NAT@count@cites}%
+  \hyper@natlinkstart{\@citeb\@extra@b@citeb}#1%
+  \ifnumequal{\value{NAT@count@cites}}{\value{NAT@total@cites}}
+    {\if*\NAT@postnote*\else\NAT@cmt\NAT@postnote\global\def\NAT@postnote{}\fi}{}%
+  \ifNAT@swa\else\if\relax\NAT@date\relax
+  \else\NAT@@close\global\let\NAT@nm\@empty\fi\fi% avoid compact citations
+  \hyper@natlinkend}
+\renewcommand\hyper@natlinkbreak[2]{#1}
+
+% avoid extraneous postnotes, closing brackets
+\patchcmd{\NAT@citex}
+  {\ifNAT@swa\else\if*#2*\else\NAT@cmt#2\fi
+   \if\relax\NAT@date\relax\else\NAT@@close\fi\fi}{}{}{}
+\patchcmd{\NAT@citex}
+  {\if\relax\NAT@date\relax\NAT@def@citea\else\NAT@def@citea@close\fi}
+  {\if\relax\NAT@date\relax\NAT@def@citea\else\NAT@def@citea@space\fi}{}{}
+\patchcmd{\NAT@cite}{\if*#3*}{\if*\NAT@postnote*}{}{}
+
+% all punctuation black
+\AtBeginDocument{%
+  \preto\NAT@sep{\textcolor{black}\bgroup}%
+  \appto\NAT@sep{\egroup}%
+  \preto\NAT@aysep{\textcolor{black}\bgroup}%
+  \appto\NAT@aysep{\egroup}%
+  \preto\NAT@yrsep{\textcolor{black}\bgroup}%
+  \appto\NAT@yrsep{\egroup}%
+  \preto\NAT@cmt{\textcolor{black}\bgroup}%
+  \appto\NAT@cmt{\egroup}%
+  \preto\NAT@open{\textcolor{black}\bgroup}%
+  \appto\NAT@open{\egroup}%
+  \preto\NAT@close{\textcolor{black}\bgroup}%
+  \appto\NAT@close{\egroup}}
+\makeatother

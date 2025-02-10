@@ -1,0 +1,199 @@
+% Template for Carleton student papers
+% Author: Andrew Gainer-Dewar, 2013
+% This work is licensed under the Creative Commons Attribution 4.0 International License.
+% To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+\documentclass[12pt,twoside,leqno,fleqn,letterpaper]{article}
+\usepackage[style=apa, backend=biber, natbib=true, language=american]{biblatex}
+\usepackage[T1]{fontenc}
+\usepackage{nicematrix}
+\usepackage{ragged2e}
+\DeclareLanguageMapping{american}{american-apa}
+\renewcommand*{\nameyeardelim}{\addcomma\space}
+\renewcommand*{\postnotedelim}{\addsemicolon\space}
+
+\newrobustcmd*{\postcite}[1]{%
+  \nocite{#1}\entrydata{#1}{\usebibmacro{cite}}
+  }
+\newrobustcmd*{\postcitemult}[2]{%
+\nocite{#1}\entrydata{#1}{\usebibmacro{cite}},
+\nocite{#2}\entrydata{#2}{\usebibmacro{cite}}
+}
+\usepackage{nicematrix}
+
+% % APA-specific adjustments
+% \AtBeginBibliography{\renewcommand*{\mkbibnamefamily}[1]{\textsc{#1}}} % APA-style author capitalization in bibliography
+
+% % Other biblatex adjustments to mimic APA style
+% \DeclareNameAlias{sortname}{last-first} % Last name, first name format
+% \DeclareNameAlias{default}{last-first}
+
+\addbibresource{sources.bib}
+% % Add a comma between author and year for in-text citations
+% \renewcommand{\nameyeardelim}{\addcomma\space}
+% \newcommand{\texteq}[2][0.5]{\text{\parbox[t]{#1\displaywidth}{#2}}}
+% \newcommand{\lther}{\mathord{\therefore}\mskip\thickmuskip}
+%-----------------------------------------------------------------
+% Lengths to control indents of 'equation numbers' and statements
+\newlength{\numbersep}          % Distance of number at left margin
+\newlength{\statementsep}       % Distance of statement at left margin
+\setlength{\numbersep}{\parindent}  % n
+\setlength{\statementsep}{15mm}    % m (0<n<m) 
+%-----------------------------------------------------------------
+\everydisplay{\displayindent=\numbersep}
+\setlength{\mathindent}{\statementsep}
+% \setlength{\mathindent}{3cm}
+\usepackage{ccpaper}
+\usepackage{setspace, graphicx, caption} %\doublespacing
+\usepackage{geometry, tikz, nccmath, graphbox}
+\usepackage{tikzsymbols}
+\usepackage{gensymb,algorithm2e}
+\RestyleAlgo{ruled}
+\allowdisplaybreaks
+\geometry{portrait, margin=1in}
+\usepackage[title]{appendix}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows.meta,arrows}
+\usetikzlibrary{positioning}
+% \usepackage{cite}
+% The Latin Modern font is a modernized replacement for the classic
+% Computer Modern. Feel free to replace this with a different font package.
+\usepackage{lmodern}
+\usepackage{preamble2}
+\newcommand{\Bias}[2]{\text{Bias}_{\text{#2}} \left(#1\right)}
+
+
+% \makeatletter
+% \newcommand{\myitem}[1]{%
+% \item[#1]\protected@edef\@currentlabel{#1}%
+% }
+% \makeatother
+
+% Define a new item command with custom labels and references
+\newlist{myenumerate}{enumerate}{1}
+\setlist[myenumerate,1]{
+    label={\theenumi.},     % Labels will include dots (e.g., P1., C1., etc.)
+    ref={\theenumi},
+    leftmargin=*,       % Indent matches paragraph indentation
+    labelindent=1.6\parindent
+    % ,
+    % widest=P8,              % Adjusts width to align with the widest label (optional)
+}
+
+% Customize counters for P and C items
+\makeatletter
+\newcommand{\myitem}[1]{%
+    \item[\textbf{#1.}]%
+    \def\@currentlabel{#1}% Set the label for referencing
+}
+\makeatother
+
+\makeatletter
+\newcommand{\myitemA}[1]{%
+    \item[$\mathbf{#1:}$]%
+    \def\@currentlabel{$\mathbf{#1}$}% Set the label for referencing
+}
+\makeatother
+
+\makeatletter
+\newcommand{\myitemB}[1]{%
+    \item[$#1:$]%
+    \def\@currentlabel{$\#1$}% Set the label for referencing
+}
+\makeatother
+
+% Load in biblatex
+% To use a different bibliography style, just change "numeric" to
+% your pautoreferred style (mla for MLA style, alphabetic for Author-Year
+% style, etc.) There are a lot of options; check the BibLaTeX documentation.
+% \usepackage{natbib}
+
+% Select the bibliography file
+\usepackage{csquotes}
+\usepackage{coffee4}
+%Use single spacing, set 10pt font, set italics, and beginning quotes
+% \renewcommand{\mkbegdispquote}
+%     {\selectfont\textooquote}%\setquotestyle{quote}
+% %End displayquote environment with ending quotes
+% \renewcommand{\mkenddispquote}{\textcoquote}
+
+\title{\textbf{LA Nurse BP}}
+\subtitle{Case Study 1} %Optional. Omit if not wanted.
+\author{Kunwu Lyu}
+\date{Feburary 13, 2025}
+
+\prof{Katie St. Clair}
+\course{STAT 330}
+\usepackage{epigraph}
+\setlength\epigraphwidth{.8\textwidth}
+\setlength\epigraphrule{0pt}
+\renewcommand*{\bibfont}{\normalfont \small}
+% \usepackage{etoolbox}
+% \apptocmd{\thebibliography}{\interlinepenalty 1000000\relax}{}{}
+% To enable double spacing, uncomment this line:
+\titlespacing*{\section}
+{0pt}{0ex}{0ex}
+\titlespacing*{\subsection}
+{0pt}{0ex}{0ex}
+\usepackage{sectsty}
+\sectionfont{\fontsize{12}{12}\selectfont}
+\subsectionfont{\fontsize{12}{12}\selectfont}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}{Lemma}[theorem]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\usepackage{xpatch}
+\xpatchcmd{\NCC@ignorepar}{%
+\abovedisplayskip\abovedisplayshortskip}
+{%
+\abovedisplayskip\abovedisplayshortskip%
+\belowdisplayskip\belowdisplayshortskip}
+{}{}
+
+\usepackage{verbatim}
+\newcommand{\detailtexcount}[1]{ %
+\immediate\write18{texcount -merge -sum #1.tex > #1.wcdetail }%
+\verbatiminput{#1.wcdetail}%
+}
+
+% \usepackage{verbatim}
+
+% \newcommand{\detailtexcount}[1]{%
+%   \immediate\write18{texcount -merge -sum -q #1. > #1.wcdetail }%
+%   \verbatiminput{#1.wcdetail}%
+% }
+% Reduce space before and after the array environment
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\setcounter{section}{-1}
+% Reduce space in enumerate environment
+\setlist{nosep}
+\begin{document}
+
+\maketitle{\vspace{-6ex}}
+\setlength{\parskip}{0.2cm}
+\setlength{\mathindent}{31pt}
+\expandafter\def\expandafter\normalsize\expandafter{%
+    \normalsize%
+    \setlength\abovedisplayskip{0pt}%
+    \setlength\belowdisplayskip{0pt}%
+    \setlength\abovedisplayshortskip{0pt}%
+    \setlength\belowdisplayshortskip{0pt}%
+}
+% \cofeAm{0.4}{0.8}{0}{5.5cm}{9cm}
+% \doublespacing
+\singlespacing
+
+\section{Introduction}
+
+
+
+% \pagebreak
+\singlespacing
+% \bibliography{sources.bib}
+% \bibliographystyle{apalike}
+\printbibliography
+% \detailtexcount{ccpaper}
+\end{document}

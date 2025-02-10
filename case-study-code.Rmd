@@ -22,5 +22,11 @@ library(knitr)
 library(patchwork)
 ```
 
+# Data Wrangling
 
+```{r}
+nurse <- read.csv("https://math.carleton.edu/kstclair/data/bmlr/nursebp.csv",
+                  stringsAsFactors = TRUE) %>% 
+  as_tibble
+```
 
