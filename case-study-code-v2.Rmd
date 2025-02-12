@@ -456,37 +456,26 @@ anova(nurse_lmm_RI, nurse_lmm_RI_lv1)
 nurse_lmm_RI_noMood <- lmer(sys ~ timepass + mnact5 + standing +
                        (1 | snum), data = nurse_filtered)
 anova(nurse_lmm_RI_noMood, nurse_lmm_RI_lv1)
-
-nurse_lmm_RI_noMoodTime <- lmer(sys ~ mnact5 + standing +
-                       (1 | snum), data = nurse_filtered)
-anova(nurse_lmm_RI_noMoodTime, nurse_lmm_RI_noMood)
-anova(nurse_lmm_RI_noMoodTime, nurse_lmm_RI_lv1)
 ```
 
 
 ### Random Intercept and Slope
 
-```{r RIS with Mood RE}
-nurse_lmm_RIS_mood <- lmer(sys ~ timepass + mnact5 + standing + mood + 
-                       (1 + mood | snum), 
+```{r RIS with Stand RE}
+nurse_lmm_RIS_stand <- lmer(sys ~ timepass + mnact5 + standing + 
+                       (1 + standing | snum), 
                        data = nurse_filtered)
-summary(nurse_lmm_RIS_mood)
+summary(nurse_lmm_RIS_stand)
 
-(lrt_RIS_mood <- as.numeric(2*(logLik(nurse_lmm_RIS_mood, REML = TRUE) - 
-                            logLik(nurse_lmm_RI, REML = TRUE))))
-.5*(1-pchisq(lrt_RI, df = 1))+.5*(1-pchisq(lrt_RI, df = 2))
+(lrt_RIS_stand <- as.numeric(2*(logLik(nurse_lmm_RIS_stand, REML = TRUE) - 
+                            logLik(nurse_lmm_RI_noMood, REML = TRUE))))
+.5*(1-pchisq(lrt_RIS_stand, df = 1))+.5*(1-pchisq(lrt_RIS_stand, df = 2))
 ```
 
-```{r RIS with Mood and Stand RE}
-nurse_lmm_RIS_mood_stand <- lmer(sys ~ timepass + mnact5 + standing + mood + 
-                       (1 + mood + standing | snum), 
-                       data = nurse_filtered)
-summary(nurse_lmm_RIS_mood_stand)
+```{r RIS with}
 
-(lrt_RIS_mood_stand <- as.numeric(2*(logLik(nurse_lmm_RIS_mood_stand, REML = TRUE) - 
-                            logLik(nurse_lmm_RIS_mood, REML = TRUE))))
-.5*(1-pchisq(lrt_RIS_mood_stand, df = 2))+.5*(1-pchisq(lrt_RIS_mood_stand, df = 3))
 ```
+
 
 ### Level 2 Covariates
 
