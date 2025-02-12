@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber ccpaper"] 1739397464.63716 "ccpaper.bcf" "ccpaper.bbl" "ccpaper" 1739397800.99528 0
-  "ccpaper.bcf" 1739397800.85112 133197 f8135f022ffd277ae4be05759f655ca1 "pdflatex"
+["biber ccpaper"] 1739399342.46343 "ccpaper.bcf" "ccpaper.bbl" "ccpaper" 1739399694.70902 0
+  "ccpaper.bcf" 1739399694.55809 133652 a336ae1895e99ad1e0799ac659028488 "pdflatex"
   "sources.bib" 1739200491.68412 3639 a4de7bdb3f7ae84fd24dc5164be9845d ""
   (generated)
   "ccpaper.bbl"
   "ccpaper.blg"
   (rewritten before read)
-["pdflatex"] 1739397798.87026 "/Users/PC/E/Kunwu/School/Undergrad/Carleton/Academics/Term Courses/Senior/Winter/STAT 330 Advanced Modeling/Case Study 1/STAT 330 Advanced Statistical Modeling Case Study 1/ccpaper.tex" "ccpaper.pdf" "ccpaper" 1739397800.9956 0
-  "/Users/PC/E/Kunwu/School/Undergrad/Carleton/Academics/Term Courses/Senior/Winter/STAT 330 Advanced Modeling/Case Study 1/STAT 330 Advanced Statistical Modeling Case Study 1/ccpaper.tex" 1739397798.63867 7709 f37c3b4ce7171a46c40d46da3d3851c1 ""
+["pdflatex"] 1739399692.57947 "/Users/PC/E/Kunwu/School/Undergrad/Carleton/Academics/Term Courses/Senior/Winter/STAT 330 Advanced Modeling/Case Study 1/STAT 330 Advanced Statistical Modeling Case Study 1/ccpaper.tex" "ccpaper.pdf" "ccpaper" 1739399694.70937 0
+  "/Users/PC/E/Kunwu/School/Undergrad/Carleton/Academics/Term Courses/Senior/Winter/STAT 330 Advanced Modeling/Case Study 1/STAT 330 Advanced Statistical Modeling Case Study 1/ccpaper.tex" 1739399692.37721 8577 3f0b45c52ea4f0277a075c7e56efa207 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc" 1254269338 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -43,6 +43,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm" 1254269338 12092 7b1546e2d096cfd5dcbd4049b0b1ec2e ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm" 1254269338 12156 ca1ae6a3c8564e89597f1f993fba1608 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmr7.tfm" 1254269338 12064 09aa3eeac96bf141d673bb1b0385ce55 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm" 1254269338 12064 a35db870f0b76c338d749c56dc030ef5 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm" 1254269338 17148 9556e1b5f936b77a796f68d2d559ba99 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm" 1254269338 17144 271aaf9ebb339934b04110dc5211fba4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmex10.tfm" 1148093231 992 ce925c9346c7613270a79afbee98c070 ""
@@ -77,6 +78,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb" 1255129361 119235 f35b44530a1d90eb90fe15d9cba67ea0 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb" 1255129361 113634 f99c44d58bae0863375faf0e1d74d612 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb" 1255129361 121145 68312a933e2c689ed40ec0aba373e279 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb" 1255129361 122174 a7a08406857c9530a0320a2517f60370 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb" 1255129361 112593 fda2373ba4420af33949610de4c28fe8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb" 1255129361 109265 32320cb6133d4d76bf83e27b5eb4009b ""
   "/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -353,12 +355,12 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1728347328.66471 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1728347243 8221420 71f512c370d08a56e6db7f6ed5f8bb1e ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "ccpaper.aux" 1739397800.84591 1679 2a43e71f2ca896fc739914826729303a "pdflatex"
-  "ccpaper.bbl" 1739397466.96864 12672 ae1c9f0c46790cbda3a3a9012dd96eb2 "biber ccpaper"
-  "ccpaper.out" 1739397800.84768 568 cc6eb028ec7897baafb3c4ab6faf41b4 "pdflatex"
-  "ccpaper.run.xml" 1739397800.85203 2479 acb0ef345ce560b5689146237fbb5a59 "pdflatex"
+  "ccpaper.aux" 1739399694.55268 2571 b68c18b64c33e8f529a179e76ee9346e "pdflatex"
+  "ccpaper.bbl" 1739399344.7803 16520 9781e621e8e4f029af3e659e8e8ade7f "biber ccpaper"
+  "ccpaper.out" 1739399694.55483 568 cc6eb028ec7897baafb3c4ab6faf41b4 "pdflatex"
+  "ccpaper.run.xml" 1739399694.55889 2479 acb0ef345ce560b5689146237fbb5a59 "pdflatex"
   "ccpaper.sty" 1738135020 7479 f0e46c9e23085f43f5d5ef6b5ce3446c ""
-  "ccpaper.tex" 1739397798.63867 7709 f37c3b4ce7171a46c40d46da3d3851c1 ""
+  "ccpaper.tex" 1739399692.37721 8577 3f0b45c52ea4f0277a075c7e56efa207 ""
   "coffee4.sty" 1738135020 479660 6183938852e516249305bc7047e3fa30 ""
   "preamble2.sty" 1738289931.50987 4693 89120a1b9b35541cf29b95eae2306507 ""
   (generated)

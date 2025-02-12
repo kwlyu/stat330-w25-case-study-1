@@ -116,7 +116,6 @@
       \field{year}{2021}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \true{nocite}
       \verb{file}
       \verb Snapshot:/Users/kwlyu/Zotero/storage/WKUPI2PV/bookdown-BeyondMLR.html:text/html
       \endverb
@@ -126,6 +125,58 @@
       \verb{url}
       \verb https://bookdown.org/roback/bookdown-BeyondMLR/
       \endverb
+    \endentry
+    \entry{weiss_modeling_2005}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4814d44c2bac1b65353b1405c3f314a9}{%
+           family={Weiss},
+           familyi={W\bibinitperiod},
+           given={Robert\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, {NY}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{4814d44c2bac1b65353b1405c3f314a9}
+      \strng{fullhash}{4814d44c2bac1b65353b1405c3f314a9}
+      \strng{bibnamehash}{4814d44c2bac1b65353b1405c3f314a9}
+      \strng{authorbibnamehash}{4814d44c2bac1b65353b1405c3f314a9}
+      \strng{authornamehash}{4814d44c2bac1b65353b1405c3f314a9}
+      \strng{authorfullhash}{4814d44c2bac1b65353b1405c3f314a9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-387-40271-0}
+      \field{langid}{english}
+      \field{series}{Springer Texts in Statistics}
+      \field{title}{Modeling Longitudinal Data}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/0-387-28314-5
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/kwlyu/Zotero/storage/4RFBINUN/2005 - Modeling Longitudinal Data.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/0-387-28314-5
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/0-387-28314-5
+      \endverb
+      \keyw{Analysis of variance,Covariance matrix,data analysis,Excel,modeling,Regression analysis,sets}
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
@@ -226,7 +277,6 @@
       \field{year}{2021}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \true{nocite}
       \verb{file}
       \verb Snapshot:/Users/kwlyu/Zotero/storage/WKUPI2PV/bookdown-BeyondMLR.html:text/html
       \endverb
@@ -236,6 +286,58 @@
       \verb{url}
       \verb https://bookdown.org/roback/bookdown-BeyondMLR/
       \endverb
+    \endentry
+    \entry{weiss_modeling_2005}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4814d44c2bac1b65353b1405c3f314a9}{%
+           family={Weiss},
+           familyi={W\bibinitperiod},
+           given={Robert\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, {NY}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{4814d44c2bac1b65353b1405c3f314a9}
+      \strng{fullhash}{4814d44c2bac1b65353b1405c3f314a9}
+      \strng{bibnamehash}{4814d44c2bac1b65353b1405c3f314a9}
+      \strng{authorbibnamehash}{4814d44c2bac1b65353b1405c3f314a9}
+      \strng{authornamehash}{4814d44c2bac1b65353b1405c3f314a9}
+      \strng{authorfullhash}{4814d44c2bac1b65353b1405c3f314a9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-387-40271-0}
+      \field{langid}{english}
+      \field{series}{Springer Texts in Statistics}
+      \field{title}{Modeling Longitudinal Data}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/0-387-28314-5
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/kwlyu/Zotero/storage/4RFBINUN/2005 - Modeling Longitudinal Data.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/0-387-28314-5
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/0-387-28314-5
+      \endverb
+      \keyw{Analysis of variance,Covariance matrix,data analysis,Excel,modeling,Regression analysis,sets}
     \endentry
   \enddatalist
 \endrefsection
