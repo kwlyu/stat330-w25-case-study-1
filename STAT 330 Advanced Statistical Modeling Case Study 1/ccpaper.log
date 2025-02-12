@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  12 FEB 2025 15:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  12 FEB 2025 16:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1657,9 +1657,16 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 175.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 213.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 213.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 213.
 
-
-LaTeX Warning: Empty bibliography on input line 210.
+Overfull \hbox (17.56969pt too wide) in paragraph at lines 215--215
+\T1/lmr/m/n/10.95 (-20) ten-sion and per-son-al-ity [Pub-lisher: Tay-lor & Fran-cis _eprint: https://doi.org/10.1080/713690197].
+ []
 
 [1
 
@@ -1669,24 +1676,24 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `ccpaper.out' has not changed.
-(rerunfilecheck)             Checksum: F9191E03C0B36A096C9887C9F329C07E;476.
+(rerunfilecheck)             Checksum: CC6EB028EC7897BAAFB3C4AB6FAF41B4;568.
 Package logreq Info: Writing requests to 'ccpaper.run.xml'.
 \openout1 = `ccpaper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56680 strings out of 474116
- 1267114 string characters out of 5743682
- 2910137 words of memory out of 5000000
- 78083 multiletter control sequences out of 15000+600000
- 618117 words of font info for 130 fonts, out of 8000000 for 9000
+ 57061 strings out of 474116
+ 1274333 string characters out of 5743682
+ 2917334 words of memory out of 5000000
+ 78396 multiletter control sequences out of 15000+600000
+ 648207 words of font info for 187 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  121i,7n,126p,18415b,5370s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb>
-Output written on ccpaper.pdf (1 page, 109520 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
+Output written on ccpaper.pdf (1 page, 153763 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 41005 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 88 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
+ 60981 words of extra memory for PDF output out of 61914 (max. 10000000)
 

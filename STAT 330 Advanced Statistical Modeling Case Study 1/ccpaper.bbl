@@ -16,5 +16,228 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{goldstein_ambulatory_2000}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e749dde94ddf92b4eaaf21f53a0c2fd4}{%
+           family={Goldstein},
+           familyi={G\bibinitperiod},
+           given={I.\bibnamedelimi B.},
+           giveni={I\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4b568b5397ec463d50cced98a8a09f6}{%
+           family={Shapiro},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5929fbdcf174253445088b50f706ca92}
+      \strng{fullhash}{5929fbdcf174253445088b50f706ca92}
+      \strng{bibnamehash}{5929fbdcf174253445088b50f706ca92}
+      \strng{authorbibnamehash}{5929fbdcf174253445088b50f706ca92}
+      \strng{authornamehash}{5929fbdcf174253445088b50f706ca92}
+      \strng{authorfullhash}{5929fbdcf174253445088b50f706ca92}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The presence of certain personality traits in individuals with a strong family history of hypertension was expected to increase ambulatory blood pressure ({BP}) in healthy working women. Ambulatory {BP} was recorded on two work and two off work days during waking and sleeping hours in healthy nurses, 24-50 years of age, with varying parental history: Two hypertensive parents (n = 14); one hypertensive parent (n = 77); two normotensive parents (n = 112). {BP} during wake and sleep was potentiated in subjects with two hypertensive parents. Assessments were made of hostility (Cook-Medley Hostility Scale), defensiveness (Marlowe Crowne Social Desirability Scale), anxiety (Spielberger Trait Anxiety Inventory) and anger-out (Spielberger Anger Expression Scale). The offspring of two-parent hypertensive families who were hostile, defensive, anxious or did not express anger had elevated ambulatory {BP}, which was highest during work days. Preventive measures are particularly important for individuals with the combination of certain personality traits and a strong family history of hypertension, who may themselves be at risk for the development of hypertension.}
+      \field{day}{1}
+      \field{issn}{1354-8506}
+      \field{journaltitle}{Psychology, Health \& Medicine}
+      \field{month}{8}
+      \field{note}{Publisher: Taylor \& Francis \_eprint: https://doi.org/10.1080/713690197}
+      \field{number}{3}
+      \field{shorttitle}{Ambulatory blood pressure in women}
+      \field{title}{Ambulatory blood pressure in women: Family history of hypertension and personality}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{volume}{5}
+      \field{year}{2000}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{227\bibrangedash 240}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1080/713690197
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/713690197
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/713690197
+      \endverb
+    \endentry
+    \entry{roback_beyond_2021}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=517f5cd6bc3aa1b001730c1b3c407806}{%
+           family={Roback},
+           familyi={R\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=562e5e2605c5dc18e3cec1f567fd6c00}{%
+           family={Legler},
+           familyi={L\bibinitperiod},
+           given={Julie},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Chapman}%
+        {Hall/{CRC}}%
+      }
+      \strng{namehash}{922d54837131d9896ba58c0fe89930fc}
+      \strng{fullhash}{922d54837131d9896ba58c0fe89930fc}
+      \strng{bibnamehash}{922d54837131d9896ba58c0fe89930fc}
+      \strng{authorbibnamehash}{922d54837131d9896ba58c0fe89930fc}
+      \strng{authornamehash}{922d54837131d9896ba58c0fe89930fc}
+      \strng{authorfullhash}{922d54837131d9896ba58c0fe89930fc}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{An applied textbook on generalized linear models and multilevel models for advanced undergraduates, featuring many real, unique data sets. It is intended to be accessible to undergraduate students who have successfully completed a regression course. Even though there is no mathematical prerequisite, we still introduce fairly sophisticated topics such as likelihood theory, zero-inflated Poisson, and parametric bootstrapping in an intuitive and applied manner. We believe strongly in case studies featuring real data and real research questions; thus, most of the data in the textbook arises from collaborative research conducted by the authors and their students, or from student projects. Our goal is that, after working through this material, students will develop an expanded toolkit and a greater appreciation for the wider world of data and statistical modeling.}
+      \field{edition}{1}
+      \field{title}{Beyond Multiple Linear Regression}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{file}
+      \verb Snapshot:/Users/kwlyu/Zotero/storage/WKUPI2PV/bookdown-BeyondMLR.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://bookdown.org/roback/bookdown-BeyondMLR/
+      \endverb
+      \verb{url}
+      \verb https://bookdown.org/roback/bookdown-BeyondMLR/
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{goldstein_ambulatory_2000}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e749dde94ddf92b4eaaf21f53a0c2fd4}{%
+           family={Goldstein},
+           familyi={G\bibinitperiod},
+           given={I.\bibnamedelimi B.},
+           giveni={I\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4b568b5397ec463d50cced98a8a09f6}{%
+           family={Shapiro},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5929fbdcf174253445088b50f706ca92}
+      \strng{fullhash}{5929fbdcf174253445088b50f706ca92}
+      \strng{bibnamehash}{5929fbdcf174253445088b50f706ca92}
+      \strng{authorbibnamehash}{5929fbdcf174253445088b50f706ca92}
+      \strng{authornamehash}{5929fbdcf174253445088b50f706ca92}
+      \strng{authorfullhash}{5929fbdcf174253445088b50f706ca92}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The presence of certain personality traits in individuals with a strong family history of hypertension was expected to increase ambulatory blood pressure ({BP}) in healthy working women. Ambulatory {BP} was recorded on two work and two off work days during waking and sleeping hours in healthy nurses, 24-50 years of age, with varying parental history: Two hypertensive parents (n = 14); one hypertensive parent (n = 77); two normotensive parents (n = 112). {BP} during wake and sleep was potentiated in subjects with two hypertensive parents. Assessments were made of hostility (Cook-Medley Hostility Scale), defensiveness (Marlowe Crowne Social Desirability Scale), anxiety (Spielberger Trait Anxiety Inventory) and anger-out (Spielberger Anger Expression Scale). The offspring of two-parent hypertensive families who were hostile, defensive, anxious or did not express anger had elevated ambulatory {BP}, which was highest during work days. Preventive measures are particularly important for individuals with the combination of certain personality traits and a strong family history of hypertension, who may themselves be at risk for the development of hypertension.}
+      \field{day}{1}
+      \field{issn}{1354-8506}
+      \field{journaltitle}{Psychology, Health \& Medicine}
+      \field{month}{8}
+      \field{note}{Publisher: Taylor \& Francis \_eprint: https://doi.org/10.1080/713690197}
+      \field{number}{3}
+      \field{shorttitle}{Ambulatory blood pressure in women}
+      \field{title}{Ambulatory blood pressure in women: Family history of hypertension and personality}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{volume}{5}
+      \field{year}{2000}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{227\bibrangedash 240}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1080/713690197
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/713690197
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/713690197
+      \endverb
+    \endentry
+    \entry{roback_beyond_2021}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=517f5cd6bc3aa1b001730c1b3c407806}{%
+           family={Roback},
+           familyi={R\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=562e5e2605c5dc18e3cec1f567fd6c00}{%
+           family={Legler},
+           familyi={L\bibinitperiod},
+           given={Julie},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Chapman}%
+        {Hall/{CRC}}%
+      }
+      \strng{namehash}{922d54837131d9896ba58c0fe89930fc}
+      \strng{fullhash}{922d54837131d9896ba58c0fe89930fc}
+      \strng{bibnamehash}{922d54837131d9896ba58c0fe89930fc}
+      \strng{authorbibnamehash}{922d54837131d9896ba58c0fe89930fc}
+      \strng{authornamehash}{922d54837131d9896ba58c0fe89930fc}
+      \strng{authorfullhash}{922d54837131d9896ba58c0fe89930fc}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{An applied textbook on generalized linear models and multilevel models for advanced undergraduates, featuring many real, unique data sets. It is intended to be accessible to undergraduate students who have successfully completed a regression course. Even though there is no mathematical prerequisite, we still introduce fairly sophisticated topics such as likelihood theory, zero-inflated Poisson, and parametric bootstrapping in an intuitive and applied manner. We believe strongly in case studies featuring real data and real research questions; thus, most of the data in the textbook arises from collaborative research conducted by the authors and their students, or from student projects. Our goal is that, after working through this material, students will develop an expanded toolkit and a greater appreciation for the wider world of data and statistical modeling.}
+      \field{edition}{1}
+      \field{title}{Beyond Multiple Linear Regression}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{file}
+      \verb Snapshot:/Users/kwlyu/Zotero/storage/WKUPI2PV/bookdown-BeyondMLR.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://bookdown.org/roback/bookdown-BeyondMLR/
+      \endverb
+      \verb{url}
+      \verb https://bookdown.org/roback/bookdown-BeyondMLR/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
