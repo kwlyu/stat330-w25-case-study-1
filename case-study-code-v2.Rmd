@@ -19,6 +19,7 @@ library(HLMdiag)
 library(gridExtra)
 library(broom.mixed)
 library(knitr)
+library(effects)
 library(patchwork)
 library(mice)
 library(GGally)
@@ -57,9 +58,9 @@ Potential alternative directions: consider diastolic blood pressure or heart rat
 nurse <- read.csv("https://math.carleton.edu/kstclair/data/bmlr/nursebp.csv",
                   stringsAsFactors = TRUE) %>% 
   as_tibble %>% 
-  mutate(snum = as.factor(snum)) %>% 
   select(-c(DIA, HRT, timept)) %>% 
-  janitor::clean_names() 
+  janitor::clean_names() %>% 
+  mutate(snum = as.factor(snum))
 glimpse(nurse)
 out<-md.pattern(nurse, rotate.names=T) #missingness pattern
 nurse_complete <- nurse %>% 
@@ -758,12 +759,12 @@ ggplot(nurse_age_phase, aes(x = nurse_phase, y = .ranef.intercept)) +
 
 ### Influential Statistics
 
-```{r Compute cache=TRUE}
+```{r Compute, cache=TRUE}
 nurse_infl2 <- hlm_influence(final_model, level = "snum", approx = FALSE, # includes RVC
                              leverage = c("overall", "fixef", "ranef.uc"))
 ```
 
-```{r Cook's Distance}
+```{r Cooks Distance}
 dotplot_diag(nurse_infl2$cooksd, name = "cooks.distance", cutoff = "internal")
 
 cd_flagged <- nurse_infl2 %>% 
@@ -843,14 +844,49 @@ ggplot(nurse_filtered, aes(x = timepass, y = sys))+
 
 ### Confidence Intervals
 
-```{r}
+```{r Fixed Effects, cache=TRUE}
+confint(final_model, parm = "beta_", method = "boot")
+confint(final_model, parm = "beta_")
+```
 
+```{r Random Effects}
+lattice::dotplot(ranef(final_model))
 ```
 
 
 ### Effects Plots
 
-```{r}
+```{r Predictor Means}
+timepass_all <- nurse_filtered %>% distinct(timepass) %>% pull()
+random_timepass <- sample(timepass_all, 3)
+# plot(predictorEffects(final_model, xlevels = list(timepass = random_timepass)))
+plot(predictorEffects(final_model, xlevels = 4),
+                      axes = list(
+                        x = list(rug = F, rotate = 90,
+                                 day2 = list(lab = "Workday"), 
+                                 fh_yes = list(lab = "Family History"), 
+                                 timepass = "Time Passed", 
+                                 standing = "Standing",
+                                 mnact5 = list(lab = "Activity Level"), 
+                                 mood = "Mood"),
+                        y = list(ticks=list(at=c(110, 114, 118, 122, 126)),
+                                 lab = "Blood Pressure"))
+                      )
+```
 
+```{r Marginal Trend}
+nurse_filtered <- nurse_filtered %>%
+  mutate(fit_cond = predict(final_model), # predicted means with RE
+         fit_marg = predict(final_model, re.form = NA)) # predicted means without RE
+
+ggplot(nurse_filtered, aes(x=timepass, y = sys)) +
+  geom_point() +
+  geom_line(aes(y = fit_cond, group = snum), color = "darkgrey") +
+  geom_line(aes(y = fit_marg), color = "red", size = 1, alpha = 0.5) +
+  facet_grid(rows = vars(day3), cols = vars(fh_2)) + 
+  labs(title = "Blood Pressure vs Time Passed, by Workday and Family History",
+       x = "Minutes since first measurement",
+       y = "Systolic Blood Pressure") +
+  theme_minimal(base_size = 17)
 ```
 
