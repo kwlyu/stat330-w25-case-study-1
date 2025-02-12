@@ -107,6 +107,103 @@ nurse_bysubject <- nurse_filtered %>%
 
 ## EDA
 
+```{r Level 1 by Clusters}
+set.seed(93487303)
+nurse_all <- nurse_filtered %>% distinct(snum) %>% pull()
+random_snums <- sample(nurse_all, 12)
+nurse_small <- nurse_filtered %>% filter(snum %in% random_snums)
+ggplot(nurse_small, 
+       aes(x = timepass, y = sys)) + 
+  geom_point() +
+  geom_line() + 
+  facet_wrap(~snum)
+
+ggplot(nurse_filtered, aes(x = as.factor(snum), y = sys)) +
+  geom_boxplot() +
+  labs(x = "Subject ID",
+       y = "BP",
+       title = "BP by Subjects") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+
+ggplot(nurse_filtered, aes(x = timepass, y = sys, color = as.factor(snum))) + 
+  geom_point(alpha = 0.3) +
+  geom_line(stat = "smooth", method = "lm", se = F, alpha = 0.8) +
+    labs(x = "Minutes since first measurement",
+       y = "BP",
+       title = "BP vs. time passed by Subjects",
+       color = "Subject ID") +
+  guides(color = "none")
+
+ggplot(nurse_filtered, aes(x = mnact5, y = sys, color = as.factor(snum))) + 
+  geom_point(alpha = 0.3) +
+  geom_line(stat = "smooth", method = "lm", se = F, alpha = 0.8) +
+    labs(x = "Activity Level",
+       y = "BP",
+       title = "BP vs. Activity Level",
+       color = "Subject ID") +
+  guides(color = "none")
+
+ggplot(nurse_filtered, aes(x = as.numeric(standing), y = sys, color = as.factor(snum))) + 
+  geom_point(alpha = 0.3) +
+  geom_line(stat = "smooth", method = "lm", se = F, alpha = 0.8) +
+    labs(x = "Standing vs. Not Standing",
+       y = "BP",
+       title = "BP vs. Posture (2 Levels)",
+       color = "Subject ID") +
+  guides(color = "none")
+
+ggplot(nurse_filtered, aes(x = mood, y = sys, color = as.factor(snum))) + 
+  geom_point(alpha = 0.3) +
+  geom_line(stat = "smooth", method = "lm", se = F, alpha = 0.8) +
+    labs(x = "Mood",
+       y = "BP",
+       title = "BP vs. Mood",
+       color = "Subject ID") +
+  guides(color = "none")
+```
+
+```{r Level 1 by Level 2 Covariates}
+ggplot(nurse_filtered, aes(x = sys)) +
+  geom_histogram(color="white") +
+  labs(x = "Systolic Blood Pressure",
+       title = "Level 1 BP Distribution")
+
+ggplot(nurse_filtered, aes(x = fh_2, y = sys)) +
+  geom_boxplot() + 
+  facet_wrap(~ day3) +
+  labs(x = "Family History",
+       y = "Systolic Blood Pressure",
+       title = "Level 1 BP by Workday and Family History")
+
+ggplot(nurse_filtered, aes(x = as.factor(snum), y = sys, fill = day3)) +
+  geom_boxplot() +
+  labs(x = "Subject ID",
+       y = "BP",
+       title = "Level 1 BP by Subjects and Workday",
+       fill = "Workday") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+
+ggplot(nurse_filtered, aes(x = as.factor(snum), y = sys, fill = fh_2)) +
+  geom_boxplot() +
+  labs(x = "Subject ID",
+       y = "BP",
+       title = "Level 1 BP by Subjects and Workday",
+       fill = "Family History") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+
+ggplot(nurse_filtered, aes(x = as.factor(snum), y = sys, fill = as.factor(age24))) +
+  geom_boxplot() +
+  labs(x = "Subject ID",
+       y = "BP",
+       title = "Level 1 BP by Subjects and Workday",
+       fill = "Family History") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+  guides(fill = "none")
+
+
+
+```
+
 ```{r Level 2 Covariates}
 ## Bivariate
 ggplot(nurse_bysubject, aes(x = phase3, y = mean_sys)) +
@@ -146,81 +243,6 @@ ggplot(nurse_bysubject, aes(x = age2, y = mean_sys)) +
   labs(x = "Age beyond 24 by Family History",
        y = "Average Systolic Blood Pressure")
 ```
-
-
-```{r Level 1 by Level 2 Covariates}
-ggplot(nurse_filtered, aes(x = sys)) +
-  geom_histogram(color="white") +
-  labs(x = "Systolic Blood Pressure",
-       title = "Level 1 BP Distribution")
-
-ggplot(nurse_filtered, aes(x = fh_2, y = sys)) +
-  geom_boxplot() + 
-  facet_wrap(~ day3) +
-  labs(x = "Family History",
-       y = "Systolic Blood Pressure",
-       title = "Level 1 BP by Workday and Family History")
-```
-
-```{r Level 1 by Clusters}
-set.seed(93487303)
-nurse_all <- nurse_filtered %>% distinct(snum) %>% pull()
-random_snums <- sample(nurse_all, 12)
-nurse_small <- nurse_filtered %>% filter(snum %in% random_snums)
-ggplot(nurse_small, 
-       aes(x = timepass, y = sys)) + 
-  geom_point() +
-  geom_line() + 
-  facet_wrap(~snum)
-
-ggplot(nurse_filtered, aes(x = as.factor(snum), y = sys)) +
-  geom_boxplot() +
-  labs(x = "Subject ID",
-       y = "BP",
-       title = "Random subset of BP by Subjects") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
-
-ggplot(nurse_filtered, aes(x = timepass, y = sys, color = as.factor(snum))) + 
-  geom_point(alpha = 0.3) +
-  geom_line(stat = "smooth", method = "lm", se = F, alpha = 0.8) +
-    labs(x = "Minutes since first measurement",
-       y = "BP",
-       title = "Random subset of BP vs. time passed by Subjects",
-       color = "Subject ID") +
-  guides(color = "none")
-
-ggplot(nurse_filtered, aes(x = mnact5, y = sys, color = as.factor(snum))) + 
-  geom_point(alpha = 0.3) +
-  geom_line(stat = "smooth", method = "lm", se = F, alpha = 0.8) +
-    labs(x = "Activity Level",
-       y = "BP",
-       title = "Random subset of BP vs. Activity Level",
-       color = "Subject ID") +
-  guides(color = "none")
-
-ggplot(nurse_filtered, aes(x = as.numeric(standing), y = sys, color = as.factor(snum))) + 
-  geom_point(alpha = 0.3) +
-  geom_line(stat = "smooth", method = "lm", se = F, alpha = 0.8) +
-    labs(x = "Standing vs. Not Standing",
-       y = "BP",
-       title = "Random subset of BP vs. Posture (2 Levels)",
-       color = "Subject ID") +
-  guides(color = "none")
-
-ggplot(nurse_filtered, aes(x = mood, y = sys, color = as.factor(snum))) + 
-  geom_point(alpha = 0.3) +
-  geom_line(stat = "smooth", method = "lm", se = F, alpha = 0.8) +
-    labs(x = "Mood",
-       y = "BP",
-       title = "Random subset of BP vs. Mood",
-       color = "Subject ID") +
-  guides(color = "none")
-```
-
-```{r}
-ggplot()
-```
-
 
 ```{r Spaghetti Plots}
 ## Time
@@ -305,7 +327,6 @@ ggplot(nurse_filtered, aes(x = mood, y = sys, color = as.factor(day3))) +
        x = "Mood",
        y = "Systolic Blood Pressure")
 ```
-
 
 ```{r Separate LS}
 ## Timepass
@@ -431,6 +452,15 @@ nurse_lmm_RI_lv1 <- lmer(sys ~ timepass + mnact5 + standing + mood +
 
 summary(nurse_lmm_RI_lv1)
 anova(nurse_lmm_RI, nurse_lmm_RI_lv1)
+
+nurse_lmm_RI_noMood <- lmer(sys ~ timepass + mnact5 + standing +
+                       (1 | snum), data = nurse_filtered)
+anova(nurse_lmm_RI_noMood, nurse_lmm_RI_lv1)
+
+nurse_lmm_RI_noMoodTime <- lmer(sys ~ mnact5 + standing +
+                       (1 | snum), data = nurse_filtered)
+anova(nurse_lmm_RI_noMoodTime, nurse_lmm_RI_noMood)
+anova(nurse_lmm_RI_noMoodTime, nurse_lmm_RI_lv1)
 ```
 
 
