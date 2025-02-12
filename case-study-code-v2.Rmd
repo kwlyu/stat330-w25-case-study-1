@@ -199,9 +199,6 @@ ggplot(nurse_filtered, aes(x = as.factor(snum), y = sys, fill = as.factor(age24)
        fill = "Family History") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
   guides(fill = "none")
-
-
-
 ```
 
 ```{r Level 2 Covariates}
@@ -329,7 +326,7 @@ ggplot(nurse_filtered, aes(x = mood, y = sys, color = as.factor(day3))) +
 ```
 
 ```{r Separate LS}
-## Timepass
+
 ls_fits_timepass <- group_modify(group_by(nurse_complete, snum), 
                         ~ tidy(lm(sys ~ timepass, data =.x))[,1:2])
 ls_fits_timepass_final <- ls_fits_timepass %>%
@@ -337,6 +334,7 @@ ls_fits_timepass_final <- ls_fits_timepass %>%
   rename("Intercept"= `(Intercept)`, "Slope"= timepass) %>%
   left_join(nurse_bysubject, by = "snum")
 
+## Intercept
 ggplot(ls_fits_timepass_final, aes(x = day3, y = Intercept)) +
   geom_boxplot() +
   labs(x = "Workday")
@@ -347,6 +345,7 @@ ggplot(ls_fits_timepass_final, aes(x = age2, y = Intercept)) +
   geom_point() +
   geom_smooth(method = "lm", se = F)
 
+## Timepass
 ggplot(ls_fits_timepass_final, aes(x = day3, y = Slope)) +
   geom_boxplot() +
   labs(x = "Workday")
@@ -456,35 +455,194 @@ anova(nurse_lmm_RI, nurse_lmm_RI_lv1)
 nurse_lmm_RI_noMood <- lmer(sys ~ timepass + mnact5 + standing +
                        (1 | snum), data = nurse_filtered)
 anova(nurse_lmm_RI_noMood, nurse_lmm_RI_lv1)
+
+nurse_lmm_RI_noMoodTime <- lmer(sys ~ mnact5 + standing +
+                       (1 | snum), data = nurse_filtered)
+anova(nurse_lmm_RI_noMoodTime, nurse_lmm_RI_noMood)
+anova(nurse_lmm_RI_noMoodTime, nurse_lmm_RI_lv1)
 ```
 
 
 ### Random Intercept and Slope
 
-```{r RIS with Stand RE}
-nurse_lmm_RIS_stand <- lmer(sys ~ timepass + mnact5 + standing + 
-                       (1 + standing | snum), 
+```{r RIS with Mood RE}
+nurse_lmm_RIS_mood <- lmer(sys ~ timepass + mnact5 + standing + mood + 
+                       (1 + mood | snum), 
                        data = nurse_filtered)
-summary(nurse_lmm_RIS_stand)
+summary(nurse_lmm_RIS_mood)
 
-(lrt_RIS_stand <- as.numeric(2*(logLik(nurse_lmm_RIS_stand, REML = TRUE) - 
-                            logLik(nurse_lmm_RI_noMood, REML = TRUE))))
-.5*(1-pchisq(lrt_RIS_stand, df = 1))+.5*(1-pchisq(lrt_RIS_stand, df = 2))
+(lrt_RIS_mood <- as.numeric(2*(logLik(nurse_lmm_RIS_mood, REML = TRUE) - 
+                            logLik(nurse_lmm_RI, REML = TRUE))))
+.5*(1-pchisq(lrt_RI, df = 1))+.5*(1-pchisq(lrt_RI, df = 2))
 ```
 
-```{r RIS with}
+```{r RIS with Mood and Stand RE}
+nurse_lmm_RIS_mood_stand <- lmer(sys ~ timepass + mnact5 + standing + mood + 
+                       (1 + mood + standing | snum), 
+                       data = nurse_filtered)
+summary(nurse_lmm_RIS_mood_stand)
 
+(lrt_RIS_mood_stand <- as.numeric(2*(logLik(nurse_lmm_RIS_mood_stand, REML = TRUE) - 
+                            logLik(nurse_lmm_RIS_mood, REML = TRUE))))
+.5*(1-pchisq(lrt_RIS_mood_stand, df = 2))+.5*(1-pchisq(lrt_RIS_mood_stand, df = 3))
 ```
 
 
-### Level 2 Covariates
+### Random Intercept and Slope with Level 2 Covariates
 
-```{r RI with Level 1 and 2 Covariates}
-nurse_lmm_RI_lv12 <- lmer(sys ~ timepass + mnact5 + standing + mood + 
-                           day2 + age + fh_2 +
-                       (1 | snum), data = nurse_filtered)
+```{r RIS with Age}
+nurse_lmm_RIS_age <- lmer(sys ~ timepass + mnact5 + standing + mood + 
+                             age24 + 
+                       (1 + mood + standing | snum),
+                       data = nurse_filtered)
 
-summary(nurse_lmm_RI_lv12)
-anova(nurse_lmm_RI_lv1, nurse_lmm_RI_lv12)
+summary(nurse_lmm_RIS_age)
+anova(nurse_lmm_RIS_mood_stand, nurse_lmm_RIS_age)
+```
+
+```{r RIS with Workday}
+nurse_lmm_RIS_day <- lmer(sys ~ day2 * (timepass + standing) + mnact5  + mood + 
+                       (1 + mood + standing | snum),
+                       data = nurse_filtered)
+
+summary(nurse_lmm_RIS_day)
+anova(nurse_lmm_RIS_mood_stand, nurse_lmm_RIS_day)
+
+nurse_lmm_RIS_day_nostand <- lmer(sys ~ day2 * (timepass) + standing + mnact5  + mood + 
+                       (1 + mood + standing | snum),
+                       data = nurse_filtered)
+anova(nurse_lmm_RIS_day, nurse_lmm_RIS_day_nostand)
+anova(nurse_lmm_RIS_day_nostand, nurse_lmm_RIS_mood_stand)
+
+nurse_lmm_RIS_day_nointer <- lmer(sys ~ day2 + timepass + standing + mnact5  + mood + 
+                       (1 + mood + standing | snum),
+                       data = nurse_filtered)
+anova(nurse_lmm_RIS_day_nostand, nurse_lmm_RIS_day_nointer)
+```
+
+```{r RIS with Family History and Workday}
+nurse_lmm_RIS_day_fh <- lmer(sys ~ (day2 + fh_yes) * timepass + 
+                                    standing + mnact5  + mood + 
+                       (1 + mood + standing | snum),
+                       data = nurse_filtered)
+anova(nurse_lmm_RIS_day_fh, nurse_lmm_RIS_day_nostand)
+anova(nurse_lmm_RIS_day_fh, nurse_lmm_RIS_mood_stand)
+
+nurse_lmm_RIS_day_fh_noint <- lmer(sys ~ day2 * timepass + fh_yes +
+                                    standing + mnact5  + mood + 
+                       (1 + mood + standing | snum),
+                       data = nurse_filtered)
+anova(nurse_lmm_RIS_day_fh, nurse_lmm_RIS_day_fh_noint)
+```
+
+
+## Model Diagnostics
+
+### Residual Analysis
+```{r Load in Residuals}
+final_model <- nurse_lmm_RIS_day_fh
+
+nurse_resid1 <- hlm_resid(final_model, level = 1, standardize = TRUE)
+nurse_resid2 <- hlm_resid(final_model, level = "snum", include.ls = FALSE)
+```
+
+```{r Marginal Residuals}
+ggplot(data = nurse_resid1, aes(x = .mar.fitted, y = .chol.mar.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Fitted Marginal",
+       y = "Marginal Residuals") 
+ggplot(data = nurse_resid1, aes(x = timepass, y = .chol.mar.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Minutes since first measurement",
+       y = "Marginal Residuals")
+ggplot(data = nurse_resid1, aes(x = as.factor(standing), y = .chol.mar.resid)) + 
+  geom_boxplot() + 
+  # geom_smooth() +
+  labs(x = "Standing vs. Not standing",
+       y = "Marginal Residuals")
+ggplot(data = nurse_resid1, aes(x = mnact5, y = .chol.mar.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Activity Level",
+       y = "Marginal Residuals")
+ggplot(data = nurse_resid1, aes(x = mood, y = .chol.mar.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Mood",
+       y = "Marginal Residuals")
+```
+
+```{r Exponential Model}
+nurse_lmm_RIS_logx <- lmer(sys ~ (day2 + fh_yes) * timepass + 
+                                    standing + log(mnact5 + 1)  + mood + 
+                       (1 + mood + standing | snum),
+                       data = nurse_filtered)
+nurse_resid1_log <- hlm_resid(nurse_lmm_RIS_logx, level = 1, standardize = TRUE)
+
+ggplot(data = nurse_resid1_log, aes(x = .mar.fitted, y = .chol.mar.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Logged Fitted Marginal",
+       y = "Marginal Residuals") 
+ggplot(data = nurse_resid1_log, aes(x = timepass, y = .chol.mar.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Minutes since first measurement",
+       y = "Marginal Residuals")
+ggplot(data = nurse_resid1_log, aes(x = as.factor(standing), y = .chol.mar.resid)) + 
+  geom_boxplot() + 
+  # geom_smooth() +
+  labs(x = "Standing vs. Not standing",
+       y = "Marginal Residuals")
+ggplot(data = nurse_resid1_log, aes(x = `log(mnact5 + 1)`, y = .chol.mar.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Activity Level",
+       y = "Marginal Residuals")
+ggplot(data = nurse_resid1_log, aes(x = mood, y = .chol.mar.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Mood",
+       y = "Marginal Residuals")
+```
+
+```{r Power Model}
+nurse_lmm_RIS_loglog <- lmer(log(sys) ~ (day2 + fh_yes) * timepass + 
+                                    standing + log(mnact5 + 1)  + mood + 
+                       (1 + mood + standing | snum),
+                       data = nurse_filtered)
+nurse_resid1_loglog <- hlm_resid(nurse_lmm_RIS_loglog, level = 1, standardize = TRUE)
+
+ggplot(data = nurse_resid1_loglog, aes(x = .mar.fitted, y = .chol.mar.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Fitted Marginal",
+       y = "Marginal Residuals") 
+ggplot(data = nurse_resid1_loglog, aes(x = timepass, y = .chol.mar.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Minutes since first measurement",
+       y = "Marginal Residuals")
+ggplot(data = nurse_resid1_loglog, aes(x = as.factor(standing), y = .chol.mar.resid)) + 
+  geom_boxplot() + 
+  # geom_smooth() +
+  labs(x = "Standing vs. Not standing",
+       y = "Marginal Residuals")
+ggplot(data = nurse_resid1_loglog, aes(x = `log(mnact5 + 1)`, y = .chol.mar.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Logged Activity Level",
+       y = "Marginal Residuals")
+ggplot(data = nurse_resid1_loglog, aes(x = mood, y = .chol.mar.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Mood",
+       y = "Marginal Residuals")
+```
+
+```{r Conditional (Raw) Residuals}
+
 ```
 
