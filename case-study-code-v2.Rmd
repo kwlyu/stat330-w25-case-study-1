@@ -62,9 +62,14 @@ nurse <- read.csv("https://math.carleton.edu/kstclair/data/bmlr/nursebp.csv",
   janitor::clean_names() 
 glimpse(nurse)
 out<-md.pattern(nurse, rotate.names=T) #missingness pattern
-nurse_complete <- nurse %>% drop_na() %>% mutate(mood = hap - (str + tir)/2)
+nurse_complete <- nurse %>% 
+  drop_na() %>% 
+  mutate(mood = hap - (str + tir)/2,
+         standing = case_when(posture == "RECLINE" ~ 0,
+                         posture == "SIT" ~ 0,
+                         posture == "STAND" ~ 1))
 
-nurse_filtered <- nurse %>% 
+nurse_filtered <- nurse_complete %>% 
   mutate(
     age24 = age-24, 
     phase2 = if_else(phase == "F", 0, 1),
@@ -85,6 +90,7 @@ nurse_filtered <- nurse %>%
          fh_yes = if_else(fh123 == 0, 0, 1)) %>% 
   mutate(standing = as.factor(standing),
          fh_yes = as.factor(fh_yes)) %>% 
+  mutate(fh_2 = if_else(fh_yes == 1, "Yes", "No")) %>% 
   drop_na()
 
 nurse_bysubject <- nurse_filtered %>% 
@@ -94,7 +100,7 @@ nurse_bysubject <- nurse_filtered %>%
   summarize(
     mean_sys = mean(sys),
     phase3 = first(phase3), day3 = first(day3), 
-    age2 = first(age24), fh123 = first(fh123)
+    age2 = first(age24), fh_2 = first(fh_2)
   )
 
 ```
@@ -113,9 +119,9 @@ ggplot(nurse_bysubject, aes(x = day3, y = mean_sys)) +
   labs(x = "Workday",
        y = "Average Systolic Blood Pressure")
 
-ggplot(nurse_bysubject, aes(x = fh123, y = mean_sys)) +
+ggplot(nurse_bysubject, aes(x = fh_2, y = mean_sys)) +
   geom_boxplot() + 
-  labs(x = "Number of Parents with Hypertension",
+  labs(x = "With Family History",
        y = "Average Systolic Blood Pressure")
 
 ## By age
@@ -136,8 +142,8 @@ ggplot(nurse_bysubject, aes(x = age2, y = mean_sys)) +
 ggplot(nurse_bysubject, aes(x = age2, y = mean_sys)) +
   geom_point() +
   geom_smooth(method = "lm") +
-  facet_wrap(~ fh123) +
-  labs(x = "Age beyond 24 by Number of Parents with Hypertension",
+  facet_wrap(~ fh_2) +
+  labs(x = "Age beyond 24 by Family History",
        y = "Average Systolic Blood Pressure")
 ```
 
@@ -148,10 +154,10 @@ ggplot(nurse_filtered, aes(x = sys)) +
   labs(x = "Systolic Blood Pressure",
        title = "Level 1 BP Distribution")
 
-ggplot(nurse_filtered, aes(x = fh123, y = sys)) +
+ggplot(nurse_filtered, aes(x = fh_2, y = sys)) +
   geom_boxplot() + 
   facet_wrap(~ day3) +
-  labs(x = "Number of Parents with Hypertension",
+  labs(x = "Family History",
        y = "Systolic Blood Pressure",
        title = "Level 1 BP by Workday and Family History")
 ```
@@ -166,7 +172,55 @@ ggplot(nurse_small,
   geom_point() +
   geom_line() + 
   facet_wrap(~snum)
+
+ggplot(nurse_filtered, aes(x = as.factor(snum), y = sys)) +
+  geom_boxplot() +
+  labs(x = "Subject ID",
+       y = "BP",
+       title = "Random subset of BP by Subjects") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+
+ggplot(nurse_filtered, aes(x = timepass, y = sys, color = as.factor(snum))) + 
+  geom_point(alpha = 0.3) +
+  geom_line(stat = "smooth", method = "lm", se = F, alpha = 0.8) +
+    labs(x = "Minutes since first measurement",
+       y = "BP",
+       title = "Random subset of BP vs. time passed by Subjects",
+       color = "Subject ID") +
+  guides(color = "none")
+
+ggplot(nurse_filtered, aes(x = mnact5, y = sys, color = as.factor(snum))) + 
+  geom_point(alpha = 0.3) +
+  geom_line(stat = "smooth", method = "lm", se = F, alpha = 0.8) +
+    labs(x = "Activity Level",
+       y = "BP",
+       title = "Random subset of BP vs. Activity Level",
+       color = "Subject ID") +
+  guides(color = "none")
+
+ggplot(nurse_filtered, aes(x = as.numeric(standing), y = sys, color = as.factor(snum))) + 
+  geom_point(alpha = 0.3) +
+  geom_line(stat = "smooth", method = "lm", se = F, alpha = 0.8) +
+    labs(x = "Standing vs. Not Standing",
+       y = "BP",
+       title = "Random subset of BP vs. Posture (2 Levels)",
+       color = "Subject ID") +
+  guides(color = "none")
+
+ggplot(nurse_filtered, aes(x = mood, y = sys, color = as.factor(snum))) + 
+  geom_point(alpha = 0.3) +
+  geom_line(stat = "smooth", method = "lm", se = F, alpha = 0.8) +
+    labs(x = "Mood",
+       y = "BP",
+       title = "Random subset of BP vs. Mood",
+       color = "Subject ID") +
+  guides(color = "none")
 ```
+
+```{r}
+ggplot()
+```
+
 
 ```{r Spaghetti Plots}
 ## Time
@@ -187,9 +241,9 @@ ggplot(nurse_filtered, aes(x = timepass, y = sys, color = as.factor(day3))) +
 ggplot(nurse_filtered, aes(x = timepass, y = sys)) +
   geom_line(aes(group = snum), color = "dark grey") +
   geom_smooth(method = "loess", color = "black", se = F, size = 1) +
-  facet_wrap(~ fh123)
+  facet_wrap(~ fh_2)
 
-ggplot(nurse_filtered, aes(x = timepass, y = sys, color = as.factor(fh123))) +
+ggplot(nurse_filtered, aes(x = timepass, y = sys, color = as.factor(fh_2))) +
   geom_line(aes(group = interaction(snum, day)), alpha = 0.1) +
   geom_smooth(method = "loess", se = FALSE, size = 1) +
   labs(color = "Family History",
@@ -213,9 +267,9 @@ ggplot(nurse_filtered, aes(x = mnact5, y = sys, color = as.factor(day3))) +
 ggplot(nurse_filtered, aes(x = mnact5, y = sys)) +
   geom_line(aes(group = snum), color = "dark grey") +
   geom_smooth(method = "loess", color = "black", se = F, size = 1) +
-  facet_wrap(~ fh123)
+  facet_wrap(~ fh_2)
 
-ggplot(nurse_filtered, aes(x = mnact5, y = sys, color = as.factor(fh123))) +
+ggplot(nurse_filtered, aes(x = mnact5, y = sys, color = as.factor(fh_2))) +
   geom_line(aes(group = interaction(snum, day)), alpha = 0.1) +
   geom_smooth(method = "loess", se = FALSE, size = 1) +
   labs(color = "Family History",
@@ -223,21 +277,22 @@ ggplot(nurse_filtered, aes(x = mnact5, y = sys, color = as.factor(fh123))) +
        y = "Systolic Blood Pressure")
 
 
-## Posture - 3 levels
-ggplot(nurse_filtered, aes(x = posture, y = sys)) +
+## Posture - 2 levels
+ggplot(nurse_filtered, aes(x = standing, y = sys)) +
   geom_boxplot() +
   facet_wrap(~ day3) +
-  labs(x = "Posture",
+  labs(x = "Standing vs Non Standing",
        y = "Systolic Blood Pressure")
 
-ggplot(nurse_filtered, aes(x = posture, y = sys)) +
+ggplot(nurse_filtered, aes(x = standing, y = sys)) +
   geom_boxplot() +
-  facet_wrap(~ fh123) +
-  labs(x = "Posture",
-       y = "Systolic Blood Pressure")
+  facet_wrap(~ fh_2) +
+  labs(x = "Standing vs Non Standing",
+       y = "Systolic Blood Pressure",
+       title = "BP by Standing and Family History")
 
 
-## Activity level
+## Mood Ratings
 ggplot(nurse_filtered, aes(x = mood, y = sys)) +
   geom_line(aes(group = snum), color = "dark grey") +
   geom_smooth(method = "loess", color = "black", se = F, size = 1) +
@@ -264,9 +319,9 @@ ls_fits_timepass_final <- ls_fits_timepass %>%
 ggplot(ls_fits_timepass_final, aes(x = day3, y = Intercept)) +
   geom_boxplot() +
   labs(x = "Workday")
-ggplot(ls_fits_timepass_final, aes(x = fh123, y = Intercept)) +
+ggplot(ls_fits_timepass_final, aes(x = fh_2, y = Intercept)) +
   geom_boxplot() +
-  labs(x = "Number of Parents with Hypertension")
+  labs(x = "Family History")
 ggplot(ls_fits_timepass_final, aes(x = age2, y = Intercept)) +
   geom_point() +
   geom_smooth(method = "lm", se = F)
@@ -274,9 +329,9 @@ ggplot(ls_fits_timepass_final, aes(x = age2, y = Intercept)) +
 ggplot(ls_fits_timepass_final, aes(x = day3, y = Slope)) +
   geom_boxplot() +
   labs(x = "Workday")
-ggplot(ls_fits_timepass_final, aes(x = fh123, y = Slope)) +
+ggplot(ls_fits_timepass_final, aes(x = fh_2, y = Slope)) +
   geom_boxplot() +
-  labs(x = "Number of Parents with Hypertension")
+  labs(x = "Family History")
 ggplot(ls_fits_timepass_final, aes(x = age2, y = Slope)) +
   geom_point() +
   geom_smooth(method = "lm", se = F)
@@ -293,9 +348,9 @@ ls_fits_act_final <- ls_fits_act %>%
 ggplot(ls_fits_act_final, aes(x = day3, y = Slope)) +
   geom_boxplot() +
   labs(x = "Workday")
-ggplot(ls_fits_act_final, aes(x = fh123, y = Slope)) +
+ggplot(ls_fits_act_final, aes(x = fh_2, y = Slope)) +
   geom_boxplot() +
-  labs(x = "Number of Parents with Hypertension")
+  labs(x = "Family History")
 ggplot(ls_fits_act_final, aes(x = age2, y = Slope)) +
   geom_point() +
   geom_smooth(method = "lm", se = F)
@@ -303,39 +358,29 @@ ggplot(ls_fits_act_final, aes(x = age2, y = Slope)) +
 
 ## Posture
 ls_fits_post <- group_modify(group_by(nurse_complete, snum), 
-                        ~ tidy(lm(sys ~ posture, data =.x))[,1:2])
+                        ~ tidy(lm(sys ~ standing, data =.x))[,1:2])
 ls_fits_post_final <- ls_fits_post %>%
   pivot_wider(names_from = term, values_from = estimate) %>%
-  rename("Sit"= `(Intercept)`, "Stand"= postureSTAND, "Recline" = postureRECLINE) %>%
+  rename("Nonstanding"= `(Intercept)`, "Standing"= standing) %>%
   left_join(nurse_bysubject, by = "snum")
-### Sit
-ggplot(ls_fits_post_final, aes(x = day3, y = Sit)) +
+### Non-standing
+ggplot(ls_fits_post_final, aes(x = day3, y = Nonstanding)) +
   geom_boxplot() +
   labs(x = "Workday")
-ggplot(ls_fits_post_final, aes(x = fh123, y = Sit)) +
+ggplot(ls_fits_post_final, aes(x = fh_2, y = Nonstanding)) +
   geom_boxplot() +
-  labs(x = "Number of Parents with Hypertension")
-ggplot(ls_fits_post_final, aes(x = age2, y = Sit)) +
+  labs(x = "With Family History")
+ggplot(ls_fits_post_final, aes(x = age2, y = Nonstanding)) +
   geom_point() +
   geom_smooth(method = "lm", se = F)
 ### Stand
-ggplot(ls_fits_post_final, aes(x = day3, y = Stand)) +
+ggplot(ls_fits_post_final, aes(x = day3, y = Standing)) +
   geom_boxplot() +
   labs(x = "Workday")
-ggplot(ls_fits_post_final, aes(x = fh123, y = Stand)) +
+ggplot(ls_fits_post_final, aes(x = fh_2, y = Standing)) +
   geom_boxplot() +
-  labs(x = "Number of Parents with Hypertension")
-ggplot(ls_fits_post_final, aes(x = age2, y = Stand)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = F)
-### Recline
-ggplot(ls_fits_post_final, aes(x = day3, y = Recline)) +
-  geom_boxplot() +
-  labs(x = "Workday")
-ggplot(ls_fits_post_final, aes(x = fh123, y = Recline)) +
-  geom_boxplot() +
-  labs(x = "Number of Parents with Hypertension")
-ggplot(ls_fits_post_final, aes(x = age2, y = Recline)) +
+  labs(x = "With Family History")
+ggplot(ls_fits_post_final, aes(x = age2, y = Standing)) +
   geom_point() +
   geom_smooth(method = "lm", se = F)
 
@@ -351,7 +396,7 @@ ls_fits_mood_final <- ls_fits_mood %>%
 ggplot(ls_fits_mood_final, aes(x = day3, y = Slope)) +
   geom_boxplot() +
   labs(x = "Workday")
-ggplot(ls_fits_mood_final, aes(x = fh123, y = Slope)) +
+ggplot(ls_fits_mood_final, aes(x = fh_2, y = Slope)) +
   geom_boxplot() +
   labs(x = "Number of Parents with Hypertension")
 ggplot(ls_fits_mood_final, aes(x = age2, y = Slope)) +
@@ -362,134 +407,65 @@ ggplot(ls_fits_mood_final, aes(x = age2, y = Slope)) +
 
 ## Model Selection
 
-### Saturated Model
-```{r Basic (Full) Model, cache=TRUE}
-nurse_lmm_full <- lmer(sys ~ (timepass + mnact5 + posture2) * (day2 + fh123) + mood + age + 
-                         (1 + timepass + mnact5 + posture2 | snum), 
+### Base Model (Random Intercept)
+
+```{r RI vs. SLR}
+nurse_lmm_RI <- lmer(sys ~ timepass + (1 | snum), data = nurse_filtered)
+summary(nurse_lmm_RI)
+
+nurse_lm <- lm(sys ~ timepass, data = nurse_filtered)
+summary(nurse_lm)
+
+
+(lrt_RI <- as.numeric(2*(logLik(nurse_lmm_RI, REML = TRUE) - 
+                            logLik(nurse_lm, REML = TRUE))))
+.5*(1-pchisq(lrt_RI, df = 0))+.5*(1-pchisq(lrt_RI, df = 1))
+```
+
+
+### Random Intercept with Level 1 Covariates
+
+```{r RI with Level 1 Covariates vs. RI}
+nurse_lmm_RI_lv1 <- lmer(sys ~ timepass + mnact5 + standing + mood + 
+                       (1 | snum), data = nurse_filtered)
+
+summary(nurse_lmm_RI_lv1)
+anova(nurse_lmm_RI, nurse_lmm_RI_lv1)
+```
+
+
+### Random Intercept and Slope
+
+```{r RIS with Mood RE}
+nurse_lmm_RIS_mood <- lmer(sys ~ timepass + mnact5 + standing + mood + 
+                       (1 + mood | snum), 
                        data = nurse_filtered)
+summary(nurse_lmm_RIS_mood)
 
-summary(nurse_lmm_full)
-
-nurse_lmm_2lv_full <- lmer(sys ~ (timepass + mnact5 + standing) * 
-                             (day2 + fh_yes) + mood + age + 
-                             (1 + timepass + mnact5 + standing | snum), 
-                           data = nurse_filtered)
-
-summary(nurse_lmm_2lv_full)
+(lrt_RIS_mood <- as.numeric(2*(logLik(nurse_lmm_RIS_mood, REML = TRUE) - 
+                            logLik(nurse_lmm_RI, REML = TRUE))))
+.5*(1-pchisq(lrt_RI, df = 1))+.5*(1-pchisq(lrt_RI, df = 2))
 ```
 
-### Fixed Effects
-```{r No Interaction, cache=TRUE}
+```{r RIS with Mood and Stand RE}
+nurse_lmm_RIS_mood_stand <- lmer(sys ~ timepass + mnact5 + standing + mood + 
+                       (1 + mood + standing | snum), 
+                       data = nurse_filtered)
+summary(nurse_lmm_RIS_mood_stand)
 
-nurse_lmm_2lv_no_int <- lmer(sys ~ (timepass + mnact5 + standing) + 
-                             (day2 + fh_yes) + mood + age + 
-                             (1 + timepass + mnact5 + standing | snum), 
-                           data = nurse_filtered)
-
-nurse_lmm_2lv_no_int_reorder <- lmer(sys ~ (timepass + mnact5 + standing + mood) + 
-                             (day2 + fh_yes + age) +
-                             (1 + timepass + mnact5 + standing | snum), 
-                           data = nurse_filtered)
-
-anova(nurse_lmm_2lv_no_int, nurse_lmm_2lv_full)
-anova(nurse_lmm_2lv_no_int_reorder, nurse_lmm_2lv_full) #WHY is this different?
+(lrt_RIS_mood_stand <- as.numeric(2*(logLik(nurse_lmm_RIS_mood_stand, REML = TRUE) - 
+                            logLik(nurse_lmm_RIS_mood, REML = TRUE))))
+.5*(1-pchisq(lrt_RIS_mood_stand, df = 2))+.5*(1-pchisq(lrt_RIS_mood_stand, df = 3))
 ```
 
-```{r No Workday or Family History, cache=TRUE}
-nurse_lmm_2lv_no_workHistory <- lmer(sys ~ (timepass + mnact5+ standing + mood) + age + 
-                                       (1 + timepass + mnact5 + standing | snum), 
-                           data = nurse_filtered)
+### Level 2 Covariates
 
-anova(nurse_lmm_2lv_no_workHistory, nurse_lmm_2lv_no_int)
-```
+```{r RI with Level 1 and 2 Covariates}
+nurse_lmm_RI_lv12 <- lmer(sys ~ timepass + mnact5 + standing + mood + 
+                           day2 + age + fh_2 +
+                       (1 | snum), data = nurse_filtered)
 
-### Random Effects - Boundary Claims
-```{r No Time RE, cache=TRUE}
-nurse_lmm_2lv_no_time <- lmer(sys ~ (timepass + mnact5 + standing + mood) + age + 
-                                       (1 + mnact5 + standing | snum), 
-                           data = nurse_filtered, REML = T)
-
-(lrt_no_time <- as.numeric(2*(logLik(nurse_lmm_2lv_no_workHistory) - logLik(nurse_lmm_2lv_no_time))))
-
-.5*(1-pchisq(lrt_no_time, df = 2))+.5*(1-pchisq(lrt_no_time, df = 3))
-```
-
-```{r No Activity RE, cache=TRUE}
-nurse_lmm_2lv_no_activity <- lmer(sys ~ (timepass + mnact5 + standing + mood) + age + 
-                                       (1 + timepass + standing | snum), 
-                           data = nurse_filtered, REML = T)
-
-(lrt_no_activity <- as.numeric(2*(logLik(nurse_lmm_2lv_no_time) - logLik(nurse_lmm_2lv_no_timeActivity))))
-
-.5*(1-pchisq(lrt_no_activity, df = 2))+.5*(1-pchisq(lrt_no_activity, df = 3))
-```
-
-```{r No Posture RE, cache=TRUE}
-nurse_lmm_2lv_no_posture <- lmer(sys ~ (timepass + mnact5 + standing + mood) + age + 
-                                       (1 + timepass + mnact5 | snum), 
-                           data = nurse_filtered, REML = T)
-
-(lrt_no_posture <- as.numeric(2*(logLik(nurse_lmm_2lv_no_workHistory) - logLik(nurse_lmm_2lv_no_posture))))
-
-.5*(1-pchisq(lrt_no_posture, df = 2))+.5*(1-pchisq(lrt_no_posture, df = 3))
-```
-
-```{r Bootstrap, cache=TRUE, eval=FALSE}
-(lrt_obs <- as.numeric(2*(logLik(nurse_lmm_2lv_no_workHistory, REML = TRUE) -
-                logLik(nurse_lmm_2lv_no_posture, REML = TRUE))))
-
-set.seed(54185214)
-
-Nsim <- 1000   
-lrt_sim <- rep(NA,Nsim) 
-
-nullY <- simulate(nurse_lmm_2lv_no_posture, nsim=Nsim) 
-count <- 0
-
-for (i in 1:Nsim){  
-  null_lmer <- refit(nurse_lmm_2lv_no_posture, nullY[, i])
-  alt_lmer <- refit(nurse_lmm_2lv_no_workHistory, nullY[, i])
-  lrt_sim[i] <- 2*(logLik(alt_lmer, REML = TRUE)-logLik(null_lmer, REML = TRUE)) 
-  count <- count + 1
-  print(count)
-}
-
-mean(lrt_sim > lrt_obs)       #P-value
-ggplot(data.frame(lrt_sim), aes(x=lrt_sim)) + 
-  geom_histogram(color = "white") + 
-  geom_vline(xintercept = lrt_obs, color = "red") 
-```
-
-### Random Effects - Interior Claim
-```{r No Correlation}
-nurse_lmm_2lv_no_corr <- lmer(sys ~ (timepass + mnact5 + standing + mood) + age + 
-                                       (1 + timepass + mnact5 || snum), 
-                           data = nurse_filtered, REML = T)
-
-anova(nurse_lmm_2lv_no_posture, nurse_lmm_2lv_no_corr, refit = FALSE)
-```
-
-```{r No Intercept vs. Time}
-nurse_lmm_2lv_no_intT <- lmer(sys ~ (timepass + mnact5 + standing + mood) + age + 
-                                       (1 + mnact5 | snum) + (0 + timepass | snum), 
-                           data = nurse_filtered, REML = T)
-
-anova(nurse_lmm_2lv_no_posture, nurse_lmm_2lv_no_intT, refit = FALSE)
-```
-
-```{r No Intercept vs. Activity}
-nurse_lmm_2lv_no_intA <- lmer(sys ~ (timepass + mnact5 + standing + mood) + age + 
-                                       (1 + timepass | snum) + (0 + mnact5 | snum), 
-                           data = nurse_filtered, REML = T)
-
-anova(nurse_lmm_2lv_no_posture, nurse_lmm_2lv_no_intA, refit = FALSE)
-```
-
-```{r No Time vs. Activity}
-nurse_lmm_2lv_no_TA <- lmer(sys ~ (timepass + mnact5 + standing + mood) + age + 
-                                       (1 + timepass | snum) + (1 + mnact5 | snum), 
-                           data = nurse_filtered, REML = T)
-
-anova(nurse_lmm_2lv_no_posture, nurse_lmm_2lv_no_TA, refit = FALSE)
+summary(nurse_lmm_RI_lv12)
+anova(nurse_lmm_RI_lv1, nurse_lmm_RI_lv12)
 ```
 

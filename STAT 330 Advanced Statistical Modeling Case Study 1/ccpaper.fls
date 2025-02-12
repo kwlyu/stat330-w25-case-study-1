@@ -605,6 +605,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ts1-lmr10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ts1-lmr7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
@@ -615,5 +617,7 @@ INPUT ./ccpaper.out
 INPUT ./ccpaper.out
 INPUT ccpaper.run.xml
 OUTPUT ccpaper.run.xml
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb
