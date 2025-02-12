@@ -535,6 +535,14 @@ nurse_lmm_RIS_day_fh_noint <- lmer(sys ~ day2 * timepass + fh_yes +
 anova(nurse_lmm_RIS_day_fh, nurse_lmm_RIS_day_fh_noint)
 ```
 
+```{r Correlation}
+nurse_lmm_RIS_day_fh_nocorr <- lmer(sys ~ (day2 + fh_yes) * timepass + 
+                                    standing + mnact5  + mood + 
+                       (1 + mood + standing || snum),
+                       data = nurse_filtered)
+anova(nurse_lmm_RIS_day_fh, nurse_lmm_RIS_day_fh_nocorr, refit = FALSE)
+```
+
 
 ## Model Diagnostics
 
@@ -643,6 +651,206 @@ ggplot(data = nurse_resid1_loglog, aes(x = mood, y = .chol.mar.resid)) +
 ```
 
 ```{r Conditional (Raw) Residuals}
+ggplot(data = nurse_resid1, aes(x = .mar.fitted, y = .std.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Fitted Conditional Means",
+       y = "Conditional Residuals") 
+ggplot(data = nurse_resid1, aes(x = timepass, y = .std.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Minutes since first measurement",
+       y = "Conditional Residuals")
+ggplot(data = nurse_resid1, aes(x = as.factor(standing), y = .std.resid)) + 
+  geom_boxplot() + 
+  # geom_smooth() +
+  labs(x = "Standing vs. Not standing",
+       y = "Conditional Residuals")
+ggplot(data = nurse_resid1, aes(x = mnact5, y = .std.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Activity Level",
+       y = "Conditional Residuals")
+ggplot(data = nurse_resid1, aes(x = mood, y = .std.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Mood",
+       y = "Conditional Residuals")
+
+ggplot(nurse_resid1, aes(sample = .std.resid)) +
+  stat_qq_line()+ 
+  stat_qq()
+```
+
+```{r Least Square Residuals}
+ggplot(data = nurse_resid1, aes(x = .mar.fitted, y = .std.ls.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Fitted Values",
+       y = "LS Residuals") 
+ggplot(data = nurse_resid1, aes(x = timepass, y = .std.ls.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Minutes since first measurement",
+       y = "LS Residuals")
+ggplot(data = nurse_resid1, aes(x = as.factor(standing), y = .std.ls.resid)) + 
+  geom_boxplot() + 
+  # geom_smooth() +
+  labs(x = "Standing vs. Not standing",
+       y = "LS Residuals")
+ggplot(data = nurse_resid1, aes(x = mnact5, y = .std.ls.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Activity Level",
+       y = "LS Residuals")
+ggplot(data = nurse_resid1, aes(x = mood, y = .std.ls.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Mood",
+       y = "LS Residuals")
+
+ggplot(nurse_resid1, aes(sample = .std.ls.resid)) +
+  stat_qq_line()+ 
+  stat_qq()
+ggplot(nurse_resid1, aes(x = as.factor(snum), y = .std.ls.resid)) +
+  geom_boxplot() +
+  geom_hline(yintercept = 0) +
+  labs(x = "Subject ID",
+       y = "LS Residuals") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+```
+
+```{r Level 2 Random Effects}
+ggplot(nurse_resid2, aes(sample = .ranef.intercept)) +
+  stat_qq_line()+ 
+  stat_qq()
+ggplot(nurse_resid2, aes(sample = .ranef.mood)) +
+  stat_qq_line()+ 
+  stat_qq()
+ggplot(nurse_resid2, aes(sample = .ranef.standing1)) +
+  stat_qq_line()+ 
+  stat_qq()
+
+nurse_age_phase <- nurse_filtered %>% 
+  mutate(snum = as.character(snum)) %>% 
+  group_by(snum) %>%
+  summarize(nurse_age = first(age24),
+            nurse_phase = first(phase)) %>% 
+  left_join(nurse_resid2, by = "snum")
+
+## Intercept
+ggplot(nurse_age_phase, aes(x = as.factor(nurse_age), y = .ranef.intercept)) +
+  geom_boxplot() + 
+  geom_hline(yintercept = 0) +
+  geom_smooth(method = "lm", se=TRUE, aes(group=1)) +
+  labs(title = "RE intercept vs Centered Age",
+       x = "Centered Age",
+       y = " RE Intercept")
+ggplot(nurse_age_phase, aes(x = nurse_phase, y = .ranef.intercept)) +
+  geom_boxplot() +
+  geom_hline(yintercept = 0) +
+  labs(title = "RE intercept vs Centered Age",
+       x = "Menstrual Phase",
+       y = " RE Intercept")
+
+```
+
+
+### Influential Statistics
+
+```{r Compute cache=TRUE}
+nurse_infl2 <- hlm_influence(final_model, level = "snum", approx = FALSE, # includes RVC
+                             leverage = c("overall", "fixef", "ranef.uc"))
+```
+
+```{r Cook's Distance}
+dotplot_diag(nurse_infl2$cooksd, name = "cooks.distance", cutoff = "internal")
+
+cd_flagged <- nurse_infl2 %>% 
+  arrange(desc(cooksd)) %>% 
+  slice(1:3) %>% 
+  pull(snum)
+
+ggplot(nurse_filtered, aes(x = timepass, y = sys))+
+  geom_point() + 
+  geom_point(data = nurse_filtered %>% filter(snum %in% cd_flagged), color = "red") +
+  geom_smooth(method = "lm", se = F) +
+  facet_grid(rows = vars(day3), cols = vars(fh_2))
+```
+
+```{r RVC}
+dotplot_diag(nurse_infl2$rvc.D11, name = "rvc", cutoff = "internal", modify = "boxplot")
+dotplot_diag(nurse_infl2$rvc.D22, name = "rvc", cutoff = "internal", modify = "boxplot")
+dotplot_diag(nurse_infl2$rvc.D33, name = "rvc", cutoff = "internal", modify = "boxplot")
+
+# rvc1_flagged <- nurse_infl2 %>% 
+#   arrange(rvc.D11) %>% 
+#   slice(1:3)
+# rvc2_flagged <- nurse_infl2 %>% 
+#   arrange(rvc.D22) %>% 
+#   slice(1) %>% 
+#   full_join(rvc1_flagged)
+# rvc3_flagged <- nurse_infl2 %>% 
+#   arrange(rvc.D33) %>% 
+#   slice(1:2) %>% 
+#   full_join(rvc2_flagged) %>% 
+#   pull(snum)
+
+rvc1_flagged <- nurse_infl2 %>%
+  arrange(rvc.D11) %>%
+  slice(1:3) %>%
+  pull(snum)
+rvc2_flagged <- nurse_infl2 %>%
+  arrange(rvc.D22) %>%
+  slice(1) %>%
+  pull(snum)
+rvc3_flagged <- nurse_infl2 %>%
+  arrange(rvc.D33) %>%
+  slice(1:2) %>%
+  pull(snum)
+
+ggplot(nurse_filtered, aes(x = timepass, y = sys))+
+  geom_point() + 
+  geom_point(data = nurse_filtered %>% filter(snum %in% rvc1_flagged), color = "red") +
+  geom_smooth(method = "lm", se = F) +
+  facet_grid(rows = vars(day3), cols = vars(fh_2))
+ggplot(nurse_filtered, aes(x = timepass, y = sys))+
+  geom_point() + 
+  geom_point(data = nurse_filtered %>% filter(snum %in% rvc2_flagged), color = "red") +
+  geom_smooth(method = "lm", se = F) +
+  facet_grid(rows = vars(day3), cols = vars(fh_2))
+ggplot(nurse_filtered, aes(x = timepass, y = sys))+
+  geom_point() + 
+  geom_point(data = nurse_filtered %>% filter(snum %in% rvc3_flagged), color = "red") +
+  geom_smooth(method = "lm", se = F) +
+  facet_grid(rows = vars(day3), cols = vars(fh_2))
+```
+
+```{r Leverage}
+dotplot_diag(nurse_infl2$leverage.overall, name = "leverage", cutoff = "internal", modify = "boxplot")
+dotplot_diag(nurse_infl2$leverage.fixef, name = "leverage", cutoff = "internal", modify = "boxplot")
+dotplot_diag(nurse_infl2$leverage.ranef.uc, name = "leverage", cutoff = "internal", modify = "boxplot")
+
+ggplot(nurse_filtered, aes(x = timepass, y = sys))+
+  geom_point() + 
+  geom_point(data = nurse_filtered %>% filter(snum == 1062 | snum == 1226), color = "red") +
+  geom_smooth(method = "lm", se = F) +
+  facet_grid(rows = vars(day3), cols = vars(fh_2))
+```
+
+
+## Effects Interpretation
+
+### Confidence Intervals
+
+```{r}
+
+```
+
+
+### Effects Plots
+
+```{r}
 
 ```
 
