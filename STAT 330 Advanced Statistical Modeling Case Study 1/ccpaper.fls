@@ -655,10 +655,71 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ts1-lmr8.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ts1-lmr6.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
+INPUT ./pics/miss.png
+INPUT ./pics/miss.png
+INPUT ./pics/miss.png
+INPUT ./pics/miss.png
+INPUT ./pics/miss.png
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT ./pics/bp by subjects.png
+INPUT ./pics/bp by subjects.png
+INPUT ./pics/bp by subjects.png
+INPUT ./pics/bp by subjects.png
+INPUT ./pics/bp by subjects.png
+INPUT ./pics/bp v time by subj.png
+INPUT ./pics/bp v time by subj.png
+INPUT ./pics/bp v time by subj.png
+INPUT ./pics/bp v time by subj.png
+INPUT ./pics/bp v time by subj.png
+INPUT ./pics/BP v time LS.png
+INPUT ./pics/BP v time LS.png
+INPUT ./pics/BP v time LS.png
+INPUT ./pics/BP v time LS.png
+INPUT ./pics/BP v time LS.png
+INPUT ./pics/bp v act.png
+INPUT ./pics/bp v act.png
+INPUT ./pics/bp v act.png
+INPUT ./pics/bp v act.png
+INPUT ./pics/bp v act.png
+INPUT ./pics/bp v mood.png
+INPUT ./pics/bp v mood.png
+INPUT ./pics/bp v mood.png
+INPUT ./pics/bp v mood.png
+INPUT ./pics/bp v mood.png
+INPUT ./pics/bp v stand.png
+INPUT ./pics/bp v stand.png
+INPUT ./pics/bp v stand.png
+INPUT ./pics/bp v stand.png
+INPUT ./pics/bp v stand.png
+INPUT ./pics/bp v phase.png
+INPUT ./pics/bp v phase.png
+INPUT ./pics/bp v phase.png
+INPUT ./pics/bp v phase.png
+INPUT ./pics/bp v phase.png
+INPUT ./pics/bp v day.png
+INPUT ./pics/bp v day.png
+INPUT ./pics/bp v day.png
+INPUT ./pics/bp v day.png
+INPUT ./pics/bp v day.png
+INPUT ./pics/bp v age.png
+INPUT ./pics/bp v age.png
+INPUT ./pics/bp v age.png
+INPUT ./pics/bp v age.png
+INPUT ./pics/bp v age.png
+INPUT ./pics/bp v fh.png
+INPUT ./pics/bp v fh.png
+INPUT ./pics/bp v fh.png
+INPUT ./pics/bp v fh.png
+INPUT ./pics/bp v fh.png
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
@@ -677,9 +738,11 @@ INPUT ccpaper.run.xml
 OUTPUT ccpaper.run.xml
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt12.pfb

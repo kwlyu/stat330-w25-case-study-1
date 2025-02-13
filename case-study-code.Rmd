@@ -102,7 +102,7 @@ nurse_bysubject <- nurse_filtered %>%
   summarize(
     mean_sys = mean(sys),
     phase3 = first(phase3), day3 = first(day3), 
-    age2 = first(age24), fh_2 = first(fh_2)
+    age2 = first(age24), fh_2 = first(fh_2), fh123 = first(fh123)
   )
 
 ```
@@ -118,7 +118,9 @@ ggplot(nurse_small,
        aes(x = timepass, y = sys)) + 
   geom_point() +
   geom_line() + 
-  facet_wrap(~snum)
+  facet_wrap(~snum) +
+  labs(x = "Minutes since first measurement",
+       y = "BP")
 
 ggplot(nurse_filtered, aes(x = as.factor(snum), y = sys)) +
   geom_boxplot() +
@@ -218,6 +220,11 @@ ggplot(nurse_bysubject, aes(x = day3, y = mean_sys)) +
 ggplot(nurse_bysubject, aes(x = fh_2, y = mean_sys)) +
   geom_boxplot() + 
   labs(x = "With Family History",
+       y = "Average Systolic Blood Pressure")
+
+ggplot(nurse_bysubject, aes(x = as.factor(age2), y = mean_sys)) +
+  geom_boxplot(show.legend = F) + 
+  labs(x = "Age",
        y = "Average Systolic Blood Pressure")
 
 ## By age

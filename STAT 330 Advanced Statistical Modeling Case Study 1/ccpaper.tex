@@ -200,7 +200,7 @@ The dataset includes repeated measures over the course of two work and off-work 
 
 \section{Exploratory Data Analysis}
 
-The variables (original and re-parameterized) used in this project are given in \Cref{tab: var desc}.
+The variables (original and re-parameterized) used in this project are given in \Cref{tab: var desc}. Variable missingness was explored in \Cref{fig: missing}. We see that the data were missing primarily mood ratings and some activity levels from several participants. Because I am interested in how both of these variables relate to BP, I will proceed the analysis with the missing rows removed, leaving us with a total of 172 participants and 7877 observations. The visuals and statistics below will be given in terms of that subset of the data, unless otherwise specified.
 
 \begin{table}[H]
     \centering\begin{tabular}{|p{0.2\linewidth} | p{0.65\linewidth}|}
@@ -235,15 +235,140 @@ The variables (original and re-parameterized) used in this project are given in 
         \hline
         \emph{\textcolor[RGB]{74, 144, 226}{FH}} & Indicator variable for having family history of hypertension (1 for YES and YESYES, 0 for NO) \\
         \hline
+        \emph{\textcolor[RGB]{74, 144, 226}{Age24}} & Recentered Age: Age - 24 \\
+        \hline
         \multicolumn{2}{c}{\footnotesize Note: \emph{emphasis} added to re-parameterized variables; colors represent levels.}
     \end{tabular}
     \caption{Variable Descrptions}
     \label{tab: var desc}
 \end{table}
 
-Because of the longitudinal nature of our data, it is worth noting our levels of analysis and to which our variables belong. I will call time-dependent measurements \emph{\textcolor[RGB]{208, 2, 27}{Level 1}} data (variables) and the rest of the subject-level measurements \emph{\textcolor[RGB]{74, 144, 226}{Level 2}} data (variables). 
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{pics/miss.png}
+\caption{Data Missingness}
+\label{fig: missing}
+\end{figure}
 
-\subsection{}
+Because of the longitudinal nature of our data, it is worth noting our levels of analysis and to which our variables belong. I will call time-dependent measurements \emph{\textcolor[RGB]{208, 2, 27}{Level 1}} data (variables) and the rest of the subject-level measurements \emph{\textcolor[RGB]{74, 144, 226}{Level 2}} data (variables). Each participant has a unique identification number; this will distinguish between different clusters. Our primary response is systolic blood pressure (BP), and I will use our exploratory data analysis below to guide our model selection process from the bottom-up.
+
+Note that I created three additional variables from the original dataset to help simplify the modeling process. In the original dataset, \texttt{Posture} is a factor variable with three levels: Recline ($n = 530$), Sit ($n = 3644$), and Stand ($n = 3703$). Because the relatively small number of observations where participants were reclining (presumably sleeping at night or resting), I collapsed the three levels into either Standing or non-Standing. Similarly, because of the relatively small number of participants have both parents with hypertension ($n = 13$), I collapsed it together with having one parent with hypertension ($n = 66$) to compare against those without any family history ($n = 103$). Lastly, a general \texttt{Mood} measurement was created by subtracting the average of tiredness and stress from happiness. 
+
+\subsection{Level 1 by Clusters}
+
+I will first explore how BP vary among participants and how it relates to the level 1 predictors to examine if there is any sign of clustering between different participants (which is the premise of a longitudinal study). From \Cref{fig: bp by subjects}, we see that BP readings do tend to vary among different participants, though variations within each participant do not seem to be pronounced. This suggests that a Linear Mixed Model (LMM) might be more appropriate than a regular Multiple Linear Regression (MLR).
+
+Since our data is ordered in time, one might be interested in answering how the participants' BP evolve over time. For sake of brevity, I show a random subsets of subjects and their BP readings over time in \Cref{fig: bp v time facet}. From this plot alone, not much could be deciphered; some trends (e.g., participant 1116) seem to decrease over time while others either slightly increase (e.g., participant 1267) or do not see much fluctuation overall. Indeed, when I fit separate linear smoothers for each participant, I see various different intercepts and slopes for each participant (see \Cref{fig: bp v time separate ls}). This suggests that a random effect for both the intercept and slope of time.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{pics/bp by subjects.png}
+\caption{BP by Subjects}
+\label{fig: bp by subjects}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.475\textwidth}
+\centering
+\includegraphics[width=\textwidth]{pics/bp v time by subj.png}
+\caption[]%
+{{\small BP vs. Time Passed by Subjects}}
+\label{fig: bp v time facet}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.475\textwidth}
+\centering
+\includegraphics[width=\textwidth]{pics/BP v time LS.png}
+\caption[]%
+{{\small BP vs. Time Passed Separate Lines}}
+\label{fig: bp v time separate ls}
+\end{subfigure}
+\caption[]
+{\small BP vs. Minutes since first measurement}
+\label{fig: bp v time}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.29\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/bp v act.png}
+    \caption[]%
+    {{\small BP vs. Activity Level by Subjects}}
+    \label{fig: bp v act}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.29\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/bp v mood.png}
+    \caption[]%
+    {{\small BP vs. Mood by Subjects}}
+    \label{fig: bp v mood}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.29\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/bp v stand.png}
+    \caption[]%
+    {{\small BP vs. Posture by Subjects}}
+    \label{fig: bp v stand}
+    \end{subfigure}
+    \caption[]
+    {\small BP vs. Level 1}
+    \label{fig: bp v level1}
+    \end{figure}
+
+We perform similar analysis for other level 1 covariates (see \Cref{fig: bp v level1}). We see the most prominent effect in \texttt{Mood}, where the slopes and intercepts for each participant differs the most. They all show, to a certain extend, signs of varying slopes and intercepts, but I cannot definitely conclude anything at this point.
+
+\subsection{Level 2 Covariates}
+
+We then want to understand the distributions of our level two covairates before we look at any interactions between the two levels. Because our level 2 covariates contains the same measurement over time (whereas our primary response \texttt{BP} is level 1 and hence time-dependent), we will compare the level 2 covariates with the \emph{average} \texttt{BP} of a given participant.
+
+
+
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.475\textwidth}
+\centering
+\includegraphics[width=\textwidth]{pics/bp v phase.png}
+\caption[]%
+{{\small Avg BP vs. Menstrual Phase}}
+\label{fig: bp v phase}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.475\textwidth}
+\centering
+\includegraphics[width=\textwidth]{pics/bp v day.png}
+\caption[]%
+{{\small Avg BP vs. Workday}}
+\label{fig: bp v day}
+\end{subfigure}
+\vskip\baselineskip
+\begin{subfigure}[b]{0.475\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/bp v age.png}
+    \caption[]%
+    {{\small Avg BP vs. Age}}
+    \label{fig: }
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.475\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/bp v fh.png}
+    \caption[]%
+    {{\small }}
+    \label{fig: }
+    \end{subfigure}
+\caption[]
+{\small Average BP vs. Level 2 Covariates}
+\label{fig: bp v level2}
+\end{figure}
+
+\subsection{Level 1 by Level 2 Covariates}
+
+Next we investigate whether our level 1 covariates depend, in any way, on our level 2 covariates. 
 
 \section{Model Selection}
 

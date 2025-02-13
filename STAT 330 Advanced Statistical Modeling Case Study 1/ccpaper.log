@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  12 FEB 2025 18:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  12 FEB 2025 20:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1441,7 +1441,20 @@ Package csquotes Info: ... found 'babel' package.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 173.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./ccpaper.aux)
+) (./ccpaper.aux
+
+LaTeX Warning: Label `fig: ' multiply defined.
+
+
+LaTeX Warning: Label `fig: @cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig: ' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig: @cref' multiply defined.
+
+)
 \openout1 = `ccpaper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 173.
@@ -1666,37 +1679,105 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+<pics/miss.png, id=66, 4818.0pt x 2710.125pt>
+File: pics/miss.png Graphic file (type png)
+<use pics/miss.png>
+Package pdftex.def Info: pics/miss.png  used on input line 248.
+(pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 255.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [2] [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc} <./pics/miss.png>]
+<pics/bp by subjects.png, id=88, 4818.0pt x 2710.125pt>
+File: pics/bp by subjects.png Graphic file (type png)
+<use pics/bp by subjects.png>
+Package pdftex.def Info: pics/bp by subjects.png  used on input line 265.
+(pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
+<pics/bp v time by subj.png, id=89, 2677.00125pt x 2456.17625pt>
+File: pics/bp v time by subj.png Graphic file (type png)
+<use pics/bp v time by subj.png>
+Package pdftex.def Info: pics/bp v time by subj.png  used on input line 274.
+(pdftex.def)             Requested size: 223.13649pt x 204.70584pt.
+<pics/BP v time LS.png, id=90, 1071.00125pt x 982.67125pt>
+File: pics/BP v time LS.png Graphic file (type png)
+<use pics/BP v time LS.png>
+Package pdftex.def Info: pics/BP v time LS.png  used on input line 282.
+(pdftex.def)             Requested size: 223.13649pt x 204.73267pt.
+<pics/bp v act.png, id=91, 1071.00125pt x 982.67125pt>
+File: pics/bp v act.png Graphic file (type png)
+<use pics/bp v act.png>
+Package pdftex.def Info: pics/bp v act.png  used on input line 297.
+(pdftex.def)             Requested size: 136.2258pt x 124.97778pt.
+<pics/bp v mood.png, id=92, 1071.00125pt x 982.67125pt>
+File: pics/bp v mood.png Graphic file (type png)
+<use pics/bp v mood.png>
+Package pdftex.def Info: pics/bp v mood.png  used on input line 305.
+(pdftex.def)             Requested size: 136.2258pt x 124.97778pt.
+<pics/bp v stand.png, id=93, 1071.00125pt x 982.67125pt>
+File: pics/bp v stand.png Graphic file (type png)
+<use pics/bp v stand.png>
+Package pdftex.def Info: pics/bp v stand.png  used on input line 313.
+(pdftex.def)             Requested size: 136.2258pt x 124.97778pt.
+<pics/bp v phase.png, id=95, 1071.00125pt x 982.67125pt>
+File: pics/bp v phase.png Graphic file (type png)
+<use pics/bp v phase.png>
+Package pdftex.def Info: pics/bp v phase.png  used on input line 335.
+(pdftex.def)             Requested size: 223.13649pt x 204.73267pt.
+<pics/bp v day.png, id=96, 1071.00125pt x 982.67125pt>
+File: pics/bp v day.png Graphic file (type png)
+<use pics/bp v day.png>
+Package pdftex.def Info: pics/bp v day.png  used on input line 343.
+(pdftex.def)             Requested size: 223.13649pt x 204.73267pt.
+<pics/bp v age.png, id=97, 1071.00125pt x 982.67125pt>
+File: pics/bp v age.png Graphic file (type png)
+<use pics/bp v age.png>
+Package pdftex.def Info: pics/bp v age.png  used on input line 351.
+(pdftex.def)             Requested size: 223.13649pt x 204.73267pt.
+<pics/bp v fh.png, id=98, 1071.00125pt x 982.67125pt>
+File: pics/bp v fh.png Graphic file (type png)
+<use pics/bp v fh.png>
+Package pdftex.def Info: pics/bp v fh.png  used on input line 359.
+(pdftex.def)             Requested size: 223.13649pt x 204.73267pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 257.
+(Font)              <10.95> on input line 382.
 
-Overfull \hbox (17.56969pt too wide) in paragraph at lines 259--259
+Overfull \hbox (17.56969pt too wide) in paragraph at lines 384--384
 \T1/lmr/m/n/10.95 (-20) ten-sion and per-son-al-ity [Pub-lisher: Tay-lor & Fran-cis _eprint: https://doi.org/10.1080/713690197].
  []
 
-[2] [3] (./ccpaper.aux)
+[4 <./pics/bp by subjects.png>] [5 <./pics/bp v time by subj.png> <./pics/BP v time LS.png> <./pics/bp v act.png> <./pics/bp v mood.png> <./pics/bp v stand.png>] [6 <./pics/bp v phase.png> <./pics/bp v day.png> <./pics/bp v age.png> <./pics/bp v fh.png>] [7] (./ccpaper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `ccpaper.out' has not changed.
-(rerunfilecheck)             Checksum: 3055182788C90D157F12ECDF6A6620D5;617.
+(rerunfilecheck)             Checksum: DED51B9D4BD09C5E82B666EB2D39A3C4;1099.
 Package logreq Info: Writing requests to 'ccpaper.run.xml'.
 \openout1 = `ccpaper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57154 strings out of 474116
- 1275904 string characters out of 5743682
- 2923498 words of memory out of 5000000
- 78452 multiletter control sequences out of 15000+600000
- 662310 words of font info for 214 fonts, out of 8000000 for 9000
+ 57378 strings out of 474116
+ 1280344 string characters out of 5743682
+ 2920894 words of memory out of 5000000
+ 78631 multiletter control sequences out of 15000+600000
+ 663898 words of font info for 229 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  121i,10n,126p,18415b,5370s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on ccpaper.pdf (3 pages, 199155 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on ccpaper.pdf (7 pages, 3899883 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 69693 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 194 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 70276 words of extra memory for PDF output out of 74296 (max. 10000000)
 
