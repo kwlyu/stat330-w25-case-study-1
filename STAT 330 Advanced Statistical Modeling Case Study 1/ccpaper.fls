@@ -668,13 +668,13 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
+INPUT ./pics/bp by subjects.png
+INPUT ./pics/bp by subjects.png
+INPUT ./pics/bp by subjects.png
+INPUT ./pics/bp by subjects.png
+INPUT ./pics/bp by subjects.png
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
-INPUT ./pics/bp by subjects.png
-INPUT ./pics/bp by subjects.png
-INPUT ./pics/bp by subjects.png
-INPUT ./pics/bp by subjects.png
-INPUT ./pics/bp by subjects.png
 INPUT ./pics/bp v time by subj.png
 INPUT ./pics/bp v time by subj.png
 INPUT ./pics/bp v time by subj.png
@@ -720,6 +720,156 @@ INPUT ./pics/bp v fh.png
 INPUT ./pics/bp v fh.png
 INPUT ./pics/bp v fh.png
 INPUT ./pics/bp v fh.png
+INPUT ./pics/bp by day and fh.png
+INPUT ./pics/bp by day and fh.png
+INPUT ./pics/bp by day and fh.png
+INPUT ./pics/bp by day and fh.png
+INPUT ./pics/bp by day and fh.png
+INPUT ./pics/bp v time and day.png
+INPUT ./pics/bp v time and day.png
+INPUT ./pics/bp v time and day.png
+INPUT ./pics/bp v time and day.png
+INPUT ./pics/bp v time and day.png
+INPUT ./pics/bp v act and day.png
+INPUT ./pics/bp v act and day.png
+INPUT ./pics/bp v act and day.png
+INPUT ./pics/bp v act and day.png
+INPUT ./pics/bp v act and day.png
+INPUT ./pics/bp v stand and day.png
+INPUT ./pics/bp v stand and day.png
+INPUT ./pics/bp v stand and day.png
+INPUT ./pics/bp v stand and day.png
+INPUT ./pics/bp v stand and day.png
+INPUT ./pics/bp v mood and day.png
+INPUT ./pics/bp v mood and day.png
+INPUT ./pics/bp v mood and day.png
+INPUT ./pics/bp v mood and day.png
+INPUT ./pics/bp v mood and day.png
+INPUT ./pics/bp v time and fh.png
+INPUT ./pics/bp v time and fh.png
+INPUT ./pics/bp v time and fh.png
+INPUT ./pics/bp v time and fh.png
+INPUT ./pics/bp v time and fh.png
+INPUT ./pics/bp v act and fh.png
+INPUT ./pics/bp v act and fh.png
+INPUT ./pics/bp v act and fh.png
+INPUT ./pics/bp v act and fh.png
+INPUT ./pics/bp v act and fh.png
+INPUT ./pics/bp v stand and fh.png
+INPUT ./pics/bp v stand and fh.png
+INPUT ./pics/bp v stand and fh.png
+INPUT ./pics/bp v stand and fh.png
+INPUT ./pics/bp v stand and fh.png
+INPUT ./pics/bp v mood and fh.png
+INPUT ./pics/bp v mood and fh.png
+INPUT ./pics/bp v mood and fh.png
+INPUT ./pics/bp v mood and fh.png
+INPUT ./pics/bp v mood and fh.png
+INPUT ./pics/mlr int by age.png
+INPUT ./pics/mlr int by age.png
+INPUT ./pics/mlr int by age.png
+INPUT ./pics/mlr int by age.png
+INPUT ./pics/mlr int by age.png
+INPUT ./pics/mlr int by day.png
+INPUT ./pics/mlr int by day.png
+INPUT ./pics/mlr int by day.png
+INPUT ./pics/mlr int by day.png
+INPUT ./pics/mlr int by day.png
+INPUT ./pics/mlr int by fh.png
+INPUT ./pics/mlr int by fh.png
+INPUT ./pics/mlr int by fh.png
+INPUT ./pics/mlr int by fh.png
+INPUT ./pics/mlr int by fh.png
+INPUT ./pics/mlr time by age.png
+INPUT ./pics/mlr time by age.png
+INPUT ./pics/mlr time by age.png
+INPUT ./pics/mlr time by age.png
+INPUT ./pics/mlr time by age.png
+INPUT ./pics/mlr time by day.png
+INPUT ./pics/mlr time by day.png
+INPUT ./pics/mlr time by day.png
+INPUT ./pics/mlr time by day.png
+INPUT ./pics/mlr time by day.png
+INPUT ./pics/mlr time by fh.png
+INPUT ./pics/mlr time by fh.png
+INPUT ./pics/mlr time by fh.png
+INPUT ./pics/mlr time by fh.png
+INPUT ./pics/mlr time by fh.png
+INPUT ./pics/mlr act by age.png
+INPUT ./pics/mlr act by age.png
+INPUT ./pics/mlr act by age.png
+INPUT ./pics/mlr act by age.png
+INPUT ./pics/mlr act by age.png
+INPUT ./pics/mlr act by day.png
+INPUT ./pics/mlr act by day.png
+INPUT ./pics/mlr act by day.png
+INPUT ./pics/mlr act by day.png
+INPUT ./pics/mlr act by day.png
+INPUT ./pics/mlr act by fh.png
+INPUT ./pics/mlr act by fh.png
+INPUT ./pics/mlr act by fh.png
+INPUT ./pics/mlr act by fh.png
+INPUT ./pics/mlr act by fh.png
+INPUT ./pics/mlr stand by age.png
+INPUT ./pics/mlr stand by age.png
+INPUT ./pics/mlr stand by age.png
+INPUT ./pics/mlr stand by age.png
+INPUT ./pics/mlr stand by age.png
+INPUT ./pics/mlr stand by day.png
+INPUT ./pics/mlr stand by day.png
+INPUT ./pics/mlr stand by day.png
+INPUT ./pics/mlr stand by day.png
+INPUT ./pics/mlr stand by day.png
+INPUT ./pics/mlr stand by fh.png
+INPUT ./pics/mlr stand by fh.png
+INPUT ./pics/mlr stand by fh.png
+INPUT ./pics/mlr stand by fh.png
+INPUT ./pics/mlr stand by fh.png
+INPUT ./pics/mlr mood by age.png
+INPUT ./pics/mlr mood by age.png
+INPUT ./pics/mlr mood by age.png
+INPUT ./pics/mlr mood by age.png
+INPUT ./pics/mlr mood by age.png
+INPUT ./pics/mlr mood by day.png
+INPUT ./pics/mlr mood by day.png
+INPUT ./pics/mlr mood by day.png
+INPUT ./pics/mlr mood by day.png
+INPUT ./pics/mlr mood by day.png
+INPUT ./pics/mlr mood by fh.png
+INPUT ./pics/mlr mood by fh.png
+INPUT ./pics/mlr mood by fh.png
+INPUT ./pics/mlr mood by fh.png
+INPUT ./pics/mlr mood by fh.png
+INPUT ./pics/bp by age and day.png
+INPUT ./pics/bp by age and day.png
+INPUT ./pics/bp by age and day.png
+INPUT ./pics/bp by age and day.png
+INPUT ./pics/bp by age and day.png
+INPUT ./pics/bp by age and fh.png
+INPUT ./pics/bp by age and fh.png
+INPUT ./pics/bp by age and fh.png
+INPUT ./pics/bp by age and fh.png
+INPUT ./pics/bp by age and fh.png
+INPUT ./pics/bp by age and phase.png
+INPUT ./pics/bp by age and phase.png
+INPUT ./pics/bp by age and phase.png
+INPUT ./pics/bp by age and phase.png
+INPUT ./pics/bp by age and phase.png
+INPUT ./pics/bp by id and age.png
+INPUT ./pics/bp by id and age.png
+INPUT ./pics/bp by id and age.png
+INPUT ./pics/bp by id and age.png
+INPUT ./pics/bp by id and age.png
+INPUT ./pics/bp by id and day.png
+INPUT ./pics/bp by id and day.png
+INPUT ./pics/bp by id and day.png
+INPUT ./pics/bp by id and day.png
+INPUT ./pics/bp by id and day.png
+INPUT ./pics/bp by id and fh.png
+INPUT ./pics/bp by id and fh.png
+INPUT ./pics/bp by id and fh.png
+INPUT ./pics/bp by id and fh.png
+INPUT ./pics/bp by id and fh.png
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm

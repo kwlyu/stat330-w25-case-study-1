@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  12 FEB 2025 20:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  13 FEB 2025 00:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1443,16 +1443,16 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 173
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./ccpaper.aux
 
-LaTeX Warning: Label `fig: ' multiply defined.
+LaTeX Warning: Label `fig: int v fh' multiply defined.
 
 
-LaTeX Warning: Label `fig: @cref' multiply defined.
+LaTeX Warning: Label `fig: int v fh@cref' multiply defined.
 
 
-LaTeX Warning: Label `sub@fig: ' multiply defined.
+LaTeX Warning: Label `sub@fig: int v fh' multiply defined.
 
 
-LaTeX Warning: Label `sub@fig: @cref' multiply defined.
+LaTeX Warning: Label `sub@fig: int v fh@cref' multiply defined.
 
 )
 \openout1 = `ccpaper.aux'.
@@ -1679,11 +1679,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-<pics/miss.png, id=66, 4818.0pt x 2710.125pt>
+<pics/miss.png, id=78, 2258.4375pt x 1254.6875pt>
 File: pics/miss.png Graphic file (type png)
 <use pics/miss.png>
 Package pdftex.def Info: pics/miss.png  used on input line 248.
-(pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
+(pdftex.def)             Requested size: 469.75502pt x 260.96501pt.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 255.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1692,65 +1692,231 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [2] [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc} <./pics/miss.png>]
+
+Underfull \vbox (badness 1874) has occurred while \output is active []
+
+ [2]
 <pics/bp by subjects.png, id=88, 4818.0pt x 2710.125pt>
 File: pics/bp by subjects.png Graphic file (type png)
 <use pics/bp by subjects.png>
-Package pdftex.def Info: pics/bp by subjects.png  used on input line 265.
+Package pdftex.def Info: pics/bp by subjects.png  used on input line 263.
 (pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
-<pics/bp v time by subj.png, id=89, 2677.00125pt x 2456.17625pt>
+ [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc} <./pics/miss.png>]
+<pics/bp v time by subj.png, id=101, 2677.00125pt x 2456.17625pt>
 File: pics/bp v time by subj.png Graphic file (type png)
 <use pics/bp v time by subj.png>
 Package pdftex.def Info: pics/bp v time by subj.png  used on input line 274.
-(pdftex.def)             Requested size: 223.13649pt x 204.70584pt.
-<pics/BP v time LS.png, id=90, 1071.00125pt x 982.67125pt>
+(pdftex.def)             Requested size: 225.4804pt x 206.87956pt.
+<pics/BP v time LS.png, id=102, 1071.00125pt x 982.67125pt>
 File: pics/BP v time LS.png Graphic file (type png)
 <use pics/BP v time LS.png>
 Package pdftex.def Info: pics/BP v time LS.png  used on input line 282.
-(pdftex.def)             Requested size: 223.13649pt x 204.73267pt.
-<pics/bp v act.png, id=91, 1071.00125pt x 982.67125pt>
+(pdftex.def)             Requested size: 225.4804pt x 206.87686pt.
+<pics/bp v act.png, id=104, 1071.00125pt x 982.67125pt>
 File: pics/bp v act.png Graphic file (type png)
 <use pics/bp v act.png>
-Package pdftex.def Info: pics/bp v act.png  used on input line 297.
-(pdftex.def)             Requested size: 136.2258pt x 124.97778pt.
-<pics/bp v mood.png, id=92, 1071.00125pt x 982.67125pt>
+Package pdftex.def Info: pics/bp v act.png  used on input line 298.
+(pdftex.def)             Requested size: 150.32504pt x 137.91791pt.
+<pics/bp v mood.png, id=105, 1071.00125pt x 982.67125pt>
 File: pics/bp v mood.png Graphic file (type png)
 <use pics/bp v mood.png>
-Package pdftex.def Info: pics/bp v mood.png  used on input line 305.
-(pdftex.def)             Requested size: 136.2258pt x 124.97778pt.
-<pics/bp v stand.png, id=93, 1071.00125pt x 982.67125pt>
+Package pdftex.def Info: pics/bp v mood.png  used on input line 306.
+(pdftex.def)             Requested size: 150.32504pt x 137.91791pt.
+<pics/bp v stand.png, id=106, 1071.00125pt x 982.67125pt>
 File: pics/bp v stand.png Graphic file (type png)
 <use pics/bp v stand.png>
-Package pdftex.def Info: pics/bp v stand.png  used on input line 313.
-(pdftex.def)             Requested size: 136.2258pt x 124.97778pt.
-<pics/bp v phase.png, id=95, 1071.00125pt x 982.67125pt>
+Package pdftex.def Info: pics/bp v stand.png  used on input line 314.
+(pdftex.def)             Requested size: 150.32504pt x 137.91791pt.
+ [4 <./pics/bp by subjects.png>] [5 <./pics/bp v time by subj.png> <./pics/BP v time LS.png> <./pics/bp v act.png> <./pics/bp v mood.png> <./pics/bp v stand.png>]
+<pics/bp v phase.png, id=129, 1071.00125pt x 982.67125pt>
 File: pics/bp v phase.png Graphic file (type png)
 <use pics/bp v phase.png>
-Package pdftex.def Info: pics/bp v phase.png  used on input line 335.
-(pdftex.def)             Requested size: 223.13649pt x 204.73267pt.
-<pics/bp v day.png, id=96, 1071.00125pt x 982.67125pt>
+Package pdftex.def Info: pics/bp v phase.png  used on input line 338.
+(pdftex.def)             Requested size: 225.4804pt x 206.87686pt.
+<pics/bp v day.png, id=130, 1071.00125pt x 982.67125pt>
 File: pics/bp v day.png Graphic file (type png)
 <use pics/bp v day.png>
-Package pdftex.def Info: pics/bp v day.png  used on input line 343.
-(pdftex.def)             Requested size: 223.13649pt x 204.73267pt.
-<pics/bp v age.png, id=97, 1071.00125pt x 982.67125pt>
+Package pdftex.def Info: pics/bp v day.png  used on input line 345.
+(pdftex.def)             Requested size: 225.4804pt x 206.87686pt.
+<pics/bp v age.png, id=131, 1071.00125pt x 982.67125pt>
 File: pics/bp v age.png Graphic file (type png)
 <use pics/bp v age.png>
-Package pdftex.def Info: pics/bp v age.png  used on input line 351.
-(pdftex.def)             Requested size: 223.13649pt x 204.73267pt.
-<pics/bp v fh.png, id=98, 1071.00125pt x 982.67125pt>
+Package pdftex.def Info: pics/bp v age.png  used on input line 357.
+(pdftex.def)             Requested size: 225.4804pt x 206.87686pt.
+<pics/bp v fh.png, id=132, 1071.00125pt x 982.67125pt>
 File: pics/bp v fh.png Graphic file (type png)
 <use pics/bp v fh.png>
-Package pdftex.def Info: pics/bp v fh.png  used on input line 359.
-(pdftex.def)             Requested size: 223.13649pt x 204.73267pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 382.
+Package pdftex.def Info: pics/bp v fh.png  used on input line 364.
+(pdftex.def)             Requested size: 225.4804pt x 206.87686pt.
+<pics/bp by day and fh.png, id=137, 1071.00125pt x 982.67125pt>
+File: pics/bp by day and fh.png Graphic file (type png)
+<use pics/bp by day and fh.png>
+Package pdftex.def Info: pics/bp by day and fh.png  used on input line 378.
+(pdftex.def)             Requested size: 187.89914pt x 172.38988pt.
+<pics/bp v time and day.png, id=140, 1367.1075pt x 1124.2pt>
+File: pics/bp v time and day.png Graphic file (type png)
+<use pics/bp v time and day.png>
+Package pdftex.def Info: pics/bp v time and day.png  used on input line 389.
+(pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
+<pics/bp v act and day.png, id=141, 1367.1075pt x 1124.2pt>
+File: pics/bp v act and day.png Graphic file (type png)
+<use pics/bp v act and day.png>
+Package pdftex.def Info: pics/bp v act and day.png  used on input line 396.
+(pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
+<pics/bp v stand and day.png, id=142, 1367.1075pt x 1124.2pt>
+File: pics/bp v stand and day.png Graphic file (type png)
+<use pics/bp v stand and day.png>
+Package pdftex.def Info: pics/bp v stand and day.png  used on input line 409.
+(pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
+<pics/bp v mood and day.png, id=143, 1367.1075pt x 1124.2pt>
+File: pics/bp v mood and day.png Graphic file (type png)
+<use pics/bp v mood and day.png>
+Package pdftex.def Info: pics/bp v mood and day.png  used on input line 416.
+(pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
+<pics/bp v time and fh.png, id=144, 1367.1075pt x 1124.2pt>
+File: pics/bp v time and fh.png Graphic file (type png)
+<use pics/bp v time and fh.png>
+Package pdftex.def Info: pics/bp v time and fh.png  used on input line 428.
+(pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
+<pics/bp v act and fh.png, id=145, 1367.1075pt x 1124.2pt>
+File: pics/bp v act and fh.png Graphic file (type png)
+<use pics/bp v act and fh.png>
+Package pdftex.def Info: pics/bp v act and fh.png  used on input line 435.
+(pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
+<pics/bp v stand and fh.png, id=146, 1367.1075pt x 1124.2pt>
+File: pics/bp v stand and fh.png Graphic file (type png)
+<use pics/bp v stand and fh.png>
+Package pdftex.def Info: pics/bp v stand and fh.png  used on input line 448.
+(pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
+<pics/bp v mood and fh.png, id=147, 1367.1075pt x 1124.2pt>
+File: pics/bp v mood and fh.png Graphic file (type png)
+<use pics/bp v mood and fh.png>
+Package pdftex.def Info: pics/bp v mood and fh.png  used on input line 455.
+(pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
+<pics/mlr int by age.png, id=154, 1367.1075pt x 1124.2pt>
+File: pics/mlr int by age.png Graphic file (type png)
+<use pics/mlr int by age.png>
+Package pdftex.def Info: pics/mlr int by age.png  used on input line 469.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+<pics/mlr int by day.png, id=155, 1367.1075pt x 1124.2pt>
+File: pics/mlr int by day.png Graphic file (type png)
+<use pics/mlr int by day.png>
+Package pdftex.def Info: pics/mlr int by day.png  used on input line 477.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+<pics/mlr int by fh.png, id=156, 1367.1075pt x 1124.2pt>
+File: pics/mlr int by fh.png Graphic file (type png)
+<use pics/mlr int by fh.png>
+Package pdftex.def Info: pics/mlr int by fh.png  used on input line 485.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+<pics/mlr time by age.png, id=157, 1367.1075pt x 1124.2pt>
+File: pics/mlr time by age.png Graphic file (type png)
+<use pics/mlr time by age.png>
+Package pdftex.def Info: pics/mlr time by age.png  used on input line 499.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+<pics/mlr time by day.png, id=158, 1367.1075pt x 1124.2pt>
+File: pics/mlr time by day.png Graphic file (type png)
+<use pics/mlr time by day.png>
+Package pdftex.def Info: pics/mlr time by day.png  used on input line 507.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+<pics/mlr time by fh.png, id=159, 1367.1075pt x 1124.2pt>
+File: pics/mlr time by fh.png Graphic file (type png)
+<use pics/mlr time by fh.png>
+Package pdftex.def Info: pics/mlr time by fh.png  used on input line 515.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+<pics/mlr act by age.png, id=160, 1367.1075pt x 1124.2pt>
+File: pics/mlr act by age.png Graphic file (type png)
+<use pics/mlr act by age.png>
+Package pdftex.def Info: pics/mlr act by age.png  used on input line 529.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+<pics/mlr act by day.png, id=161, 1367.1075pt x 1124.2pt>
+File: pics/mlr act by day.png Graphic file (type png)
+<use pics/mlr act by day.png>
+Package pdftex.def Info: pics/mlr act by day.png  used on input line 537.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+<pics/mlr act by fh.png, id=162, 1367.1075pt x 1124.2pt>
+File: pics/mlr act by fh.png Graphic file (type png)
+<use pics/mlr act by fh.png>
+Package pdftex.def Info: pics/mlr act by fh.png  used on input line 545.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+<pics/mlr stand by age.png, id=163, 1367.1075pt x 1124.2pt>
+File: pics/mlr stand by age.png Graphic file (type png)
+<use pics/mlr stand by age.png>
+Package pdftex.def Info: pics/mlr stand by age.png  used on input line 559.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+<pics/mlr stand by day.png, id=164, 1367.1075pt x 1124.2pt>
+File: pics/mlr stand by day.png Graphic file (type png)
+<use pics/mlr stand by day.png>
+Package pdftex.def Info: pics/mlr stand by day.png  used on input line 567.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+<pics/mlr stand by fh.png, id=165, 1367.1075pt x 1124.2pt>
+File: pics/mlr stand by fh.png Graphic file (type png)
+<use pics/mlr stand by fh.png>
+Package pdftex.def Info: pics/mlr stand by fh.png  used on input line 575.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+<pics/mlr mood by age.png, id=166, 1367.1075pt x 1124.2pt>
+File: pics/mlr mood by age.png Graphic file (type png)
+<use pics/mlr mood by age.png>
+Package pdftex.def Info: pics/mlr mood by age.png  used on input line 589.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+<pics/mlr mood by day.png, id=167, 1367.1075pt x 1124.2pt>
+File: pics/mlr mood by day.png Graphic file (type png)
+<use pics/mlr mood by day.png>
+Package pdftex.def Info: pics/mlr mood by day.png  used on input line 597.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+<pics/mlr mood by fh.png, id=168, 1367.1075pt x 1124.2pt>
+File: pics/mlr mood by fh.png Graphic file (type png)
+<use pics/mlr mood by fh.png>
+Package pdftex.def Info: pics/mlr mood by fh.png  used on input line 605.
+(pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
+ [6 <./pics/bp v phase.png> <./pics/bp v day.png>] [7 <./pics/bp v age.png> <./pics/bp v fh.png> <./pics/bp by day and fh.png>] [8 <./pics/bp v time and day.png> <./pics/bp v act and day.png> <./pics/bp v stand and day.png> <./pics/bp v mood and day.png>] [9 <./pics/bp v time and fh.png> <./pics/bp v act and fh.png> <./pics/bp v stand and fh.png> <./pics/bp v mood and fh.png> <./pics/mlr int by age.png> <./pics/mlr int by day.png> <./pics/mlr int by fh.png>] [10 <./pics/mlr time by age.png> <./pics/mlr time by day.png> <./pics/mlr time by fh.png> <./pics/mlr act by age.png> <./pics/mlr act by day.png> <./pics/mlr act by fh.png> <./pics/mlr stand by age.png> <./pics/mlr stand by day.png> <./pics/mlr stand by fh.png>]
+<pics/bp by age and day.png, id=224, 1071.00125pt x 982.67125pt>
+File: pics/bp by age and day.png Graphic file (type png)
+<use pics/bp by age and day.png>
+Package pdftex.def Info: pics/bp by age and day.png  used on input line 634.
+(pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
+<pics/bp by age and fh.png, id=225, 1071.00125pt x 982.67125pt>
+File: pics/bp by age and fh.png Graphic file (type png)
+<use pics/bp by age and fh.png>
+Package pdftex.def Info: pics/bp by age and fh.png  used on input line 642.
+(pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
+<pics/bp by age and phase.png, id=226, 1071.00125pt x 982.67125pt>
+File: pics/bp by age and phase.png Graphic file (type png)
+<use pics/bp by age and phase.png>
+Package pdftex.def Info: pics/bp by age and phase.png  used on input line 650.
+(pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
+<pics/bp by id and age.png, id=227, 4818.0pt x 2710.125pt>
+File: pics/bp by id and age.png Graphic file (type png)
+<use pics/bp by id and age.png>
+Package pdftex.def Info: pics/bp by id and age.png  used on input line 664.
+(pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
 
-Overfull \hbox (17.56969pt too wide) in paragraph at lines 384--384
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pics/bp by id and day.png, id=228, 4818.0pt x 2710.125pt>
+File: pics/bp by id and day.png Graphic file (type png)
+<use pics/bp by id and day.png>
+Package pdftex.def Info: pics/bp by id and day.png  used on input line 676.
+(pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pics/bp by id and fh.png, id=229, 4818.0pt x 2710.125pt>
+File: pics/bp by id and fh.png Graphic file (type png)
+<use pics/bp by id and fh.png>
+Package pdftex.def Info: pics/bp by id and fh.png  used on input line 688.
+(pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 702.
+
+Overfull \hbox (17.56969pt too wide) in paragraph at lines 704--704
 \T1/lmr/m/n/10.95 (-20) ten-sion and per-son-al-ity [Pub-lisher: Tay-lor & Fran-cis _eprint: https://doi.org/10.1080/713690197].
  []
 
-[4 <./pics/bp by subjects.png>] [5 <./pics/bp v time by subj.png> <./pics/BP v time LS.png> <./pics/bp v act.png> <./pics/bp v mood.png> <./pics/bp v stand.png>] [6 <./pics/bp v phase.png> <./pics/bp v day.png> <./pics/bp v age.png> <./pics/bp v fh.png>] [7] (./ccpaper.aux)
+[11 <./pics/mlr mood by age.png> <./pics/mlr mood by day.png> <./pics/mlr mood by fh.png> <./pics/bp by age and day.png> <./pics/bp by age and fh.png> <./pics/bp by age and phase.png>] [12 <./pics/bp by id and age.png>] [13 <./pics/bp by id and day.png> <./pics/bp by id and fh.png>] (./ccpaper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1760,24 +1926,24 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `ccpaper.out' has not changed.
-(rerunfilecheck)             Checksum: DED51B9D4BD09C5E82B666EB2D39A3C4;1099.
+(rerunfilecheck)             Checksum: 2A62B80A286792525F9EC364C1F5C2A5;1590.
 Package logreq Info: Writing requests to 'ccpaper.run.xml'.
 \openout1 = `ccpaper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57378 strings out of 474116
- 1280344 string characters out of 5743682
- 2920894 words of memory out of 5000000
- 78631 multiletter control sequences out of 15000+600000
- 663898 words of font info for 229 fonts, out of 8000000 for 9000
+ 57790 strings out of 474116
+ 1291314 string characters out of 5743682
+ 2937628 words of memory out of 5000000
+ 79012 multiletter control sequences out of 15000+600000
+ 664262 words of font info for 233 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  121i,10n,126p,18415b,5370s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on ccpaper.pdf (7 pages, 3899883 bytes).
+Output written on ccpaper.pdf (13 pages, 11419248 bytes).
 PDF statistics:
- 194 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 70276 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 329 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 70450 words of extra memory for PDF output out of 74296 (max. 10000000)
 

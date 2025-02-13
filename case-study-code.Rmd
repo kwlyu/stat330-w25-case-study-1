@@ -166,45 +166,6 @@ ggplot(nurse_filtered, aes(x = mood, y = sys, color = as.factor(snum))) +
   guides(color = "none")
 ```
 
-```{r Level 1 by Level 2 Covariates}
-ggplot(nurse_filtered, aes(x = sys)) +
-  geom_histogram(color="white") +
-  labs(x = "Systolic Blood Pressure",
-       title = "Level 1 BP Distribution")
-
-ggplot(nurse_filtered, aes(x = fh_2, y = sys)) +
-  geom_boxplot() + 
-  facet_wrap(~ day3) +
-  labs(x = "Family History",
-       y = "Systolic Blood Pressure",
-       title = "Level 1 BP by Workday and Family History")
-
-ggplot(nurse_filtered, aes(x = as.factor(snum), y = sys, fill = day3)) +
-  geom_boxplot() +
-  labs(x = "Subject ID",
-       y = "BP",
-       title = "Level 1 BP by Subjects and Workday",
-       fill = "Workday") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
-
-ggplot(nurse_filtered, aes(x = as.factor(snum), y = sys, fill = fh_2)) +
-  geom_boxplot() +
-  labs(x = "Subject ID",
-       y = "BP",
-       title = "Level 1 BP by Subjects and Workday",
-       fill = "Family History") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
-
-ggplot(nurse_filtered, aes(x = as.factor(snum), y = sys, fill = as.factor(age24))) +
-  geom_boxplot() +
-  labs(x = "Subject ID",
-       y = "BP",
-       title = "Level 1 BP by Subjects and Workday",
-       fill = "Family History") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
-  guides(fill = "none")
-```
-
 ```{r Level 2 Covariates}
 ## Bivariate
 ggplot(nurse_bysubject, aes(x = phase3, y = mean_sys)) +
@@ -224,6 +185,7 @@ ggplot(nurse_bysubject, aes(x = fh_2, y = mean_sys)) +
 
 ggplot(nurse_bysubject, aes(x = as.factor(age2), y = mean_sys)) +
   geom_boxplot(show.legend = F) + 
+  geom_smooth(method = "lm", se=TRUE, aes(group=1)) +
   labs(x = "Age",
        y = "Average Systolic Blood Pressure")
 
@@ -250,6 +212,47 @@ ggplot(nurse_bysubject, aes(x = age2, y = mean_sys)) +
        y = "Average Systolic Blood Pressure")
 ```
 
+```{r Level 1 by Level 2 Covariates}
+ggplot(nurse_filtered, aes(x = sys)) +
+  geom_histogram(color="white") +
+  labs(x = "Systolic Blood Pressure",
+       title = "Level 1 BP Distribution")
+
+ggplot(nurse_filtered, aes(x = fh_2, y = sys)) +
+  geom_boxplot() + 
+  facet_wrap(~ day3) +
+  labs(x = "Family History",
+       y = "Systolic Blood Pressure",
+       title = "Level 1 BP by Workday and Family History")
+
+ggplot(nurse_filtered, aes(x = as.factor(snum), y = sys, fill = day3)) +
+  geom_boxplot() +
+  labs(x = "Subject ID",
+       y = "BP",
+       title = "Level 1 BP by Subjects and Workday",
+       fill = "Workday") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        legend.position = c(0.1, 0.9))
+
+ggplot(nurse_filtered, aes(x = as.factor(snum), y = sys, fill = fh_2)) +
+  geom_boxplot() +
+  labs(x = "Subject ID",
+       y = "BP",
+       title = "Level 1 BP by Subjects and Family History",
+       fill = "Family History") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        legend.position = c(0.1, 0.9))
+
+ggplot(nurse_filtered, aes(x = as.factor(snum), y = sys, fill = as.factor(age24))) +
+  geom_boxplot() +
+  labs(x = "Subject ID",
+       y = "BP",
+       title = "Level 1 BP by Subjects and Age",
+       fill = "Age") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+  guides(fill = "none")
+```
+
 ```{r Spaghetti Plots}
 ## Time
 ggplot(nurse_filtered, aes(x = timepass, y = sys)) +
@@ -264,7 +267,7 @@ ggplot(nurse_filtered, aes(x = timepass, y = sys, color = as.factor(day3))) +
   geom_smooth(method = "loess", se = FALSE, size = 1) +
   labs(color = "Workday",
        x = "Time since first measurement",
-       y = "Systolic Blood Pressure")
+       y = "Systolic Blood Pressure") + theme(legend.position = c(0.2, 0.8))
 
 ggplot(nurse_filtered, aes(x = timepass, y = sys)) +
   geom_line(aes(group = snum), color = "dark grey") +
@@ -276,21 +279,21 @@ ggplot(nurse_filtered, aes(x = timepass, y = sys, color = as.factor(fh_2))) +
   geom_smooth(method = "loess", se = FALSE, size = 1) +
   labs(color = "Family History",
        x = "Time since first measurement",
-       y = "Systolic Blood Pressure")
+       y = "Systolic Blood Pressure") + theme(legend.position = c(0.2, 0.8))
 
 
 ## Activity level
 ggplot(nurse_filtered, aes(x = mnact5, y = sys)) +
   geom_line(aes(group = snum), color = "dark grey") +
   geom_smooth(method = "loess", color = "black", se = F, size = 1) +
-  facet_wrap(~ day)
+  facet_wrap(~ day3)
 
 ggplot(nurse_filtered, aes(x = mnact5, y = sys, color = as.factor(day3))) +
   geom_line(aes(group = interaction(snum, day)), alpha = 0.1) +
   geom_smooth(method = "loess", se = FALSE, size = 1) +
   labs(color = "Workday",
        x = "Activity Level",
-       y = "Systolic Blood Pressure")
+       y = "Systolic Blood Pressure") + theme(legend.position = c(0.2, 0.8))
 
 ggplot(nurse_filtered, aes(x = mnact5, y = sys)) +
   geom_line(aes(group = snum), color = "dark grey") +
@@ -302,7 +305,7 @@ ggplot(nurse_filtered, aes(x = mnact5, y = sys, color = as.factor(fh_2))) +
   geom_smooth(method = "loess", se = FALSE, size = 1) +
   labs(color = "Family History",
        x = "Activity Level",
-       y = "Systolic Blood Pressure")
+       y = "Systolic Blood Pressure") + theme(legend.position = c(0.2, 0.8))
 
 
 ## Posture - 2 levels
@@ -317,120 +320,108 @@ ggplot(nurse_filtered, aes(x = standing, y = sys)) +
   facet_wrap(~ fh_2) +
   labs(x = "Standing vs Non Standing",
        y = "Systolic Blood Pressure",
-       title = "BP by Standing and Family History")
+       title = "BP by Standing and Family History") 
 
 
 ## Mood Ratings
 ggplot(nurse_filtered, aes(x = mood, y = sys)) +
   geom_line(aes(group = snum), color = "dark grey") +
   geom_smooth(method = "loess", color = "black", se = F, size = 1) +
-  facet_wrap(~ day)
+  facet_wrap(~ day3)
 
 ggplot(nurse_filtered, aes(x = mood, y = sys, color = as.factor(day3))) +
   geom_line(aes(group = interaction(snum, day)), alpha = 0.1) +
   geom_smooth(method = "loess", se = FALSE, size = 1) +
   labs(color = "Workday",
        x = "Mood",
-       y = "Systolic Blood Pressure")
+       y = "Systolic Blood Pressure") + theme(legend.position = c(0.2, 0.8))
+
+ggplot(nurse_filtered, aes(x = mood, y = sys)) +
+  geom_line(aes(group = snum), color = "dark grey") +
+  geom_smooth(method = "loess", color = "black", se = F, size = 1) +
+  facet_wrap(~ fh_2)
+
+ggplot(nurse_filtered, aes(x = mood, y = sys, color = fh_2)) +
+  geom_line(aes(group = interaction(snum, day)), alpha = 0.1) +
+  geom_smooth(method = "loess", se = FALSE, size = 1) +
+  labs(color = "Family History",
+       x = "Mood",
+       y = "Systolic Blood Pressure") + theme(legend.position = c(0.2, 0.8))
 ```
 
-```{r Separate LS}
-
-ls_fits_timepass <- group_modify(group_by(nurse_complete, snum), 
-                        ~ tidy(lm(sys ~ timepass, data =.x))[,1:2])
-ls_fits_timepass_final <- ls_fits_timepass %>%
+```{r Separate MLR}
+ls_fits <- group_modify(group_by(nurse_complete, snum), 
+                        ~ tidy(lm(sys ~ timepass + mnact5 + standing + mood, 
+                                  data =.x))[,1:2])
+ls_fits_final <- ls_fits %>%
   pivot_wider(names_from = term, values_from = estimate) %>%
-  rename("Intercept"= `(Intercept)`, "Slope"= timepass) %>%
+  rename("Intercept"= `(Intercept)`, "Time"= timepass,
+         "Activity" = mnact5, "Standing" = standing,
+         "Mood" = mood) %>%
   left_join(nurse_bysubject, by = "snum")
 
 ## Intercept
-ggplot(ls_fits_timepass_final, aes(x = day3, y = Intercept)) +
+ggplot(ls_fits_final, aes(x = day3, y = Intercept)) +
   geom_boxplot() +
   labs(x = "Workday")
-ggplot(ls_fits_timepass_final, aes(x = fh_2, y = Intercept)) +
+ggplot(ls_fits_final, aes(x = fh_2, y = Intercept)) +
   geom_boxplot() +
   labs(x = "Family History")
-ggplot(ls_fits_timepass_final, aes(x = age2, y = Intercept)) +
+ggplot(ls_fits_final, aes(x = age2, y = Intercept)) +
   geom_point() +
-  geom_smooth(method = "lm", se = F)
+  geom_smooth(method = "lm", se = F) +
+  labs(x = "Age")
 
 ## Timepass
-ggplot(ls_fits_timepass_final, aes(x = day3, y = Slope)) +
+ggplot(ls_fits_final, aes(x = day3, y = Time)) +
   geom_boxplot() +
   labs(x = "Workday")
-ggplot(ls_fits_timepass_final, aes(x = fh_2, y = Slope)) +
+ggplot(ls_fits_final, aes(x = fh_2, y = Time)) +
   geom_boxplot() +
   labs(x = "Family History")
-ggplot(ls_fits_timepass_final, aes(x = age2, y = Slope)) +
+ggplot(ls_fits_final, aes(x = age2, y = Time)) +
   geom_point() +
-  geom_smooth(method = "lm", se = F)
+  geom_smooth(method = "lm", se = F) +
+  labs(x = "Age")
 
 
 ## Activity Level
-ls_fits_act <- group_modify(group_by(nurse_complete, snum), 
-                        ~ tidy(lm(sys ~ mnact5, data =.x))[,1:2])
-ls_fits_act_final <- ls_fits_act %>%
-  pivot_wider(names_from = term, values_from = estimate) %>%
-  rename("Intercept"= `(Intercept)`, "Slope"= mnact5) %>%
-  left_join(nurse_bysubject, by = "snum")
-
-ggplot(ls_fits_act_final, aes(x = day3, y = Slope)) +
+ggplot(ls_fits_final, aes(x = day3, y = Activity)) +
   geom_boxplot() +
   labs(x = "Workday")
-ggplot(ls_fits_act_final, aes(x = fh_2, y = Slope)) +
+ggplot(ls_fits_final, aes(x = fh_2, y = Activity)) +
   geom_boxplot() +
   labs(x = "Family History")
-ggplot(ls_fits_act_final, aes(x = age2, y = Slope)) +
+ggplot(ls_fits_final, aes(x = age2, y = Activity)) +
   geom_point() +
-  geom_smooth(method = "lm", se = F)
+  geom_smooth(method = "lm", se = F) +
+  labs(x = "Age")
 
 
-## Posture
-ls_fits_post <- group_modify(group_by(nurse_complete, snum), 
-                        ~ tidy(lm(sys ~ standing, data =.x))[,1:2])
-ls_fits_post_final <- ls_fits_post %>%
-  pivot_wider(names_from = term, values_from = estimate) %>%
-  rename("Nonstanding"= `(Intercept)`, "Standing"= standing) %>%
-  left_join(nurse_bysubject, by = "snum")
-### Non-standing
-ggplot(ls_fits_post_final, aes(x = day3, y = Nonstanding)) +
+## Standing
+ggplot(ls_fits_final, aes(x = day3, y = Standing)) +
   geom_boxplot() +
   labs(x = "Workday")
-ggplot(ls_fits_post_final, aes(x = fh_2, y = Nonstanding)) +
+ggplot(ls_fits_final, aes(x = fh_2, y = Standing)) +
   geom_boxplot() +
   labs(x = "With Family History")
-ggplot(ls_fits_post_final, aes(x = age2, y = Nonstanding)) +
+ggplot(ls_fits_final, aes(x = age2, y = Standing)) +
   geom_point() +
-  geom_smooth(method = "lm", se = F)
-### Stand
-ggplot(ls_fits_post_final, aes(x = day3, y = Standing)) +
-  geom_boxplot() +
-  labs(x = "Workday")
-ggplot(ls_fits_post_final, aes(x = fh_2, y = Standing)) +
-  geom_boxplot() +
-  labs(x = "With Family History")
-ggplot(ls_fits_post_final, aes(x = age2, y = Standing)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = F)
+  geom_smooth(method = "lm", se = F) +
+  labs(x = "Age")
 
 
 ## Mood
-ls_fits_mood <- group_modify(group_by(nurse_complete, snum), 
-                        ~ tidy(lm(sys ~ mood, data =.x))[,1:2])
-ls_fits_mood_final <- ls_fits_mood %>%
-  pivot_wider(names_from = term, values_from = estimate) %>%
-  rename("Intercept"= `(Intercept)`, "Slope"= mood) %>%
-  left_join(nurse_bysubject, by = "snum")
-
-ggplot(ls_fits_mood_final, aes(x = day3, y = Slope)) +
+ggplot(ls_fits_final, aes(x = day3, y = Mood)) +
   geom_boxplot() +
   labs(x = "Workday")
-ggplot(ls_fits_mood_final, aes(x = fh_2, y = Slope)) +
+ggplot(ls_fits_final, aes(x = fh_2, y = Mood)) +
   geom_boxplot() +
   labs(x = "Number of Parents with Hypertension")
-ggplot(ls_fits_mood_final, aes(x = age2, y = Slope)) +
+ggplot(ls_fits_final, aes(x = age2, y = Mood)) +
   geom_point() +
-  geom_smooth(method = "lm", se = F)
+  geom_smooth(method = "lm", se = F) +
+  labs(x = "Age")
 ```
 
 
