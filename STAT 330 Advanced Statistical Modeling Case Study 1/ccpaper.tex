@@ -196,10 +196,54 @@ Certain traits such as family history and mood are expected to increase one's am
 
 \subsection{Methods}
 
-The dataset includes repeated measures over the course of two work and off-work days on 203 registered nurses between the ages of 24 and 50 years working in Los Angeles, in 2000. Of those 203 nurses, 172 has complete data on all of the variables recorded.\footnote{In the original paper by Goldstein and Shapiro \pnotecite[228-29]{goldstein_ambulatory_2000}, they reported 171 nurses who completed all sessions. It is likely that this is due to \citet{roback_beyond_2021} or \citet{weiss_modeling_2005} excluding other personality variables used in the original study. Because I am not investigating personality traits in this project, 172 suffices being my total subject counts. Additionally, Goldstein and Shapiro  mention that ``[s]imilar patterns of findings were obtained in the sample of 171 as in the total sample'' \pnotecite[229]{goldstein_ambulatory_2000}.} 
+The dataset includes repeated measures over the course of two work and off-work days on 203 registered nurses between the ages of 24 and 50 years working in Los Angeles, in the year 2000. Of those 203 nurses, 172 has complete data on all of the variables recorded.\footnote{In the original paper by Goldstein and Shapiro \pnotecite[228-29]{goldstein_ambulatory_2000}, they reported 171 nurses who completed all sessions. It is likely that this is due to \citet{roback_beyond_2021} or \citet{weiss_modeling_2005} excluding other personality variables used in the original study. Because I am not investigating personality traits in this project, 172 suffices being my total subject counts. Additionally, Goldstein and Shapiro  mention that ``[s]imilar patterns of findings were obtained in the sample of 171 as in the total sample'' \pnotecite[229]{goldstein_ambulatory_2000}.} BP of the participants were measured 30 minutes before their normal start of work, and measured measured repeatedly every 20 minutes for the rest of the day. This led to around 40-60 observations per nurse (9573 total observations). Each time the BP was taken, participants were asked to give several mood ratings including happiness, stress, and tiredness. In addition, participants wore an actigraph on their waist to record frequency of movements in one-minute intervals; the researchers obtained an activity measure for the ten-minute periods before each BP reading.
 
 \section{Exploratory Data Analysis}
 
+The variables (original and re-parameterized) used in this project are given in \Cref{tab: var desc}.
+
+\begin{table}[H]
+    \centering\begin{tabular}{|p{0.2\linewidth} | p{0.65\linewidth}|}
+        \hline
+        Variable Name & Variable Descrption \\
+        \hline\hline
+        ID (Cluster) & Unique identification number for each participant \\
+        \hline
+        BP (Response) & Systolic blood pressure (in mmHg) \\
+        \hline
+        \textcolor[RGB]{208, 2, 27}{Act} & Activity level (frequency of movements in 1-minute intervals, over a 10-minute period) \\
+        \hline
+        \textcolor[RGB]{74, 144, 226}{Phase} & Menstrual phase (follicular or luteal) \\
+        \hline
+        \textcolor[RGB]{74, 144, 226}{Day} & Workday or non-workday \\
+        \hline
+        \textcolor[RGB]{208, 2, 27}{Posture} & Position during BP measurement (sitting, standing, or reclining) \\
+        \hline
+        \textcolor[RGB]{208, 2, 27}{HAP} & Self-ratings of happiness by each nurse at the time of each BP measurement on a 5-point scale (5 strongest and 1 weakest) \\
+        \hline
+        \textcolor[RGB]{208, 2, 27}{STR} & Self-ratings of stress by each nurse at the time of each BP measurement on a 5-point scale (5 strongest and 1 weakest) \\
+        \hline
+        \textcolor[RGB]{208, 2, 27}{TIR} & Self-ratings of tiredness by each nurse at the time of each BP measurement on a 5-point scale (5 strongest and 1 weakest) \\
+        \hline
+        \textcolor[RGB]{74, 144, 226}{Age} & Age (in years) \\
+        \hline
+        \textcolor[RGB]{74, 144, 226}{Full FH} & Family history, coded as either NO (no family history of  hypertension), YES (1 hypertensive parent), or YESYES (both parents hypertensive) \\
+        \hline\hline
+        \emph{\textcolor[RGB]{208, 2, 27}{Stand}} & Indicator variable for standing, where it equals 0 if Posture is either sitting or reclining and 1 when Posture is standing \\
+        \hline
+        \emph{\textcolor[RGB]{208, 2, 27}{Mood}} & Combined mood ratings: HAP - (STR + TIR)/2 \\
+        \hline
+        \emph{\textcolor[RGB]{74, 144, 226}{FH}} & Indicator variable for having family history of hypertension (1 for YES and YESYES, 0 for NO) \\
+        \hline
+        \multicolumn{2}{c}{\footnotesize Note: \emph{emphasis} added to re-parameterized variables; colors represent levels.}
+    \end{tabular}
+    \caption{Variable Descrptions}
+    \label{tab: var desc}
+\end{table}
+
+Because of the longitudinal nature of our data, it is worth noting our levels of analysis and to which our variables belong. I will call time-dependent measurements \emph{\textcolor[RGB]{208, 2, 27}{Level 1}} data (variables) and the rest of the subject-level measurements \emph{\textcolor[RGB]{74, 144, 226}{Level 2}} data (variables). 
+
+\subsection{}
 
 \section{Model Selection}
 
