@@ -6,12 +6,6 @@ INPUT /Users/PC/E/Kunwu/School/Undergrad/Carleton/Academics/Term Courses/Senior/
 OUTPUT ccpaper.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/leqno.clo
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/leqno.clo
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/leqno.clo
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/fleqn.clo
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/fleqn.clo
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/fleqn.clo
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/size12.clo
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/size12.clo
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/size12.clo
@@ -840,6 +834,8 @@ INPUT ./pics/mlr mood by fh.png
 INPUT ./pics/mlr mood by fh.png
 INPUT ./pics/mlr mood by fh.png
 INPUT ./pics/mlr mood by fh.png
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT ./pics/bp by age and day.png
 INPUT ./pics/bp by age and day.png
 INPUT ./pics/bp by age and day.png
@@ -889,10 +885,12 @@ OUTPUT ccpaper.run.xml
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt12.pfb

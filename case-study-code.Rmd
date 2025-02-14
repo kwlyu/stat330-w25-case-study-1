@@ -465,54 +465,42 @@ anova(nurse_lmm_RI_noMoodTime, nurse_lmm_RI_lv1)
 
 ### Random Intercept and Slope
 
-```{r RIS with Mood RE}
-nurse_lmm_RIS_mood <- lmer(sys ~ timepass + mnact5 + standing + mood + 
-                       (1 + mood | snum), 
+```{r RIS with Stand RE}
+nurse_lmm_RIS_stand <- lmer(sys ~ timepass + mnact5 + standing + 
+                       (1 + standing | snum), 
                        data = nurse_filtered)
-summary(nurse_lmm_RIS_mood)
+summary(nurse_lmm_RIS_stand)
 
-(lrt_RIS_mood <- as.numeric(2*(logLik(nurse_lmm_RIS_mood, REML = TRUE) - 
+(lrt_RIS_stand <- as.numeric(2*(logLik(nurse_lmm_RIS_stand, REML = TRUE) - 
                             logLik(nurse_lmm_RI, REML = TRUE))))
-.5*(1-pchisq(lrt_RI, df = 1))+.5*(1-pchisq(lrt_RI, df = 2))
+.5*(1-pchisq(lrt_RIS_stand, df = 1))+.5*(1-pchisq(lrt_RIS_stand, df = 2))
 ```
-
-```{r RIS with Mood and Stand RE}
-nurse_lmm_RIS_mood_stand <- lmer(sys ~ timepass + mnact5 + standing + mood + 
-                       (1 + mood + standing | snum), 
-                       data = nurse_filtered)
-summary(nurse_lmm_RIS_mood_stand)
-
-(lrt_RIS_mood_stand <- as.numeric(2*(logLik(nurse_lmm_RIS_mood_stand, REML = TRUE) - 
-                            logLik(nurse_lmm_RIS_mood, REML = TRUE))))
-.5*(1-pchisq(lrt_RIS_mood_stand, df = 2))+.5*(1-pchisq(lrt_RIS_mood_stand, df = 3))
-```
-
 
 ### Random Intercept and Slope with Level 2 Covariates
 
 ```{r RIS with Age}
-nurse_lmm_RIS_age <- lmer(sys ~ timepass + mnact5 + standing + mood + 
+nurse_lmm_RIS_age <- lmer(sys ~ timepass + mnact5 + standing + 
                              age24 + 
-                       (1 + mood + standing | snum),
+                       (1 + standing | snum),
                        data = nurse_filtered)
 
 summary(nurse_lmm_RIS_age)
-anova(nurse_lmm_RIS_mood_stand, nurse_lmm_RIS_age)
+anova(nurse_lmm_RIS_stand, nurse_lmm_RIS_age)
 ```
 
 ```{r RIS with Workday}
-nurse_lmm_RIS_day <- lmer(sys ~ day2 * (timepass + standing) + mnact5  + mood + 
-                       (1 + mood + standing | snum),
+nurse_lmm_RIS_day <- lmer(sys ~ day2 * (timepass + standing) + mnact5 + 
+                       (1 + standing | snum),
                        data = nurse_filtered)
 
 summary(nurse_lmm_RIS_day)
-anova(nurse_lmm_RIS_mood_stand, nurse_lmm_RIS_day)
+anova(nurse_lmm_RIS_stand, nurse_lmm_RIS_day)
 
-nurse_lmm_RIS_day_nostand <- lmer(sys ~ day2 * (timepass) + standing + mnact5  + mood + 
-                       (1 + mood + standing | snum),
+nurse_lmm_RIS_day_nostand <- lmer(sys ~ day2 * (timepass) + standing + mnact5 + 
+                       (1 + standing | snum),
                        data = nurse_filtered)
 anova(nurse_lmm_RIS_day, nurse_lmm_RIS_day_nostand)
-anova(nurse_lmm_RIS_day_nostand, nurse_lmm_RIS_mood_stand)
+anova(nurse_lmm_RIS_day_nostand, nurse_lmm_RIS_stand)
 
 nurse_lmm_RIS_day_nointer <- lmer(sys ~ day2 + timepass + standing + mnact5  + mood + 
                        (1 + mood + standing | snum),
@@ -522,23 +510,17 @@ anova(nurse_lmm_RIS_day_nostand, nurse_lmm_RIS_day_nointer)
 
 ```{r RIS with Family History and Workday}
 nurse_lmm_RIS_day_fh <- lmer(sys ~ (day2 + fh_yes) * timepass + 
-                                    standing + mnact5  + mood + 
-                       (1 + mood + standing | snum),
+                                    standing + mnact5 + 
+                       (1 + standing | snum),
                        data = nurse_filtered)
 anova(nurse_lmm_RIS_day_fh, nurse_lmm_RIS_day_nostand)
-anova(nurse_lmm_RIS_day_fh, nurse_lmm_RIS_mood_stand)
-
-nurse_lmm_RIS_day_fh_noint <- lmer(sys ~ day2 * timepass + fh_yes +
-                                    standing + mnact5  + mood + 
-                       (1 + mood + standing | snum),
-                       data = nurse_filtered)
-anova(nurse_lmm_RIS_day_fh, nurse_lmm_RIS_day_fh_noint)
+anova(nurse_lmm_RIS_day_fh, nurse_lmm_RIS_stand)
 ```
 
 ```{r Correlation}
 nurse_lmm_RIS_day_fh_nocorr <- lmer(sys ~ (day2 + fh_yes) * timepass + 
-                                    standing + mnact5  + mood + 
-                       (1 + mood + standing || snum),
+                                    standing + mnact5 + 
+                       (1 + standing || snum),
                        data = nurse_filtered)
 anova(nurse_lmm_RIS_day_fh, nurse_lmm_RIS_day_fh_nocorr, refit = FALSE)
 ```
@@ -575,11 +557,6 @@ ggplot(data = nurse_resid1, aes(x = mnact5, y = .chol.mar.resid)) +
   geom_smooth() +
   labs(x = "Activity Level",
        y = "Marginal Residuals")
-ggplot(data = nurse_resid1, aes(x = mood, y = .chol.mar.resid)) + 
-  geom_point(alpha=0.2) + 
-  geom_smooth() +
-  labs(x = "Mood",
-       y = "Marginal Residuals")
 ```
 
 ```{r Exponential Model}
@@ -607,11 +584,6 @@ ggplot(data = nurse_resid1_log, aes(x = `log(mnact5 + 1)`, y = .chol.mar.resid))
   geom_point(alpha=0.2) + 
   geom_smooth() +
   labs(x = "Activity Level",
-       y = "Marginal Residuals")
-ggplot(data = nurse_resid1_log, aes(x = mood, y = .chol.mar.resid)) + 
-  geom_point(alpha=0.2) + 
-  geom_smooth() +
-  labs(x = "Mood",
        y = "Marginal Residuals")
 ```
 
@@ -669,11 +641,6 @@ ggplot(data = nurse_resid1, aes(x = mnact5, y = .std.resid)) +
   geom_smooth() +
   labs(x = "Activity Level",
        y = "Conditional Residuals")
-ggplot(data = nurse_resid1, aes(x = mood, y = .std.resid)) + 
-  geom_point(alpha=0.2) + 
-  geom_smooth() +
-  labs(x = "Mood",
-       y = "Conditional Residuals")
 
 ggplot(nurse_resid1, aes(sample = .std.resid)) +
   stat_qq_line()+ 
@@ -701,11 +668,6 @@ ggplot(data = nurse_resid1, aes(x = mnact5, y = .std.ls.resid)) +
   geom_smooth() +
   labs(x = "Activity Level",
        y = "LS Residuals")
-ggplot(data = nurse_resid1, aes(x = mood, y = .std.ls.resid)) + 
-  geom_point(alpha=0.2) + 
-  geom_smooth() +
-  labs(x = "Mood",
-       y = "LS Residuals")
 
 ggplot(nurse_resid1, aes(sample = .std.ls.resid)) +
   stat_qq_line()+ 
@@ -720,9 +682,6 @@ ggplot(nurse_resid1, aes(x = as.factor(snum), y = .std.ls.resid)) +
 
 ```{r Level 2 Random Effects}
 ggplot(nurse_resid2, aes(sample = .ranef.intercept)) +
-  stat_qq_line()+ 
-  stat_qq()
-ggplot(nurse_resid2, aes(sample = .ranef.mood)) +
   stat_qq_line()+ 
   stat_qq()
 ggplot(nurse_resid2, aes(sample = .ranef.standing1)) +
@@ -747,10 +706,9 @@ ggplot(nurse_age_phase, aes(x = as.factor(nurse_age), y = .ranef.intercept)) +
 ggplot(nurse_age_phase, aes(x = nurse_phase, y = .ranef.intercept)) +
   geom_boxplot() +
   geom_hline(yintercept = 0) +
-  labs(title = "RE intercept vs Centered Age",
+  labs(title = "RE intercept vs Menstrual Phase",
        x = "Menstrual Phase",
        y = " RE Intercept")
-
 ```
 
 
@@ -779,20 +737,6 @@ ggplot(nurse_filtered, aes(x = timepass, y = sys))+
 ```{r RVC}
 dotplot_diag(nurse_infl2$rvc.D11, name = "rvc", cutoff = "internal", modify = "boxplot")
 dotplot_diag(nurse_infl2$rvc.D22, name = "rvc", cutoff = "internal", modify = "boxplot")
-dotplot_diag(nurse_infl2$rvc.D33, name = "rvc", cutoff = "internal", modify = "boxplot")
-
-# rvc1_flagged <- nurse_infl2 %>% 
-#   arrange(rvc.D11) %>% 
-#   slice(1:3)
-# rvc2_flagged <- nurse_infl2 %>% 
-#   arrange(rvc.D22) %>% 
-#   slice(1) %>% 
-#   full_join(rvc1_flagged)
-# rvc3_flagged <- nurse_infl2 %>% 
-#   arrange(rvc.D33) %>% 
-#   slice(1:2) %>% 
-#   full_join(rvc2_flagged) %>% 
-#   pull(snum)
 
 rvc1_flagged <- nurse_infl2 %>%
   arrange(rvc.D11) %>%
@@ -801,10 +745,6 @@ rvc1_flagged <- nurse_infl2 %>%
 rvc2_flagged <- nurse_infl2 %>%
   arrange(rvc.D22) %>%
   slice(1) %>%
-  pull(snum)
-rvc3_flagged <- nurse_infl2 %>%
-  arrange(rvc.D33) %>%
-  slice(1:2) %>%
   pull(snum)
 
 ggplot(nurse_filtered, aes(x = timepass, y = sys))+
@@ -815,11 +755,6 @@ ggplot(nurse_filtered, aes(x = timepass, y = sys))+
 ggplot(nurse_filtered, aes(x = timepass, y = sys))+
   geom_point() + 
   geom_point(data = nurse_filtered %>% filter(snum %in% rvc2_flagged), color = "red") +
-  geom_smooth(method = "lm", se = F) +
-  facet_grid(rows = vars(day3), cols = vars(fh_2))
-ggplot(nurse_filtered, aes(x = timepass, y = sys))+
-  geom_point() + 
-  geom_point(data = nurse_filtered %>% filter(snum %in% rvc3_flagged), color = "red") +
   geom_smooth(method = "lm", se = F) +
   facet_grid(rows = vars(day3), cols = vars(fh_2))
 ```

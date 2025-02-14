@@ -2,7 +2,7 @@
 % Author: Andrew Gainer-Dewar, 2013
 % This work is licensed under the Creative Commons Attribution 4.0 International License.
 % To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
-\documentclass[12pt,twoside,leqno,fleqn,letterpaper]{article}
+\documentclass[12pt,twoside,letterpaper]{article}
 \usepackage[style=apa, backend=biber, natbib=true, language=american]{biblatex}
 \usepackage[T1]{fontenc}
 \usepackage{nicematrix}
@@ -40,7 +40,7 @@
 \setlength{\statementsep}{15mm}    % m (0<n<m) 
 %-----------------------------------------------------------------
 \everydisplay{\displayindent=\numbersep}
-\setlength{\mathindent}{\statementsep}
+% \setlength{\mathindent}{\statementsep}
 % \setlength{\mathindent}{3cm}
 \usepackage{ccpaper}
 \usepackage{setspace, graphicx, caption} %\doublespacing
@@ -174,7 +174,7 @@
 \renewcommand{\abstractname}{Executive Summary}
 \maketitle{\vspace{-6ex}}
 \setlength{\parskip}{0.2cm}
-\setlength{\mathindent}{31pt}
+% \setlength{\mathindent}{31pt}
 \expandafter\def\expandafter\normalsize\expandafter{%
     \normalsize%
     \setlength\abovedisplayskip{0pt}%
@@ -228,6 +228,8 @@ The variables (original and re-parameterized) used in this project are given in 
         \textcolor[RGB]{74, 144, 226}{Age} & Age (in years) \\
         \hline
         \textcolor[RGB]{74, 144, 226}{Full FH} & Family history, coded as either NO (no family history of  hypertension), YES (1 hypertensive parent), or YESYES (both parents hypertensive) \\
+        \textcolor[RGB]{208, 2, 27}{Timepass} & Number of minutes since the first measurement \\
+        \hline
         \hline\hline
         \emph{\textcolor[RGB]{208, 2, 27}{Stand}} & Indicator variable for standing, where it equals 0 if Posture is either sitting or reclining and 1 when Posture is standing \\
         \hline
@@ -615,7 +617,16 @@ After fitting separate MLR models for each participant, we see that the intercep
 
 \section{Model Selection}\label{sec: model selection}
 
-We will use a bottom-up approach to build a saturated model from scratch. We start with a base model (Model 1)
+We will use a bottom-up approach to build a saturated model from scratch. Since, our data is ordered by time, we start with a base model (Model \ref{eq: RI with time}) with only the random intercept and and level 1 covariate time: for the $j^\text{th}$ measurement in the $i^\text{th}$ participant, where $i = 1,\, \ldots,\, n$ and $j = 1,\, \ldots,\, n_i$,
+\begin{equation}\label{eq: RI with time}
+    \begin{aligned}
+        \text{Level 1}: \quad & \text{BP}_{ij} &&= a_i + \beta\, \text{Time}_{ij} + \epsilon_{ij}, \quad & \epsilon_{ij} &\overset{i.i.d.}{\sim} N(0, \sigma^2) \\
+        \text{Level 2}: \quad & a_i &&= \alpha + u_i, \quad & u_{i} &\overset{i.i.d.}{\sim} N(0, \sigma_u^2).
+    \end{aligned}
+\end{equation}
+A Likelihood Ration Test (LRT) reveals that compared to a Ordinary Least Squares (OLS) model with no random intercept, the random effect is significant ($\chi^2 (0,\, 1) = 2044.1$, $p = 0$). Note that here the $p$-value is a mixture from a chi-square model with 0 degrees of freedom and 1 degree of freedom.
+
+We then proceed to add in fixed effects for level 1 to investigate whether activity level, whether or not the participants were standing, and mood ratings were associated with elevating BP. We propose the 
 
 \subsection{Residual Analysis}\label{sec: resid}
 
