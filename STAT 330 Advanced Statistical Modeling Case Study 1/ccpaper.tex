@@ -617,7 +617,7 @@ After fitting separate MLR models for each participant, we see that the intercep
 
 \section{Model Selection}\label{sec: model selection}
 
-We will use a bottom-up approach to build a saturated model from scratch. Since, our data is ordered by time, we start with a base model (Model \ref{eq: RI with time}) with only the random intercept and and level 1 covariate time: for the $j^\text{th}$ measurement in the $i^\text{th}$ participant, where $i = 1,\, \ldots,\, n$ and $j = 1,\, \ldots,\, n_i$,
+We will use a bottom-up approach to build a saturated model from scratch. Since, our data is ordered by time, we start with a base model (Model \ref{eq: RI with time}) with only the random intercept and level 1 covariate time: for the $j^\text{th}$ measurement in the $i^\text{th}$ participant, where $i = 1,\, \ldots,\, n$ and $j = 1,\, \ldots,\, n_i$,
 \begin{equation}\label{eq: RI with time}
     \begin{aligned}
         \text{Level 1}: \quad & \text{BP}_{ij} &&= a_i + \beta\, \text{Time}_{ij} + \epsilon_{ij}, \quad & \epsilon_{ij} &\overset{i.i.d.}{\sim} N(0, \sigma^2) \\
@@ -626,7 +626,15 @@ We will use a bottom-up approach to build a saturated model from scratch. Since,
 \end{equation}
 A Likelihood Ration Test (LRT) reveals that compared to a Ordinary Least Squares (OLS) model with no random intercept, the random effect is significant ($\chi^2 (0,\, 1) = 2044.1$, $p = 0$). Note that here the $p$-value is a mixture from a chi-square model with 0 degrees of freedom and 1 degree of freedom.
 
-We then proceed to add in fixed effects for level 1 to investigate whether activity level, whether or not the participants were standing, and mood ratings were associated with elevating BP. We propose the 
+We then proceed to add in fixed effects for level 1 to investigate whether activity level, whether or not the participants were standing, and mood ratings were \emph{associated} with elevating BP. We propose the following (Model \ref{eq: RI with all lv1}) with a random intercept and all level 1 covariates:
+\begin{equation}\label{eq: RI with all lv1}
+    \begin{array}{rrcll}
+        \text{Level 1}: & \text{BP}_{ij} &=& a_i + \beta_1\, \text{Time}_{ij} + \beta_2\, \text{Activity}_{ij} + \beta_3\, \text{Standing}_{ij} + \beta_4\, \text{Mood}_{ij} + \epsilon_{ij}, \\[0.5ex]
+         & \epsilon_{ij} &\overset{i.i.d.}{\sim}& N(0, \sigma^2), \\[0.5ex]
+        \text{Level 2}: & a_i &=& \alpha + u_i, \\[0.5ex]
+         & u_{i} &\overset{i.i.d.}{\sim}& N(0, \sigma_u^2).
+    \end{array}
+\end{equation}
 
 \subsection{Residual Analysis}\label{sec: resid}
 

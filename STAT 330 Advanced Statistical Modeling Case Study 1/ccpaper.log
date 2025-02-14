@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  14 FEB 2025 09:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  14 FEB 2025 11:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1856,50 +1856,50 @@ File: pics/mlr mood by fh.png Graphic file (type png)
 Package pdftex.def Info: pics/mlr mood by fh.png  used on input line 607.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
  [10{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./pics/mlr int by age.png> <./pics/mlr int by day.png> <./pics/mlr int by fh.png> <./pics/mlr time by age.png> <./pics/mlr time by day.png> <./pics/mlr time by fh.png>] [11 <./pics/mlr act by age.png> <./pics/mlr act by day.png> <./pics/mlr act by fh.png> <./pics/mlr stand by age.png> <./pics/mlr stand by day.png> <./pics/mlr stand by fh.png> <./pics/mlr mood by age.png> <./pics/mlr mood by day.png> <./pics/mlr mood by fh.png>]
-<pics/bp by age and day.png, id=237, 1071.00125pt x 982.67125pt>
+<pics/bp by age and day.png, id=238, 1071.00125pt x 982.67125pt>
 File: pics/bp by age and day.png Graphic file (type png)
 <use pics/bp by age and day.png>
-Package pdftex.def Info: pics/bp by age and day.png  used on input line 645.
+Package pdftex.def Info: pics/bp by age and day.png  used on input line 653.
 (pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
-<pics/bp by age and fh.png, id=238, 1071.00125pt x 982.67125pt>
+<pics/bp by age and fh.png, id=239, 1071.00125pt x 982.67125pt>
 File: pics/bp by age and fh.png Graphic file (type png)
 <use pics/bp by age and fh.png>
-Package pdftex.def Info: pics/bp by age and fh.png  used on input line 653.
+Package pdftex.def Info: pics/bp by age and fh.png  used on input line 661.
 (pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
-<pics/bp by age and phase.png, id=239, 1071.00125pt x 982.67125pt>
+<pics/bp by age and phase.png, id=240, 1071.00125pt x 982.67125pt>
 File: pics/bp by age and phase.png Graphic file (type png)
 <use pics/bp by age and phase.png>
-Package pdftex.def Info: pics/bp by age and phase.png  used on input line 661.
+Package pdftex.def Info: pics/bp by age and phase.png  used on input line 669.
 (pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
-<pics/bp by id and age.png, id=240, 4818.0pt x 2710.125pt>
+<pics/bp by id and age.png, id=241, 4818.0pt x 2710.125pt>
 File: pics/bp by id and age.png Graphic file (type png)
 <use pics/bp by id and age.png>
-Package pdftex.def Info: pics/bp by id and age.png  used on input line 675.
+Package pdftex.def Info: pics/bp by id and age.png  used on input line 683.
 (pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pics/bp by id and day.png, id=241, 4818.0pt x 2710.125pt>
+<pics/bp by id and day.png, id=242, 4818.0pt x 2710.125pt>
 File: pics/bp by id and day.png Graphic file (type png)
 <use pics/bp by id and day.png>
-Package pdftex.def Info: pics/bp by id and day.png  used on input line 687.
+Package pdftex.def Info: pics/bp by id and day.png  used on input line 695.
 (pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pics/bp by id and fh.png, id=242, 4818.0pt x 2710.125pt>
+<pics/bp by id and fh.png, id=243, 4818.0pt x 2710.125pt>
 File: pics/bp by id and fh.png Graphic file (type png)
 <use pics/bp by id and fh.png>
-Package pdftex.def Info: pics/bp by id and fh.png  used on input line 699.
+Package pdftex.def Info: pics/bp by id and fh.png  used on input line 707.
 (pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 713.
+(Font)              <10.95> on input line 721.
 
-Overfull \hbox (17.56969pt too wide) in paragraph at lines 715--715
+Overfull \hbox (17.56969pt too wide) in paragraph at lines 723--723
 \T1/lmr/m/n/10.95 (-20) ten-sion and per-son-al-ity [Pub-lisher: Tay-lor & Fran-cis _eprint: https://doi.org/10.1080/713690197].
  []
 
@@ -1919,18 +1919,18 @@ Package logreq Info: Writing requests to 'ccpaper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57793 strings out of 474116
- 1291194 string characters out of 5743682
- 2931723 words of memory out of 5000000
- 79008 multiletter control sequences out of 15000+600000
+ 57798 strings out of 474116
+ 1291307 string characters out of 5743682
+ 2931798 words of memory out of 5000000
+ 79012 multiletter control sequences out of 15000+600000
  667586 words of font info for 238 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  121i,10n,126p,18415b,5370s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on ccpaper.pdf (14 pages, 11433775 bytes).
+Output written on ccpaper.pdf (14 pages, 11434942 bytes).
 PDF statistics:
- 349 PDF objects out of 1000 (max. 8388607)
- 220 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
+ 351 PDF objects out of 1000 (max. 8388607)
+ 222 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
  72498 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber ccpaper"] 1739399342.46343 "ccpaper.bcf" "ccpaper.bbl" "ccpaper" 1739546486.63584 0
-  "ccpaper.bcf" 1739546486.46427 133652 a336ae1895e99ad1e0799ac659028488 "pdflatex"
+["biber ccpaper"] 1739399342.46343 "ccpaper.bcf" "ccpaper.bbl" "ccpaper" 1739554853.86589 0
+  "ccpaper.bcf" 1739554853.69437 133652 a336ae1895e99ad1e0799ac659028488 "pdflatex"
   "sources.bib" 1739200491.68412 3639 a4de7bdb3f7ae84fd24dc5164be9845d ""
   (generated)
   "ccpaper.bbl"
   "ccpaper.blg"
   (rewritten before read)
-["pdflatex"] 1739546474.02832 "/Users/PC/E/Kunwu/School/Undergrad/Carleton/Academics/Term Courses/Senior/Winter/STAT 330 Advanced Modeling/Case Study 1/STAT 330 Advanced Statistical Modeling Case Study 1/ccpaper.tex" "ccpaper.pdf" "ccpaper" 1739546486.63616 0
-  "/Users/PC/E/Kunwu/School/Undergrad/Carleton/Academics/Term Courses/Senior/Winter/STAT 330 Advanced Modeling/Case Study 1/STAT 330 Advanced Statistical Modeling Case Study 1/ccpaper.tex" 1739546461.0285 33515 a107cb022d1d8160461ff4c29efad665 ""
+["pdflatex"] 1739554841.28135 "/Users/PC/E/Kunwu/School/Undergrad/Carleton/Academics/Term Courses/Senior/Winter/STAT 330 Advanced Modeling/Case Study 1/STAT 330 Advanced Statistical Modeling Case Study 1/ccpaper.tex" "ccpaper.pdf" "ccpaper" 1739554853.86635 0
+  "/Users/PC/E/Kunwu/School/Undergrad/Carleton/Academics/Term Courses/Senior/Winter/STAT 330 Advanced Modeling/Case Study 1/STAT 330 Advanced Statistical Modeling Case Study 1/ccpaper.tex" 1739554841.04764 34107 a8235e2465c16d2de9300c68c1b636f6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -363,12 +363,12 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1728347328.66471 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1728347243 8221420 71f512c370d08a56e6db7f6ed5f8bb1e ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "ccpaper.aux" 1739546486.45785 20645 e921f929b8091cd9cfdaeee93ff56074 "pdflatex"
+  "ccpaper.aux" 1739554853.68795 20787 e149fdc6bab31fe326be281eaed09817 "pdflatex"
   "ccpaper.bbl" 1739399344.7803 16520 9781e621e8e4f029af3e659e8e8ade7f "biber ccpaper"
-  "ccpaper.out" 1739546486.46121 1590 2a62b80a286792525f9ec364c1f5c2a5 "pdflatex"
-  "ccpaper.run.xml" 1739546486.46502 2479 acb0ef345ce560b5689146237fbb5a59 "pdflatex"
+  "ccpaper.out" 1739554853.69133 1590 2a62b80a286792525f9ec364c1f5c2a5 "pdflatex"
+  "ccpaper.run.xml" 1739554853.69512 2479 acb0ef345ce560b5689146237fbb5a59 "pdflatex"
   "ccpaper.sty" 1738135020 7479 f0e46c9e23085f43f5d5ef6b5ce3446c ""
-  "ccpaper.tex" 1739546461.0285 33515 a107cb022d1d8160461ff4c29efad665 ""
+  "ccpaper.tex" 1739554841.04764 34107 a8235e2465c16d2de9300c68c1b636f6 ""
   "coffee4.sty" 1738135020 479660 6183938852e516249305bc7047e3fa30 ""
   "pics/BP v time LS.png" 1739410761.41198 682188 8bc34a28b1f97c8edf175650d6cb1c37 ""
   "pics/bp by age and day.png" 1739416188.84846 126597 7210ddcd2a9172496c4970b60b128036 ""
