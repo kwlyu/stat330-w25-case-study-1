@@ -612,11 +612,6 @@ ggplot(data = nurse_resid1_loglog, aes(x = `log(mnact5 + 1)`, y = .chol.mar.resi
   geom_smooth() +
   labs(x = "Logged Activity Level",
        y = "Marginal Residuals")
-ggplot(data = nurse_resid1_loglog, aes(x = mood, y = .chol.mar.resid)) + 
-  geom_point(alpha=0.2) + 
-  geom_smooth() +
-  labs(x = "Mood",
-       y = "Marginal Residuals")
 ```
 
 ```{r Conditional (Raw) Residuals}

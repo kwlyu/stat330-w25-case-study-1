@@ -838,6 +838,26 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT ./pics/mar resid fit.png
+INPUT ./pics/mar resid fit.png
+INPUT ./pics/mar resid fit.png
+INPUT ./pics/mar resid fit.png
+INPUT ./pics/mar resid fit.png
+INPUT ./pics/mar resid act.png
+INPUT ./pics/mar resid act.png
+INPUT ./pics/mar resid act.png
+INPUT ./pics/mar resid act.png
+INPUT ./pics/mar resid act.png
+INPUT ./pics/mar resid time.png
+INPUT ./pics/mar resid time.png
+INPUT ./pics/mar resid time.png
+INPUT ./pics/mar resid time.png
+INPUT ./pics/mar resid time.png
+INPUT ./pics/mar resid stand.png
+INPUT ./pics/mar resid stand.png
+INPUT ./pics/mar resid stand.png
+INPUT ./pics/mar resid stand.png
+INPUT ./pics/mar resid stand.png
 INPUT ./pics/bp by age and day.png
 INPUT ./pics/bp by age and day.png
 INPUT ./pics/bp by age and day.png

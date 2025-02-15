@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  15 FEB 2025 10:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  15 FEB 2025 10:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1883,54 +1883,77 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.3.6})
                                                   \__shipout_drop_firstpage_...
 l.724 
       ]
-<pics/bp by age and day.png, id=279, 1071.00125pt x 982.67125pt>
+<pics/mar resid fit.png, id=280, 1367.1075pt x 1124.2pt>
+File: pics/mar resid fit.png Graphic file (type png)
+<use pics/mar resid fit.png>
+Package pdftex.def Info: pics/mar resid fit.png  used on input line 733.
+(pdftex.def)             Requested size: 223.13649pt x 183.47798pt.
+<pics/mar resid act.png, id=281, 1367.1075pt x 1124.2pt>
+File: pics/mar resid act.png Graphic file (type png)
+<use pics/mar resid act.png>
+Package pdftex.def Info: pics/mar resid act.png  used on input line 741.
+(pdftex.def)             Requested size: 223.13649pt x 183.47798pt.
+<pics/mar resid time.png, id=282, 1367.1075pt x 1124.2pt>
+File: pics/mar resid time.png Graphic file (type png)
+<use pics/mar resid time.png>
+Package pdftex.def Info: pics/mar resid time.png  used on input line 749.
+(pdftex.def)             Requested size: 223.13649pt x 183.47798pt.
+<pics/mar resid stand.png, id=283, 1367.1075pt x 1124.2pt>
+File: pics/mar resid stand.png Graphic file (type png)
+<use pics/mar resid stand.png>
+Package pdftex.def Info: pics/mar resid stand.png  used on input line 757.
+(pdftex.def)             Requested size: 223.13649pt x 183.47798pt.
+<pics/bp by age and day.png, id=284, 1071.00125pt x 982.67125pt>
 File: pics/bp by age and day.png Graphic file (type png)
 <use pics/bp by age and day.png>
-Package pdftex.def Info: pics/bp by age and day.png  used on input line 739.
+Package pdftex.def Info: pics/bp by age and day.png  used on input line 779.
 (pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
-<pics/bp by age and fh.png, id=280, 1071.00125pt x 982.67125pt>
+<pics/bp by age and fh.png, id=285, 1071.00125pt x 982.67125pt>
 File: pics/bp by age and fh.png Graphic file (type png)
 <use pics/bp by age and fh.png>
-Package pdftex.def Info: pics/bp by age and fh.png  used on input line 747.
+Package pdftex.def Info: pics/bp by age and fh.png  used on input line 787.
 (pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
-<pics/bp by age and phase.png, id=281, 1071.00125pt x 982.67125pt>
+<pics/bp by age and phase.png, id=286, 1071.00125pt x 982.67125pt>
 File: pics/bp by age and phase.png Graphic file (type png)
 <use pics/bp by age and phase.png>
-Package pdftex.def Info: pics/bp by age and phase.png  used on input line 755.
+Package pdftex.def Info: pics/bp by age and phase.png  used on input line 795.
 (pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
-<pics/bp by id and age.png, id=282, 4818.0pt x 2710.125pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pics/bp by id and age.png, id=287, 4818.0pt x 2710.125pt>
 File: pics/bp by id and age.png Graphic file (type png)
 <use pics/bp by id and age.png>
-Package pdftex.def Info: pics/bp by id and age.png  used on input line 769.
+Package pdftex.def Info: pics/bp by id and age.png  used on input line 809.
 (pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pics/bp by id and day.png, id=283, 4818.0pt x 2710.125pt>
+<pics/bp by id and day.png, id=288, 4818.0pt x 2710.125pt>
 File: pics/bp by id and day.png Graphic file (type png)
 <use pics/bp by id and day.png>
-Package pdftex.def Info: pics/bp by id and day.png  used on input line 781.
+Package pdftex.def Info: pics/bp by id and day.png  used on input line 821.
 (pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pics/bp by id and fh.png, id=284, 4818.0pt x 2710.125pt>
+<pics/bp by id and fh.png, id=289, 4818.0pt x 2710.125pt>
 File: pics/bp by id and fh.png Graphic file (type png)
 <use pics/bp by id and fh.png>
-Package pdftex.def Info: pics/bp by id and fh.png  used on input line 793.
+Package pdftex.def Info: pics/bp by id and fh.png  used on input line 833.
 (pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 807.
+(Font)              <10.95> on input line 847.
 
-Overfull \hbox (17.56969pt too wide) in paragraph at lines 809--809
+Overfull \hbox (17.56969pt too wide) in paragraph at lines 849--849
 \T1/lmr/m/n/10.95 (-20) ten-sion and per-son-al-ity [Pub-lisher: Tay-lor & Fran-cis _eprint: https://doi.org/10.1080/713690197].
  []
 
-[14 <./pics/bp by age and day.png> <./pics/bp by age and fh.png> <./pics/bp by age and phase.png>] [15 <./pics/bp by id and age.png> <./pics/bp by id and day.png>] [16 <./pics/bp by id and fh.png>] (./ccpaper.aux)
+[14 <./pics/mar resid fit.png> <./pics/mar resid act.png> <./pics/mar resid time.png> <./pics/mar resid stand.png>] [15 <./pics/bp by age and day.png> <./pics/bp by age and fh.png> <./pics/bp by age and phase.png>] [16 <./pics/bp by id and age.png> <./pics/bp by id and day.png>] [17 <./pics/bp by id and fh.png>] (./ccpaper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1946,18 +1969,18 @@ Package logreq Info: Writing requests to 'ccpaper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57836 strings out of 474116
- 1291887 string characters out of 5743682
- 2938306 words of memory out of 5000000
- 79027 multiletter control sequences out of 15000+600000
+ 57884 strings out of 474116
+ 1293225 string characters out of 5743682
+ 2938940 words of memory out of 5000000
+ 79073 multiletter control sequences out of 15000+600000
  668473 words of font info for 245 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  121i,13n,126p,18415b,5370s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on ccpaper.pdf (16 pages, 11476353 bytes).
+Output written on ccpaper.pdf (17 pages, 12835211 bytes).
 PDF statistics:
- 405 PDF objects out of 1000 (max. 8388607)
- 268 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
- 73010 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 419 PDF objects out of 1000 (max. 8388607)
+ 273 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 73030 words of extra memory for PDF output out of 74296 (max. 10000000)
 
