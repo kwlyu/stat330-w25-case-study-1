@@ -983,36 +983,11 @@ INPUT ./pics/lev flagged.png
 INPUT ./pics/lev flagged.png
 INPUT ./pics/lev flagged.png
 INPUT ./pics/lev flagged.png
-INPUT ./pics/bp by age and day.png
-INPUT ./pics/bp by age and day.png
-INPUT ./pics/bp by age and day.png
-INPUT ./pics/bp by age and day.png
-INPUT ./pics/bp by age and day.png
-INPUT ./pics/bp by age and fh.png
-INPUT ./pics/bp by age and fh.png
-INPUT ./pics/bp by age and fh.png
-INPUT ./pics/bp by age and fh.png
-INPUT ./pics/bp by age and fh.png
-INPUT ./pics/bp by age and phase.png
-INPUT ./pics/bp by age and phase.png
-INPUT ./pics/bp by age and phase.png
-INPUT ./pics/bp by age and phase.png
-INPUT ./pics/bp by age and phase.png
-INPUT ./pics/bp by id and age.png
-INPUT ./pics/bp by id and age.png
-INPUT ./pics/bp by id and age.png
-INPUT ./pics/bp by id and age.png
-INPUT ./pics/bp by id and age.png
-INPUT ./pics/bp by id and day.png
-INPUT ./pics/bp by id and day.png
-INPUT ./pics/bp by id and day.png
-INPUT ./pics/bp by id and day.png
-INPUT ./pics/bp by id and day.png
-INPUT ./pics/bp by id and fh.png
-INPUT ./pics/bp by id and fh.png
-INPUT ./pics/bp by id and fh.png
-INPUT ./pics/bp by id and fh.png
-INPUT ./pics/bp by id and fh.png
+INPUT ./pics/fh123 v bp.png
+INPUT ./pics/fh123 v bp.png
+INPUT ./pics/fh123 v bp.png
+INPUT ./pics/fh123 v bp.png
+INPUT ./pics/fh123 v bp.png
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
@@ -1024,6 +999,75 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ts1-lmr10.tfm
+INPUT ./pics/bp by age and day.png
+INPUT ./pics/bp by age and day.png
+INPUT ./pics/bp by age and day.png
+INPUT ./pics/bp by age and day.png
+INPUT ./pics/bp by age and day.png
+INPUT ./pics/bp by age and fh.png
+INPUT ./pics/bp by age and fh.png
+INPUT ./pics/bp by age and fh.png
+INPUT ./pics/bp by age and fh.png
+INPUT ./pics/bp by age and fh.png
+INPUT ./pics/bp by age and phase.png
+INPUT ./pics/bp by age and phase.png
+INPUT ./pics/bp by age and phase.png
+INPUT ./pics/bp by age and phase.png
+INPUT ./pics/bp by age and phase.png
+INPUT ./pics/bp by id and age.png
+INPUT ./pics/bp by id and age.png
+INPUT ./pics/bp by id and age.png
+INPUT ./pics/bp by id and age.png
+INPUT ./pics/bp by id and age.png
+INPUT ./pics/bp by id and day.png
+INPUT ./pics/bp by id and day.png
+INPUT ./pics/bp by id and day.png
+INPUT ./pics/bp by id and day.png
+INPUT ./pics/bp by id and day.png
+INPUT ./pics/bp by id and fh.png
+INPUT ./pics/bp by id and fh.png
+INPUT ./pics/bp by id and fh.png
+INPUT ./pics/bp by id and fh.png
+INPUT ./pics/bp by id and fh.png
+INPUT ./pics/bp v time and day facet.png
+INPUT ./pics/bp v time and day facet.png
+INPUT ./pics/bp v time and day facet.png
+INPUT ./pics/bp v time and day facet.png
+INPUT ./pics/bp v time and day facet.png
+INPUT ./pics/bp v act and day facet.png
+INPUT ./pics/bp v act and day facet.png
+INPUT ./pics/bp v act and day facet.png
+INPUT ./pics/bp v act and day facet.png
+INPUT ./pics/bp v act and day facet.png
+INPUT ./pics/bp v mood and day facet.png
+INPUT ./pics/bp v mood and day facet.png
+INPUT ./pics/bp v mood and day facet.png
+INPUT ./pics/bp v mood and day facet.png
+INPUT ./pics/bp v mood and day facet.png
+INPUT ./pics/bp v time and fh facet.png
+INPUT ./pics/bp v time and fh facet.png
+INPUT ./pics/bp v time and fh facet.png
+INPUT ./pics/bp v time and fh facet.png
+INPUT ./pics/bp v time and fh facet.png
+INPUT ./pics/bp v act and fh.png
+INPUT ./pics/bp v act and fh.png
+INPUT ./pics/bp v act and fh.png
+INPUT ./pics/bp v act and fh.png
+INPUT ./pics/bp v mood and fh facet.png
+INPUT ./pics/bp v mood and fh facet.png
+INPUT ./pics/bp v mood and fh facet.png
+INPUT ./pics/bp v mood and fh facet.png
+INPUT ./pics/bp v mood and fh facet.png
+INPUT ./pics/effects plot.png
+INPUT ./pics/effects plot.png
+INPUT ./pics/effects plot.png
+INPUT ./pics/effects plot.png
+INPUT ./pics/effects plot.png
+INPUT ./pics/marginal trend.png
+INPUT ./pics/marginal trend.png
+INPUT ./pics/marginal trend.png
+INPUT ./pics/marginal trend.png
+INPUT ./pics/marginal trend.png
 INPUT ccpaper.aux
 INPUT ./ccpaper.out
 INPUT ./ccpaper.out

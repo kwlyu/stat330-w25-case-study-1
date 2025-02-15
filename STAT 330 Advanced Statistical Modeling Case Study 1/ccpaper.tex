@@ -116,7 +116,7 @@
 % %End displayquote environment with ending quotes
 % \renewcommand{\mkenddispquote}{\textcoquote}
 
-\title{\textbf{LA Nurse BP}}
+\title{\textbf{Blood Pressure in LA}}
 \subtitle{Case Study 1\footnote{Code used for this project is available at this \href{https://github.com/kwlyu/stat330-w25-case-study-1.git}{GitHub Repository}.}} %Optional. Omit if not wanted.
 \author{Kunwu Lyu}
 \date{Feburary 13, 2025}
@@ -187,25 +187,25 @@
 \singlespacing
 
 \begin{abstract}
-    Here is what I did.
+    We investigated what factors in one's work conditions are associated with one's Blood Pressure (BP). Using data from \citet{goldstein_ambulatory_2000} on 203 registered nurses, we used a linear mixed model to investigate the relationship between BP and work status, mood, and other demographic information. We found that activity level, whether it is a workday, and whether one is standing are associated with BP levels. We do not have sufficient evidence to decide if the menstrual phase that one is on, one's age, mood, whether one has a family history, and the time elapsed since the first measurement makes a statistically significant difference in BP. 
 \end{abstract}
 
 \section{Introduction}\label{sec: intro}
 
-Certain traits such as family history and mood are expected to increase one's ambulatory blood pressure (BP). \citet{goldstein_ambulatory_2000} studied potential factors that contribute to hypertension. They collected information about the participants' BP, activity levels, work status, and mood ratings throughout the day, as well as relevant family history and information about their menstrual phases, to establish links that lead to elevated BP. Towards the end, they sought to uncover preventative measures for individuals who may be at a higher risks of developing hypertension. The objectives of this project is much simpler. I am interested in exactly what traits are \emph{associated} with elevating one's BP, given the longitudinal structure and various time-dependent metrics in the dataset \parencites(given by)()[cited by \postcite{roback_beyond_2021}]{goldstein_ambulatory_2000}.
+Certain traits such as family history and mood are expected to increase one's ambulatory blood pressure (BP). \citet{goldstein_ambulatory_2000} studied potential factors that contribute to hypertension. They collected information about the participants' BP, activity levels, work status, and mood ratings throughout the day, as well as relevant family history and information about their menstrual phases, to establish links that lead to elevated BP. Towards the end, they sought to uncover preventative measures for individuals who may be at a higher risks of developing hypertension. The objectives of this project are much simpler. I am interested in exactly what traits are \emph{associated} with elevating one's BP, given the longitudinal structure and various time-dependent metrics in the dataset \parencites(given by)()[cited by \postcite{roback_beyond_2021}]{goldstein_ambulatory_2000}.
 
 \subsection{Methods}\label{sec: method}
 
-The dataset includes repeated measures over the course of two work and off-work days on 203 registered nurses between the ages of 24 and 50 years working in Los Angeles, in the year 2000. Of those 203 nurses, 172 has complete data on all of the variables recorded.\footnote{In the original paper by Goldstein and Shapiro \pnotecite[228-29]{goldstein_ambulatory_2000}, they reported 171 nurses who completed all sessions. It is likely that this is due to \citet{roback_beyond_2021} or \citet{weiss_modeling_2005} excluding other personality variables used in the original study. Because I am not investigating personality traits in this project, 172 suffices being my total subject counts. Additionally, Goldstein and Shapiro  mention that ``[s]imilar patterns of findings were obtained in the sample of 171 as in the total sample'' \pnotecite[229]{goldstein_ambulatory_2000}.} BP of the participants were measured 30 minutes before their normal start of work, and measured measured repeatedly every 20 minutes for the rest of the day. This led to around 40-60 observations per nurse (9573 total observations). Each time the BP was taken, participants were asked to give several mood ratings including happiness, stress, and tiredness. In addition, participants wore an actigraph on their waist to record frequency of movements in one-minute intervals; the researchers obtained an activity measure for the ten-minute periods before each BP reading.
+The dataset includes repeated measures over the course of two work and off-work days on 203 registered nurses between the ages of 24 and 50 years working in Los Angeles, in the year 2000. Of those 203 nurses, 172 have complete data on all of the variables recorded.\footnote{In the original paper by Goldstein and Shapiro \pnotecite[228-29]{goldstein_ambulatory_2000}, they reported 171 nurses who completed all sessions. It is likely that this is due to \citet{roback_beyond_2021} or \citet{weiss_modeling_2005} excluding other personality variables used in the original study. Because I am not investigating personality traits in this project, 172 suffices to be my total subject count. Additionally, Goldstein and Shapiro mention that ``[s]imilar patterns of findings were obtained in the sample of 171 as in the total sample'' \pnotecite[229]{goldstein_ambulatory_2000}.} The BP of the participants was measured 30 minutes before their normal start of work, and measured measured repeatedly every 20 minutes for the rest of the day. This led to around 40-60 observations per nurse (9573 total observations). Each time the BP was taken, participants were asked to give several mood ratings including happiness, stress, and tiredness. In addition, participants wore an actigraph on their waist to record the frequency of movements in one-minute intervals; the researchers obtained an activity measure for the ten-minute periods before each BP reading.
 
 \section{Exploratory Data Analysis}\label{sec: eda}
 
-The variables (original and re-parameterized) used in this project are given in \Cref{tab: var desc}. Variable missingness was explored in \Cref{fig: missing}. We see that the data were missing primarily mood ratings and some activity levels from several participants. Because I am interested in how both of these variables relate to BP, I will proceed the analysis with the missing rows removed, leaving us with a total of 172 participants and 7877 observations. The visuals and statistics below will be given in terms of that subset of the data, unless otherwise specified.
+The variables (original and re-parameterized) used in this project are given in \Cref{tab: var desc}. Variable missingness was explored in \Cref{fig: missing}. We see that the data were missing primarily mood ratings and some activity levels from several participants. Because I am interested in how both of these variables relate to BP, I will proceed with the analysis with the missing rows removed, leaving us with a total of 172 participants and 7877 observations. The visuals and statistics below will be given in terms of that subset of the data unless otherwise specified.
 
 \begin{table} 
     \centering\begin{tabular}{|p{0.2\linewidth} | p{0.65\linewidth}|}
         \hline
-        Variable Name & Variable Descrption \\
+        Variable Name & Variable Description \\
         \hline\hline
         ID (Cluster) & Unique identification number for each participant \\
         \hline
@@ -228,6 +228,7 @@ The variables (original and re-parameterized) used in this project are given in 
         \textcolor[RGB]{74, 144, 226}{Age} & Age (in years) \\
         \hline
         \textcolor[RGB]{74, 144, 226}{Full FH} & Family history, coded as either NO (no family history of  hypertension), YES (1 hypertensive parent), or YESYES (both parents hypertensive) \\
+        \hline
         \textcolor[RGB]{208, 2, 27}{Timepass} & Number of minutes since the first measurement \\
         \hline
         \hline\hline
@@ -235,7 +236,7 @@ The variables (original and re-parameterized) used in this project are given in 
         \hline
         \emph{\textcolor[RGB]{208, 2, 27}{Mood}} & Combined mood ratings: HAP - (STR + TIR)/2 \\
         \hline
-        \emph{\textcolor[RGB]{74, 144, 226}{FH}} & Indicator variable for having family history of hypertension (1 for YES and YESYES, 0 for NO) \\
+        \emph{\textcolor[RGB]{74, 144, 226}{FH}} & Indicator variable for having a family history of hypertension (1 for YES and YESYES, 0 for NO) \\
         \hline
         \emph{\textcolor[RGB]{74, 144, 226}{Age24}} & Recentered Age: Age - 24 \\
         \hline
@@ -252,13 +253,13 @@ The variables (original and re-parameterized) used in this project are given in 
 \label{fig: missing}
 \end{figure}
 
-Because of the longitudinal nature of our data, it is worth noting our levels of analysis and to which our variables belong. I will call time-dependent measurements \emph{\textcolor[RGB]{208, 2, 27}{Level 1}} data (variables) and the rest of the subject-level measurements \emph{\textcolor[RGB]{74, 144, 226}{Level 2}} data (variables). Each participant has a unique identification number; this will distinguish between different clusters. Our primary response is systolic blood pressure (BP), and I will use our exploratory data analysis below to guide our model selection process from the bottom-up.
+Because of the longitudinal nature of our data, it is worth noting our levels of analysis and to which our variables belong. I will call time-dependent measurements \emph{\textcolor[RGB]{208, 2, 27}{Level 1}} data (variables) and the rest of the subject-level measurements \emph{\textcolor[RGB]{74, 144, 226}{Level 2}} data (variables). Each participant has a unique identification number; this will distinguish between different clusters. Our primary response is systolic blood pressure (BP), and I will use our exploratory data analysis below to guide our model selection process from the bottom up.
 
-Note that I created three additional variables from the original dataset to help simplify the modeling process. In the original dataset, \texttt{Posture} is a factor variable with three levels: Recline ($n = 530$), Sit ($n = 3644$), and Stand ($n = 3703$). Because the relatively small number of observations where participants were reclining (presumably sleeping at night or resting), I collapsed the three levels into either Standing or non-Standing. Similarly, because of the relatively small number of participants have both parents with hypertension ($n = 13$), I collapsed it together with having one parent with hypertension ($n = 66$) to compare against those without any family history ($n = 103$). Lastly, a general \texttt{Mood} measurement was created by subtracting the average of tiredness and stress from happiness. 
+Note that I created three additional variables from the original dataset to help simplify the modeling process. In the original dataset, \texttt{Posture} is a factor variable with three levels: Recline ($n = 530$), Sit ($n = 3644$), and Stand ($n = 3703$). Because of the relatively small number of observations where participants were reclining (presumably sleeping at night or resting), I collapsed the three levels into either Standing or non-standing. Similarly, because the relatively small number of participants have both parents with hypertension ($n = 13$), I collapsed it together with having one parent with hypertension ($n = 66$) to compare against those without any family history ($n = 103$). Lastly, a general \texttt{Mood} measurement was created by subtracting the average of tiredness and stress from happiness. 
 
 \subsection{Level 1 by Clusters}\label{sec: lv1}
 
-I will first explore how BP vary among participants and how it relates to the level 1 predictors to examine if there is any sign of clustering between different participants (which is the premise of a longitudinal study). From \Cref{fig: bp by subjects}, we see that BP readings do tend to vary among different participants, though variations within each participant do not seem to be pronounced. This suggests that a Linear Mixed Model (LMM) might be more appropriate than a regular Multiple Linear Regression (MLR).
+I will first explore how BP varies among participants and how it relates to level 1 predictors to examine if there is any sign of clustering between different participants (which is the premise of a longitudinal study). From \Cref{fig: bp by subjects}, we see that BP readings do tend to vary among different participants, though variations within each participant do not seem to be pronounced. This suggests that a Linear Mixed Model (LMM) might be more appropriate than a regular Multiple Linear Regression (MLR).
 
 \begin{figure} 
     \centering
@@ -267,7 +268,7 @@ I will first explore how BP vary among participants and how it relates to the le
     \label{fig: bp by subjects}
     \end{figure}
 
-Since our data is ordered in time, one might be interested in answering how the participants' BP evolve over time. For sake of brevity, I show a random subsets of subjects and their BP readings over time in \Cref{fig: bp v time facet}. From this plot alone, not much could be deciphered; some trends (e.g., participant 1116) seem to decrease over time while others either slightly increase (e.g., participant 1267) or do not see much fluctuation overall. Indeed, when I fit separate linear smoothers for each participant, I see various different intercepts and slopes for each participant (see \Cref{fig: bp v time separate ls}). This suggests that a random effect for both the intercept and slope of time.
+Since our data is ordered in time, one might be interested in answering how the participants' BP evolves over time. For the sake of brevity, I show random subsets of subjects and their BP readings over time in \Cref{fig: bp v time facet}. From this plot alone, not much could be deciphered; some trends (e.g., participant 1116) seem to decrease over time while others either slightly increase (e.g., participant 1267) or do not see much fluctuation overall. Indeed, when I fit separate linear smoothers for each participant, I see various different intercepts and slopes for each participant (see \Cref{fig: bp v time separate ls}). This suggests that a random effect for both the intercept and slope of time.
 
 \begin{figure} 
 \centering
@@ -287,11 +288,11 @@ Since our data is ordered in time, one might be interested in answering how the 
 \label{fig: bp v time separate ls}
 \end{subfigure}
 \caption[]
-{\small BP vs. Minutes since first measurement}
+{\small BP vs. Minutes since the first measurement}
 \label{fig: bp v time}
 \end{figure}
 
-We perform similar analysis for other level 1 covariates (see \Cref{fig: bp v level1}). We see the most prominent effect in \texttt{Mood}, where the slopes and intercepts for each participant differs the most. They all show, to a certain extend, signs of varying slopes and intercepts, but I cannot definitely conclude anything at this point.
+We perform similar analysis for other level 1 covariates (see \Cref{fig: bp v level1}). We see the most prominent effect in \texttt{Mood}, where the slopes and intercepts for each participant differ the most. They all show, to a certain extent, signs of varying slopes and intercepts, but I cannot definitely conclude anything at this point.
 
 \begin{figure} 
     \centering
@@ -325,13 +326,13 @@ We perform similar analysis for other level 1 covariates (see \Cref{fig: bp v le
 
 \subsection{Level 2 Covariates}\label{sec: lv2}
 
-We then want to understand the distributions of our level two covairates before we look at any interactions between the two levels. Because our level 2 covariates contains the same measurement over time (whereas our primary response \texttt{BP} is level 1 and hence time-dependent), we will compare the level 2 covariates with the \emph{average} \texttt{BP} of a given participant. 
+We then want to understand the distributions of our level two covariates before we look at any interactions between the two levels. Because our level 2 covariates contain the same measurement over time (whereas our primary response \texttt{BP} is level 1 and hence time-dependent), we will compare the level 2 covariates with the \emph{average} \texttt{BP} of a given participant. 
 
-From \Cref{fig: bp v phase}, we do not see that being on a different menstural phase impacts the participants' average \texttt{BP} much at all, suggesting that we likely do not need to control for \texttt{Phase} as a level 2 predictor. We see that in a workday, as opposed to a non-workday, the average \texttt{BP} of the participants appears to have a higher mean (see \Cref{fig: bp v day}). 
+From \Cref{fig: bp v phase}, we do not see that being on a different menstrual phase impacts the participants' average \texttt{BP} much at all, suggesting that we likely do not need to control for \texttt{Phase} as a level 2 predictor. We see that in a workday, as opposed to a non-workday, the average \texttt{BP} of the participants appears to have a higher mean (see \Cref{fig: bp v day}). 
 
-Similarly for family history; having at least one parent with hypertension bumps the participants' average \texttt{BP} by a marginal amount (\Cref{fig: bp v fh}). This suggest that we might want to look into having \texttt{Day} and \texttt{FH} in our model as control or predictors; we will return to their interaction with level 1 predictors in the next section. 
+Similarly for family history; having at least one parent with hypertension bumps the participants' average \texttt{BP} by a marginal amount (\Cref{fig: bp v fh}). This suggests that we might want to look into having \texttt{Day} and \texttt{FH} in our model as control or predictors; we will return to their interaction with level 1 predictors in the next section. 
 
-Lastly, it is unclear how age impacts average \texttt{BP}, since \Cref{fig: bp v age} shows that the effect of age varies significantly (though a smoother line shows slight positive increase as age increases). We will test this formally in \Cref{sec: model selection}.
+Lastly, it is unclear how age impacts average \texttt{BP}, since \Cref{fig: bp v age} shows that the effect of age varies significantly (though a smoother line shows a slight positive increase as age increases). We will test this formally in \Cref{sec: model selection}.
 
 \begin{figure} 
     \centering
@@ -373,7 +374,7 @@ Lastly, it is unclear how age impacts average \texttt{BP}, since \Cref{fig: bp v
 
 \subsection{Level 1 by Level 2 Covariates}\label{sec: lv1 x lv2}
 
-Next we investigate whether our level 1 covariates depend, in any way, on our level 2 covariates. There are several ways one could explore this.\footnote{Additional visualizations are shown in \autoref{sec: add visuals}.} In \Cref{sec: lv2}, we suspect that \texttt{BP} depends on \texttt{Workday} and \texttt{FH}. Instead of showing the average \texttt{BP}, we can also show simply the level 1 responses, faceted by workday and family history (see \Cref{fig: bp by day and fh}).
+Next, we investigate whether our level 1 covariates depend, in any way, on our level 2 covariates. There are several ways one could explore this.\footnote{Additional visualizations are shown in \autoref{sec: add visuals}.} In \Cref{sec: lv2}, we suspect that \texttt{BP} depends on \texttt{Workday} and \texttt{FH}. Instead of showing the average \texttt{BP}, we can also show simply the level 1 responses, faceted by workday and family history (see \Cref{fig: bp by day and fh}).
 
 \begin{figure} 
 \centering
@@ -382,7 +383,7 @@ Next we investigate whether our level 1 covariates depend, in any way, on our le
 \label{fig: bp by day and fh}
 \end{figure}
 
-To better understand the interaction between level 2 covairates and the level 1 covairates, however, it is most clear to explore with spaghetti plots or separate LS models to see the difference in intercepts and slopes. We first explore with spaghetti plots. From \Cref{fig: bp v level1 and day2} alone, it is hard to say anything conclusive about whether one of the level one covariates depend on \texttt{Workday}; there all seem to be marginal difference in intercepts, but slopes seem largely similar. \Cref{fig: bp v level1 and fh2} likewise shows inconclusive results in terms of \texttt{Family History} (though there appears to be some difference in slopes in Mood by \texttt{FH}). We proceed to analyze separate MLR models containing level 1 variables for each participant. This also allows us to better understand the continuous variable \texttt{Age24}. 
+To better understand the interaction between level 2 covariates and level 1 covariates, however, it is most clear to explore with spaghetti plots or separate LS models to see the difference in intercepts and slopes. We first explore spaghetti plots. From \Cref{fig: bp v level1 and day2} alone, it is hard to say anything conclusive about whether one of the level 1 covariates depends on \texttt{Workday}; there all seem to be marginal differences in intercepts, but slopes seem largely similar. \Cref{fig: bp v level1 and fh2} likewise shows inconclusive results in terms of \texttt{Family History} (though there appears to be some difference in slopes in Mood by \texttt{FH}). We proceed to analyze separate MLR models containing level 1 variables for each participant. This also allows us better to understand the continuous variable \texttt{Age24}. 
 
 \begin{figure} 
     \centering
@@ -462,7 +463,7 @@ To better understand the interaction between level 2 covairates and the level 1 
     \label{fig: bp v level1 and fh2}
 \end{figure}
 
-After fitting separate MLR models for each participant, we see that the intercepts appears to depend on \texttt{Workday} and \texttt{Age} (see \Cref{fig: int v day} and \Cref{fig: int v age}), the slopes for \texttt{Time} appears to depend on \texttt{Family History} and \texttt{Workday} (see \Cref{fig: time v fh} and \Cref{fig: time v day}), and the fixed effect for \texttt{Standing} appears to depend on \texttt{Age} and \texttt{Workday} (see \Cref{fig: stand v age} and \Cref{fig: stand v day}).
+After fitting separate MLR models for each participant, we see that the intercepts appear to depend on \texttt{Workday} and \texttt{Age} (see \Cref{fig: int v day} and \Cref{fig: int v age}), the slopes for \texttt{Time} appears to depend on \texttt{Family History} and \texttt{Workday} (see \Cref{fig: time v fh} and \Cref{fig: time v day}), and the fixed effect for \texttt{Standing} appears to depend on \texttt{Age} and \texttt{Workday} (see \Cref{fig: stand v age} and \Cref{fig: stand v day}).
 
 \begin{figure} 
     \centering
@@ -617,16 +618,16 @@ After fitting separate MLR models for each participant, we see that the intercep
 
 \section{Model Selection}\label{sec: model selection}
 
-We will use a bottom-up approach to build a saturated model from scratch. Since, our data is ordered by time, we start with a base model (Model \ref{eq: RI with time}) with only the random intercept and level 1 covariate time: for the $j^\text{th}$ measurement in the $i^\text{th}$ participant, where $i = 1,\, \ldots,\, n$ and $j = 1,\, \ldots,\, n_i$,
+We will use a bottom-up approach to build a saturated model from scratch. Since, our data is ordered by time, we start with a base model (Model \ref{eq: RI with time}) with only the random intercept and level 1 covariates time: for the $j^\text{th}$ measurement in the $i^\text{th}$ participant, where $i = 1,\, \ldots,\, n$ and $j = 1,\, \ldots,\, n_i$,
 \begin{equation}\label{eq: RI with time}
     \begin{aligned}
         \text{Level 1}: \quad & \text{BP}_{ij} &&= a_i + \beta_1\, \text{Time}_{ij} + \epsilon_{ij}, \quad & \epsilon_{ij} &\overset{i.i.d.}{\sim} N(0, \sigma^2) \\
         \text{Level 2}: \quad & a_i &&= \alpha + u_i, \quad & u_{i} &\overset{i.i.d.}{\sim} N(0, \sigma_u^2).
     \end{aligned}
 \end{equation}
-A Likelihood Ration Test (LRT) reveals that compared to a Ordinary Least Squares (OLS) model with no random intercept, the random effect is significant ($\chi^2 (0,\, 1) = 2044.1$, $p < 2.2 \times 10^{-16}$). Note that here the $p$-value is a mixture from a chi-square model with 0 degrees of freedom and 1 degree of freedom.
+A Likelihood Ration Test (LRT) reveals that compared to an Ordinary Least Squares (OLS) model with no random intercept, the random effect is significant ($\chi^2 (0,\, 1) = 2044.1$, $p < 2.2 \times 10^{-16}$). Note that here the $p$-value is a mixture from a chi-square model with 0 degrees of freedom and 1 degree of freedom.
 
-We then proceed to add in fixed effects for level 1 to investigate whether activity level, whether or not the participants were standing, and mood ratings were \emph{associated} with elevating BP. We propose the following (Model \ref{eq: RI with all lv1}) with a random intercept and all level 1 covariates:
+We then proceed to add in fixed effects for level 1 to investigate whether activity level, whether or not the participants were standing and mood ratings were \emph{associated} with elevating BP. We propose the following (Model \ref{eq: RI with all lv1}) with a random intercept and all level 1 covariates:
 \begin{equation}\label{eq: RI with all lv1}
     \begin{array}{rrcll}
         \text{Level 1}: & \text{BP}_{ij} &=& a_i + \beta_1\, \text{Time}_{ij} + \beta_2\, \text{Activity}_{ij} + \beta_3\, \text{Standing}_{ij} + \\
@@ -636,7 +637,7 @@ We then proceed to add in fixed effects for level 1 to investigate whether activ
          & u_{i} &\overset{i.i.d.}{\sim}& N(0, \sigma_u^2).
     \end{array}
 \end{equation}
-A LRT between Model \ref{eq: RI with time} and \ref{eq: RI with all lv1} reveals that the three added fixed effects are statistically significant ($\chi^2 (3) = 365.37$, $p < 2.2 \times 10^{-16}$). Naturally, one might wonder if we need all three fixed effect. Indeed, a LRT suggests that the following Model \ref{eq: RI no mood} without the covariate \texttt{Mood} ($\beta_4 = 0$) is just as good as Model \ref{eq: RI with all lv1} ($\chi^2 (1) = 0.43$, $p =0.51$). Because we are interested in \emph{whether} something is associated with elevated \texttt{BP} at all, we proceed the analysis with the simpler Model \ref{eq: RI no mood}.
+A LRT between Model \ref{eq: RI with time} and \ref{eq: RI with all lv1} reveals that the three added fixed effects are statistically significant ($\chi^2 (3) = 365.37$, $p < 2.2 \times 10^{-16}$). Naturally, one might wonder if we need all three fixed effects. Indeed, a LRT suggests that the following Model \ref{eq: RI no mood} without the covariate \texttt{Mood} ($\beta_4 = 0$) is just as good as Model \ref{eq: RI with all lv1} ($\chi^2 (1) = 0.43$, $p =0.51$). Because we are interested in \emph{whether} something is associated with elevated \texttt{BP} at all, we proceed with the analysis with the simpler Model \ref{eq: RI no mood}.
 \begin{equation}\label{eq: RI no mood}
     \begin{array}{rrcll}\tag{\ref{eq: RI with all lv1}$'$}
         \text{Level 1}: & \text{BP}_{ij} &=& a_i' + \beta_1'\, \text{Time}_{ij} + \beta_2'\, \text{Activity}_{ij} + \beta_3'\, \text{Standing}_{ij} + \epsilon_{ij}, \\[0.5ex]
@@ -647,7 +648,7 @@ A LRT between Model \ref{eq: RI with time} and \ref{eq: RI with all lv1} reveals
 \end{equation}
 Interestingly, LRT tests also suggest that compared to Model \ref{eq: RI no mood}, a model without the \texttt{Time} term ($\beta_1' = 0$) is also just as good ($\chi^2 (1) = 0.99$, $p = 0.32$). However, because time is such an important aspect of the longitudinal model, we think it is important that we keep \texttt{Time} as a level 1 covariate in our model.
 
-Next we investigate what random effects are needed in our model. The most clear evidence of random slopes from our EDA comes from \texttt{Mood}, but since LRT tests suggest that the fixed effect of \texttt{Mood} is not significant, we will not consider its random effect. For the rest of the covariates, EDA do show marginal signs of varying slopes. However, only adding a random effect for \texttt{Standing} do not raise convergence issues. This leads us to the following model with a random effect for \texttt{Standing}:
+Next, we investigate what random effects are needed in our model. The clearest evidence of random slopes from our EDA comes from \texttt{Mood}, but since LRT tests suggest that the fixed effect of \texttt{Mood} is not significant, we will not consider its random effect. For the rest of the covariates, EDA does show marginal signs of varying slopes. However, only adding a random effect for \texttt{Standing} does not raise convergence issues. This leads us to the following model with a random effect for \texttt{Standing}:
 \begin{equation}\label{eq: RIS stand}
     \begin{array}{rrcll}
         \text{Level 1}: & \text{BP}_{ij} &=& a_i + \gamma_1\, \text{Time}_{ij} + \gamma_2\, \text{Activity}_{ij} + b_i\, \text{Standing}_{ij} + \epsilon_{ij}, \\[0.5ex]
@@ -660,9 +661,9 @@ Next we investigate what random effects are needed in our model. The most clear 
          \end{bmatrix} \right).
     \end{array}
 \end{equation}
-A LRT suggests that the random effect for \texttt{Standing} is significant, based on a mixture from a chi-square model with 1 and 2 degrees of freedom ($\chi^2 (1,\, 2) = 377.34.1$, $p < 2.2 \times 10^{-16}$). Interestingly, removing the correlation term ($\rho_{uv}$) between the random effect for the intercept and the random effect for \texttt{Standing} causes further convergence issues, so we preserve the it in our following analysis.
+A LRT suggests that the random effect for \texttt{Standing} is significant, based on a mixture from a chi-square model with 1 and 2 degrees of freedom ($\chi^2 (1,\, 2) = 377.34.1$, $p < 2.2 \times 10^{-16}$). Interestingly, removing the correlation term ($\rho_{uv}$) between the random effect for the intercept and the random effect for \texttt{Standing} causes further convergence issues, so we preserve it in our following analysis.
 
-We move on to consider the interaction between level 2 and level 1 covaraites. Recall that our EDA identifies \texttt{Age}, \texttt{Workday}, and \texttt{Family History} as possibly interacting with the effect for \texttt{Standing}, the effects for \texttt{Time} and \texttt{Standing}, and the effect for \texttt{Time}, respectively. We will first consider whether the intercept and the effect of \texttt{Standing} depend on \texttt{Age} (recentered at 24):
+We move on to consider the interaction between level 2 and level 1 covariates. Recall that our EDA identifies \texttt{Age}, \texttt{Workday}, and \texttt{Family History} as possibly interacting with the effect for \texttt{Standing}, the effects for \texttt{Time} and \texttt{Standing}, and the effect for \texttt{Time}, respectively. We will first consider whether the intercept and the effect of \texttt{Standing} depend on \texttt{Age} (recentered at 24):
 \begin{equation}\label{eq: RIS stand age}
     \begin{array}{rrcll}
         \text{Level 1}: & \text{BP}_{ij} &=& a_i + \gamma_1\, \text{Time}_{ij} + \gamma_2\, \text{Activity}_{ij} + b_i\, \text{Standing}_{ij} + \epsilon_{ij}, \\[0.5ex]
@@ -675,7 +676,7 @@ We move on to consider the interaction between level 2 and level 1 covaraites. R
          \end{bmatrix} \right).
     \end{array}
 \end{equation}
-When compared with Model \ref{eq: RIS stand} ($\alpha_1 = \beta_1 = 0$), a LRT suggests that the smaller model without \texttt{Age} is just as good as the full model with the \texttt{Age} term ($\chi^2 (2) = 0.97$, $p = 0.61$). Because this project concerns \emph{whether} a covaraite is associated with elevated \texttt{BP}, we will proceed with the smaller model without \texttt{Age}.\footnote{Note that \citet{goldstein_ambulatory_2000} does include \texttt{Age} as a predictor because they are interested in preventative measures \emph{controlling for} age. This is not the aim of this project, even though \texttt{Age} is a meaningful and important predictor.} 
+When compared with Model \ref{eq: RIS stand} ($\alpha_1 = \beta_1 = 0$), a LRT suggests that the smaller model without \texttt{Age} is just as good as the full model with the \texttt{Age} term ($\chi^2 (2) = 0.97$, $p = 0.61$). Because this project concerns \emph{whether} a covariate is associated with elevated \texttt{BP}, we will proceed with the smaller model without \texttt{Age}.\footnote{Note that \citet{goldstein_ambulatory_2000} does include \texttt{Age} as a predictor because they are interested in preventative measures \emph{controlling for} age. This is not the aim of this project, even though \texttt{Age} is a meaningful and important predictor.} 
 
 Next, we consider the interaction of \texttt{Workday} between \texttt{Time} and \texttt{Standing}. 
 \begin{equation}\label{eq: RIS workday}
@@ -691,7 +692,7 @@ Next, we consider the interaction of \texttt{Workday} between \texttt{Time} and 
          \end{bmatrix} \right).
     \end{array}
 \end{equation}
-A LRT suggests that, when compared to Model \ref{eq: RIS stand} ($\alpha_1 = \beta_1 = \gamma_1 = 0$), at least one of coefficients is statistically significantly different from zero; we have some evidence to reject the Model \ref{eq: RIS stand} and prefer Model \ref{eq: RIS workday} for better model fit ($\chi^2 (3) = 8.22$, $p = 0.04$). However, when one removes the interaction between \texttt{Workday} and \texttt{Standing} ($\gamma_1 = 0$), a LRT test suggests that the smaller model is just as good ($\chi^2 (1) = 0.45$, $p = 0.50$); we drop the $\gamma_1$ for the sake of simplicity, which, when compared to the simpler Model \ref{eq: RIS stand} ($\alpha_1 = \beta_1 = 0$), still presents better explanatory power ($\chi^2 (2) = 7.77$, $p = 0.02$). Nevertheless, if we were to remove the interaction between \texttt{Time} and \texttt{Workday} ($\beta_1 = \gamma_1 = 0$ vs. $\gamma_1 = 0$), a LRT suggests that we have some evidence to prefer having the interaction between \texttt{Time} and \texttt{Workday} for a better model fit ($\chi^2 (1) = 4.46$, $p = 0.03$):
+A LRT suggests that, when compared to Model \ref{eq: RIS stand} ($\alpha_1 = \beta_1 = \gamma_1 = 0$), at least one of coefficients is statistically significantly different from zero; we have some evidence to reject the Model \ref{eq: RIS stand} and prefer Model \ref{eq: RIS workday} for better model fit ($\chi^2 (3) = 8.22$, $p = 0.04$). However, when one removes the interaction between \texttt{Workday} and \texttt{Standing} ($\gamma_1 = 0$), a LRT test suggests that the smaller model is just as good ($\chi^2 (1) = 0.45$, $p = 0.50$); we drop the $\gamma_1$ for the sake of simplicity, which, when compared to the simpler Model \ref{eq: RIS stand} ($\alpha_1 = \beta_1 = 0$), still presents better explanatory power ($\chi^2 (2) = 7.77$, $p = 0.02$). Nevertheless, if we were to remove the interaction between \texttt{Time} and \texttt{Workday} ($\beta_1 = \gamma_1 = 0$ vs. $\gamma_1 = 0$), an LRT suggests that we have some evidence to prefer having the interaction between \texttt{Time} and \texttt{Workday} for a better model fit ($\chi^2 (1) = 4.46$, $p = 0.03$):
 \begin{equation}\label{eq: RIS workday no stand}
     \begin{array}{rrcll}\tag{\ref{eq: RIS workday}$'$}
         \text{Level 1}: & \text{BP}_{ij} &=& a_i + b_i\, \text{Time}_{ij} + \delta \, \text{Activity}_{ij} + c_i\, \text{Standing}_{ij} + \epsilon_{ij}, \\[0.5ex]
@@ -724,7 +725,7 @@ When compared with \ref{eq: RIS workday no stand} ($\alpha_2 = \beta_2 = 0$), a 
 
 \subsection{Residual Analysis}\label{sec: resid}
 
-We first consider the level 1 \emph{marginal residuals} for each of the predictors as well as fitted values. From \Cref{fig: mar resid v fit}, there are some slight curvature in the fitted values, but not a huge concern. We see a similar pattern in \texttt{Activity Levels} (\Cref{fig: mar resid v act}), but generally not a huge concern. \texttt{Time} and \texttt{Standing} looks fine (see \Cref{fig: mar resid v time} and \Cref{fig: mar resid v stand}). 
+We first consider the level 1 \emph{marginal residuals} for each of the predictors as well as fitted values. From \Cref{fig: mar resid v fit}, there is some slight curvature in the fitted values, but not a huge concern. We see a similar pattern in \texttt{Activity Levels} (\Cref{fig: mar resid v act}), but generally not a huge concern. \texttt{Time} and \texttt{Standing} looks fine (see \Cref{fig: mar resid v time} and \Cref{fig: mar resid v stand}). 
 
 \begin{figure}[H] 
 \centering
@@ -764,7 +765,7 @@ We first consider the level 1 \emph{marginal residuals} for each of the predicto
 \label{fig: mar resid v lv1}
 \end{figure}
 
-Because we see some worry of constant variance in the fitted values, we proceed to check that assumption with the \emph{conditional residuals}. As before, \texttt{Time} and \texttt{Standing} looks fine (see \Cref{fig: cond resid v time} and \Cref{fig: cond resid v stand}). However, we see that for fitted values (\Cref{fig: cond resid v fit}) and \texttt{Activity Levels} (\Cref{fig: cond resid v act}), we have higher variations for higher values of fitted values and \texttt{Activity Levels}, respectively. The conditional residuals are, however, very heavy-tailed. 
+Because we see some worry of constant variance in the fitted values, we proceed to check that assumption with the \emph{conditional residuals}. As before, \texttt{Time} and \texttt{Standing} look fine (see \Cref{fig: cond resid v time} and \Cref{fig: cond resid v stand}). However, we see that for fitted values (\Cref{fig: cond resid v fit}) and \texttt{Activity Levels} (\Cref{fig: cond resid v act}), we have higher variations for higher values of fitted values and \texttt{Activity Levels}, respectively. The conditional residuals are, however, very heavy-tailed. 
 \begin{figure}[H] 
     \centering
     \begin{subfigure}[b]{0.4\textwidth}
@@ -812,7 +813,7 @@ Because we see some worry of constant variance in the fitted values, we proceed 
     \label{fig: cond resid v lv1}
     \end{figure}
 
-We reach similar conclusions for \emph{least squares} (LS) residuals (\Cref{fig: ls resid v lv1}). There is still some slight curvature in the fitted values (\Cref{fig: ls resid v fit}), some worry of constant variance (see \Cref{fig: ls resid v fit} and \Cref{fig: ls resid v act}), and violation of normality (\Cref{fig: ls resid norm}, heavy-tailed). Nevertheless, when we look at LS residuals for each participant (\Cref{fig: ls resid cluster}), we see that residuals across participants have more or less similar within cluster variation, which suggests that our constant variance might not be as severe as we imagined. 
+We reach similar conclusions for \emph{least squares} (LS) residuals (\Cref{fig: ls resid v lv1}). There is still some slight curvature in the fitted values (\Cref{fig: ls resid v fit}), some worry of constant variance (see \Cref{fig: ls resid v fit} and \Cref{fig: ls resid v act}), and violation of normality (\Cref{fig: ls resid norm}, heavy-tailed). Nevertheless, when we look at LS residuals for each participant (\Cref{fig: ls resid cluster}), we see that residuals across participants have more or less similar within-cluster variation, which suggests that our constant variance might not be as severe as we imagined. 
     \begin{figure}[H] 
         \centering
         \begin{subfigure}[b]{0.4\textwidth}
@@ -867,7 +868,7 @@ We reach similar conclusions for \emph{least squares} (LS) residuals (\Cref{fig:
         \label{fig: ls resid v lv1}
         \end{figure}
 
-We move on to examine level 2 residuals. We first examine the normality of the intercepts and slopes (\Cref{fig: lv2 qq}). The intercepts are right-skewed (\Cref{fig: lv2 int qq}), whereas the slopes (for \texttt{Standing}) are heavy-tailed (\Cref{fig: lv2 stand qq}). We also examine whether there is any missing variables (\Cref{fig: miss lv2}). We chose not to include \texttt{Phase} in our model because our EDA did not suggest any relationship between \texttt{Phase} and \texttt{BP}; indeed, \Cref{fig: miss phase} shows that the intercept random effect does not seem to be related to \texttt{Phase}.\footnote{\citet[][~ p. 231]{goldstein_ambulatory_2000} reached the same conclusion.} Whether the intercept random effect depends on \texttt{Age} has been tested in \Cref{sec: model selection}, and \Cref{fig: miss age} is consistent with our analysis above. That is, the intercept random effect does not seem to be dependent on age (even though the smoother suggest a very slight increasing trend).
+We move on to examine level 2 residuals. We first examine the normality of the intercepts and slopes (\Cref{fig: lv2 qq}). The intercepts are right-skewed (\Cref{fig: lv2 int qq}), whereas the slopes (for \texttt{Standing}) are heavy-tailed (\Cref{fig: lv2 stand qq}). We also examine whether there are any missing variables (\Cref{fig: miss lv2}). We chose not to include \texttt{Phase} in our model because our EDA did not suggest any relationship between \texttt{Phase} and \texttt{BP}; indeed, \Cref{fig: miss phase} shows that the intercept random effect does not seem to be related to \texttt{Phase}.\footnote{\citet[][~ p. 231]{goldstein_ambulatory_2000} reached the same conclusion.} Whether the intercept random effect depends on \texttt{Age} has been tested in \Cref{sec: model selection}, and \Cref{fig: miss age} is consistent with our analysis above. That is, the intercept random effect does not seem to be dependent on age (even though the smoother suggests a very slight increasing trend).
 
 \begin{figure}[H] 
     \centering
@@ -916,7 +917,7 @@ We move on to examine level 2 residuals. We first examine the normality of the i
 
 \subsection{Influential Statistics}\label{sec: infl stat}
 
-We also examine if some of the measurements carry greater weights in our model. It is important to note first that while many cases have been flagged, there is no \emph{a priori} reason that we should remove any of them.
+We also examine if some of the measurements carry greater weight in our model. It is important to note first that while many cases have been flagged, there is no \emph{a priori} reason that we should remove any of them.
 
 From \Cref{fig: cook and flagged}, we see that most flagged cases (e.g., participant 1133, 1276, 1223) in terms of Cook's Distance come from observations during a workday as opposed to non-workday. 
 \begin{figure}[H] 
@@ -940,7 +941,7 @@ From \Cref{fig: cook and flagged}, we see that most flagged cases (e.g., partici
     \label{fig: cook and flagged}
     \end{figure}
 
-For random effects influence, we see that most influential cases resuot in lower RE variation when omitted (\Cref{fig: rvc and flagged}). Specifically, most flagged cases (e.g., participant 1290) in terms of RVC for the intercept come observations during a workday from those \emph{with} family history. Similarly for slopes, most flagged cases (e.g., participant 1276, 1290) in terms of RVC for the slope come from observations during a workday.
+For random effects influence, we see that most influential cases result in lower RE variation when omitted (\Cref{fig: rvc and flagged}). Specifically, most flagged cases (e.g., participant 1290) in terms of RVC for the intercept come observations during a workday from those \emph{with} family history. Similarly for slopes, most flagged cases (e.g., participant 1276, 1290) in terms of RVC for the slope come from observations during a workday.
 \begin{figure}[H] 
     \centering
     \begin{subfigure}[b]{0.36\textwidth}
@@ -977,7 +978,7 @@ For random effects influence, we see that most influential cases resuot in lower
     \label{fig: rvc and flagged}
     \end{figure}
 
-Participants 1046, 1224, and 1140 have the highest overall leverage. Participants 1046 and 1224 also have the highest fixed effects leverage. We see that these cases occur mostly during the workday and mostly for those with family history (except participant 1046, which also have the highest overall leverage). 
+Participants 1046, 1224, and 1140 have the highest overall leverage. Participants 1046 and 1224 also have the highest fixed effects leverage. We see that these cases occur mostly during the workday and mostly for those with family history (except participant 1046, which also has the highest overall leverage). 
 
     \begin{figure}[H] 
         \centering
@@ -1019,6 +1020,71 @@ Participants 1046, 1224, and 1140 have the highest overall leverage. Participant
 
 \section{Results}\label{sec: results}
 
+\begin{table} 
+    \centering\begin{tabular}{|c|c|c||c|c|c|}
+        \hline
+        Effect & Group & Term & Estimate & Std. Error & Statistic \\
+        \hline\hline
+        Fixed & NA & Intercept & 108 & 1.24 & 87.5 \\
+        \hline
+        Fixed & NA & Workday & 3.29  &   1.33  &       2.47  \\
+        \hline
+        Fixed & NA & Family History & -0.708 &   1.34    &    -0.53 \\
+        \hline
+        Fixed & NA & Time & -0.001 &  0.001  &  -1.11 \\
+        \hline
+        Fixed & NA & Standing & 1.08  &   0.388    &    2.79 \\
+        \hline
+        Fixed & NA & Activity Level & 0.043 &  0.002  &   17.2  \\
+        \hline
+        Fixed & NA & Workday $\times$ Time & -0.002 & 0.001   &  -2.19 \\
+        \hline
+        Fixed & NA & Family History $\times$ Time & 0.004 & 0.001   &   3.92  \\
+        \hline\hline
+        Rand. & Subject & SD(Intercept) & 8.22  &  NA     &      NA  \\
+        \hline  
+        Rand. & Subject & Corr(Intercept, Standing) & -0.202  &  NA     &      NA  \\
+        \hline
+        Rand. & Subject & SD(Standing) & 3.03  &  NA     &      NA  \\
+        \hline\hline
+        Rand. & Residual & SD(Intercept) & 12.5  &  NA     &      NA  \\
+        \hline
+    \end{tabular}
+    \caption{Variable Estimates}
+    \label{tab: var est}
+\end{table}
+
+We give the estimates of our model in \Cref{tab: var est}.\footnote{similar visualizations are given in \autoref{sec: add visuals}.} First note that 
+\[ICC = \dfrac{8.22^2}{8.22^2 + 12.5^2} \approx 30.2\%,\]
+meaning that about $30.2\%$ of the total variability is attributable to differences among the participants. Our model predicts that the average baseline blood pressure for a nurse on a non-workday, with no family history of hypertension, at the start of the measurement period, while inactive and not standing will be around 108 mmHg (95\% CI, 105.9 to 110.7; 95\% bootstrap CI, 105.8 to 110.8).
+
+On a workday, the baseline blood pressure is 3.29 mmHg higher compared to a non-workday (95\% CI, 0.68 to 5.90), holding all other factors constant. However, over time, blood pressure decreases (just) slightly more on workdays than on non-workdays (-0.002 mmHg per measurement; 95\% CI, -0.005 to -0.0003).
+
+For a nurse with a family history of hypertension, their baseline blood pressure is 0.708 mmHg lower than someone without a family history (95\% CI, 3.32 decrease to 1.90 increase), holding all other factors constant. Note that here the confidence interval includes 0 (also reflected in the test statistics being close to 0), so it is still unclear whether simply having family history is associated with elevated \texttt{BP}. Nevertheless, over time, their blood pressure rises faster than those without a family history (+0.004 mmHg per measurement; 95\% CI 0.002 to 0.006).
+
+When a is standing, their mean blood pressure is expected to be 1.08 mmHg higher than when they are not standing (95\% CI 0.32 to 1.85), holding other factors constant; this is consistent with our intuition. Similarly, for each unit increase in Activity Level, blood pressure is expected to increase by 0.043 mmHg (95\% CI, 0.038 to 0.048), holding other factors constant. While this seems like a small increase, because the range of \texttt{Activity Level} spans from 0 to 300, there could be a large difference if, for instance, there is a 100-unit increase (95\% CI, 3.8 to 4.8).
+
+Lastly, each minute passed since the first measurement is associated with a slight decrease in blood pressure of 0.001 mmHg (95\% IC, -0.003 to 0.0008), on average, holding other factors constant; this is consistent with the LRT tests in \Cref{sec: model selection}. We discussed this briefly before as LRT tests find time to be not statistically significant. We preserved the variable in our final model to maintain the longitudinal structure. 
+
+In sum, we find that whether it is a workday, whether someone is standing, and activity levels are associated with BP levels.
+
+\subsection{Limitations}
+
+In the previous section, we do not have sufficient evidence to conclude whether family history is associated with BP levels. This is likely due to our grouping of family history into either with or without family history. the original data set has three levels, going from no parents with hypertension to both parents with hypertension. Indeed, if we look at the average BP for participants against the number of parents with hypertension (see \Cref{fig: avg bp v fh123}), we see the biggest jump going from 1 to 2, whereas there is not much difference between 0 and 1. Grouping family history into a binary obscured this relationship.\footnote{This is what Goldstein and Shapiro \pnotecite[231]{goldstein_ambulatory_2000} found as well; specifically, Table 2.}
+
+We similarly found no significant relationship between time and BP as well. This is also likely due to our variable choice as the original study distinguishes between wake time and sleep time. It is not inconceivable that one's BP during sleep will be different from one's BP when they are awake. Our choice of time variable does not capture that as it simply measures the minutes elapsed since the first measurement; some of them started at midnight while others started at noon. Similar comments can be made to \texttt{Mood} (which is an average of three predictors, happiness, tiredness, and stress; some meaningful relationship might be obscured) and \texttt{Standing} (as opposed to the three-level \texttt{Posture} variable with recline, sit, and standing).
+
+\begin{figure} 
+\centering
+\includegraphics[width=0.5\textwidth]{pics/fh123 v bp.png}
+\caption{Average BP vs Number of Parents with Hypertension}
+\label{fig: avg bp v fh123}
+\end{figure}
+
+\singlespacing
+% \bibliography{sources.bib}
+% \bibliographystyle{apalike}
+\printbibliography
 
 \begin{appendices}
     \section{Additional Visualizations}\label{sec: add visuals}
@@ -1057,7 +1123,7 @@ Participants 1046, 1224, and 1140 have the highest overall leverage. Participant
         \centering
         \begin{subfigure}[b]{\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{pics/bp by id and age.png}
+            \includegraphics[width=0.9\textwidth]{pics/bp by id and age.png}
             \caption{BP vs. Age by Subjects}
             \label{fig: bp v id and age}
         \end{subfigure}
@@ -1089,12 +1155,75 @@ Participants 1046, 1224, and 1140 have the highest overall leverage. Participant
         \label{fig: bp v id and level2_3}
     \end{figure}
 
+    \begin{figure} 
+        \centering
+        \begin{subfigure}{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{pics/bp v time and day facet.png}
+            \caption{{\small L1 BP vs. Time by Workday}}
+            \label{fig: bp by time and day}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{pics/bp v act and day facet.png}
+            \caption{{\small L1 BP vs. Activity by Workday}}
+            \label{fig: bp by act and day}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{pics/bp v mood and day facet.png}
+            \caption{{\small L1 BP vs. Mood by Workday}}
+            \label{fig: bp by mood and day}
+        \end{subfigure}
+        \caption{{\small L1 BP vs. Level 1 Covariates by Workday}}
+        \label{fig: bp by level1 and day2}
+    \end{figure}
+
+    \begin{figure} 
+        \centering
+        \begin{subfigure}{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{pics/bp v time and fh facet.png}
+            \caption{{\small L1 BP vs. Time by Family History}}
+            \label{fig: bp by time and fh}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{pics/bp v act and fh.png}
+            \caption{{\small L1 BP vs. Activity by Family History}}
+            \label{fig: bp by act and fh}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{pics/bp v mood and fh facet.png}
+            \caption{{\small L1 BP vs. Mood by Family History}}
+            \label{fig: bp by mood and day}
+        \end{subfigure}
+        \caption{{\small L1 BP vs. Level 1 Covariates by Family History}}
+        \label{fig: bp by level1 and fh}
+    \end{figure}
+
+    \begin{figure} 
+    \centering
+    \includegraphics[width=\textwidth]{pics/effects plot.png}
+    \caption{Predictor Effects}
+    \label{fig: effects}
+    \end{figure}
+
+
+    \begin{figure} 
+    \centering
+    \includegraphics[width=\textwidth]{pics/marginal trend.png}
+    \caption{Marginal Trends}
+    \label{fig: marginal trend}
+    \end{figure}
 \end{appendices}
 
 % \pagebreak
-\singlespacing
-% \bibliography{sources.bib}
-% \bibliographystyle{apalike}
-\printbibliography
+
 % \detailtexcount{ccpaper}
 \end{document}
