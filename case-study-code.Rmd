@@ -558,64 +558,8 @@ ggplot(data = nurse_resid1, aes(x = mnact5, y = .chol.mar.resid)) +
        y = "Marginal Residuals")
 ```
 
-```{r Exponential Model}
-nurse_lmm_RIS_logx <- lmer(sys ~ (day2 + fh_yes) * timepass + 
-                                    standing + log(mnact5 + 1)  + mood + 
-                       (1 + mood + standing | snum),
-                       data = nurse_filtered)
-nurse_resid1_log <- hlm_resid(nurse_lmm_RIS_logx, level = 1, standardize = TRUE)
-
-ggplot(data = nurse_resid1_log, aes(x = .mar.fitted, y = .chol.mar.resid)) + 
-  geom_point(alpha=0.2) + 
-  geom_smooth() +
-  labs(x = "Logged Fitted Marginal",
-       y = "Marginal Residuals") 
-ggplot(data = nurse_resid1_log, aes(x = timepass, y = .chol.mar.resid)) + 
-  geom_point(alpha=0.2) + 
-  geom_smooth() +
-  labs(x = "Minutes since first measurement",
-       y = "Marginal Residuals")
-ggplot(data = nurse_resid1_log, aes(x = as.factor(standing), y = .chol.mar.resid)) + 
-  geom_boxplot() + 
-  labs(x = "Standing vs. Not standing",
-       y = "Marginal Residuals")
-ggplot(data = nurse_resid1_log, aes(x = `log(mnact5 + 1)`, y = .chol.mar.resid)) + 
-  geom_point(alpha=0.2) + 
-  geom_smooth() +
-  labs(x = "Activity Level",
-       y = "Marginal Residuals")
-```
-
-```{r Power Model}
-nurse_lmm_RIS_loglog <- lmer(log(sys) ~ (day2 + fh_yes) * timepass + 
-                                    standing + log(mnact5 + 1)  + mood + 
-                       (1 + mood + standing | snum),
-                       data = nurse_filtered)
-nurse_resid1_loglog <- hlm_resid(nurse_lmm_RIS_loglog, level = 1, standardize = TRUE)
-
-ggplot(data = nurse_resid1_loglog, aes(x = .mar.fitted, y = .chol.mar.resid)) + 
-  geom_point(alpha=0.2) + 
-  geom_smooth() +
-  labs(x = "Fitted Marginal",
-       y = "Marginal Residuals") 
-ggplot(data = nurse_resid1_loglog, aes(x = timepass, y = .chol.mar.resid)) + 
-  geom_point(alpha=0.2) + 
-  geom_smooth() +
-  labs(x = "Minutes since first measurement",
-       y = "Marginal Residuals")
-ggplot(data = nurse_resid1_loglog, aes(x = as.factor(standing), y = .chol.mar.resid)) + 
-  geom_boxplot() + 
-  labs(x = "Standing vs. Not standing",
-       y = "Marginal Residuals")
-ggplot(data = nurse_resid1_loglog, aes(x = `log(mnact5 + 1)`, y = .chol.mar.resid)) + 
-  geom_point(alpha=0.2) + 
-  geom_smooth() +
-  labs(x = "Logged Activity Level",
-       y = "Marginal Residuals")
-```
-
 ```{r Conditional (Raw) Residuals}
-ggplot(data = nurse_resid1, aes(x = .mar.fitted, y = .std.resid)) + 
+ggplot(data = nurse_resid1_log, aes(x = .mar.fitted, y = .std.resid)) + 
   geom_point(alpha=0.2) + 
   geom_smooth() +
   labs(x = "Fitted Conditional Means",
@@ -639,6 +583,63 @@ ggplot(data = nurse_resid1, aes(x = mnact5, y = .std.resid)) +
 ggplot(nurse_resid1, aes(sample = .std.resid)) +
   stat_qq_line()+ 
   stat_qq()
+```
+
+```{r Exponential Model}
+nurse_lmm_RIS_logx <- lmer(sys ~ (day2 + fh_yes) * timepass + 
+                                    standing + log(mnact5 + 1)  + mood + 
+                       (1 + mood + standing | snum),
+                       data = nurse_filtered)
+nurse_resid1_logx <- hlm_resid(nurse_lmm_RIS_logx, level = 1, standardize = TRUE)
+
+ggplot(data = nurse_resid1_logx, aes(x = .mar.fitted, y = .std.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Logged Fitted Conditional",
+       y = "Conditional Residuals") 
+ggplot(data = nurse_resid1_logx, aes(x = `log(mnact5 + 1)`, y = .std.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Activity Level",
+       y = "Conditional Residuals")
+```
+
+```{r Logarithmic Model}
+nurse_lmm_RIS_logy <- lmer(log(sys) ~ (day2 + fh_yes) * timepass + 
+                                    standing + mnact5 + mood + 
+                       (1 + mood + standing | snum),
+                       data = nurse_filtered)
+nurse_resid1_logy <- hlm_resid(nurse_lmm_RIS_logy, level = 1, standardize = TRUE)
+
+ggplot(data = nurse_resid1_logy, aes(x = .mar.fitted, y = .std.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Fitted Conditional",
+       y = "Conditional Residuals") 
+ggplot(data = nurse_resid1_logy, aes(x = mnact5, y = .std.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Activity Level",
+       y = "Conditional Residuals")
+```
+
+```{r Power Model}
+nurse_lmm_RIS_loglog <- lmer(log(sys) ~ (day2 + fh_yes) * timepass + 
+                                    standing + log(mnact5 + 1)  + mood + 
+                       (1 + mood + standing | snum),
+                       data = nurse_filtered)
+nurse_resid1_loglog <- hlm_resid(nurse_lmm_RIS_loglog, level = 1, standardize = TRUE)
+
+ggplot(data = nurse_resid1_loglog, aes(x = .mar.fitted, y = .std.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Fitted Conditional",
+       y = "Conditional Residuals") 
+ggplot(data = nurse_resid1_loglog, aes(x = `log(mnact5 + 1)`, y = .std.resid)) + 
+  geom_point(alpha=0.2) + 
+  geom_smooth() +
+  labs(x = "Logged Activity Level",
+       y = "Conditional Residuals")
 ```
 
 ```{r Least Square Residuals}
@@ -725,7 +726,9 @@ ggplot(nurse_filtered, aes(x = timepass, y = sys))+
   geom_point() + 
   geom_point(data = nurse_filtered %>% filter(snum %in% cd_flagged), color = "red") +
   geom_smooth(method = "lm", se = F) +
-  facet_grid(rows = vars(day3), cols = vars(fh_2))
+  facet_grid(rows = vars(day3), cols = vars(fh_2)) +
+  labs(x = "Time passed",
+       y = "BP")
 ```
 
 ```{r RVC}
@@ -733,24 +736,28 @@ dotplot_diag(nurse_infl2$rvc.D11, name = "rvc", cutoff = "internal", modify = "b
 dotplot_diag(nurse_infl2$rvc.D22, name = "rvc", cutoff = "internal", modify = "boxplot")
 
 rvc1_flagged <- nurse_infl2 %>%
-  arrange(rvc.D11) %>%
-  slice(1:3) %>%
+  arrange(desc(rvc.D11)) %>%
+  slice(1) %>%
   pull(snum)
 rvc2_flagged <- nurse_infl2 %>%
-  arrange(rvc.D22) %>%
-  slice(1) %>%
+  arrange(desc(rvc.D22)) %>%
+  slice(1:2) %>%
   pull(snum)
 
 ggplot(nurse_filtered, aes(x = timepass, y = sys))+
   geom_point() + 
   geom_point(data = nurse_filtered %>% filter(snum %in% rvc1_flagged), color = "red") +
   geom_smooth(method = "lm", se = F) +
-  facet_grid(rows = vars(day3), cols = vars(fh_2))
-ggplot(nurse_filtered, aes(x = timepass, y = sys))+
+  facet_grid(rows = vars(day3), cols = vars(fh_2)) +
+  labs(x = "Time passed",
+       y = "BP")
+  ggplot(nurse_filtered, aes(x = timepass, y = sys))+
   geom_point() + 
   geom_point(data = nurse_filtered %>% filter(snum %in% rvc2_flagged), color = "red") +
   geom_smooth(method = "lm", se = F) +
-  facet_grid(rows = vars(day3), cols = vars(fh_2))
+  facet_grid(rows = vars(day3), cols = vars(fh_2)) +
+  labs(x = "Time passed",
+       y = "BP")
 ```
 
 ```{r Leverage}
@@ -758,11 +765,18 @@ dotplot_diag(nurse_infl2$leverage.overall, name = "leverage", cutoff = "internal
 dotplot_diag(nurse_infl2$leverage.fixef, name = "leverage", cutoff = "internal", modify = "boxplot")
 dotplot_diag(nurse_infl2$leverage.ranef.uc, name = "leverage", cutoff = "internal", modify = "boxplot")
 
+lev_flagged <- nurse_infl2 %>%
+  arrange(desc(leverage.overall)) %>%
+  slice(1:3) %>%
+  pull(snum)
+
 ggplot(nurse_filtered, aes(x = timepass, y = sys))+
   geom_point() + 
-  geom_point(data = nurse_filtered %>% filter(snum == 1062 | snum == 1226), color = "red") +
+  geom_point(data = nurse_filtered %>% filter(snum %in% lev_flagged), color = "red") +
   geom_smooth(method = "lm", se = F) +
-  facet_grid(rows = vars(day3), cols = vars(fh_2))
+  facet_grid(rows = vars(day3), cols = vars(fh_2)) +
+  labs(x = "Time passed",
+       y = "BP")
 ```
 
 
@@ -771,8 +785,9 @@ ggplot(nurse_filtered, aes(x = timepass, y = sys))+
 ### Confidence Intervals
 
 ```{r Fixed Effects, cache=TRUE}
-confint(final_model, parm = "beta_", method = "boot")
-confint(final_model, parm = "beta_")
+confint(final_model, parm = "beta_", method = "boot") -> boot_ci
+confint(final_model, parm = "beta_") -> ci
+tidy(final_model)
 ```
 
 ```{r Random Effects}

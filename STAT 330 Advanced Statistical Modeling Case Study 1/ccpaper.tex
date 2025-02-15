@@ -724,9 +724,9 @@ When compared with \ref{eq: RIS workday no stand} ($\alpha_2 = \beta_2 = 0$), a 
 
 \subsection{Residual Analysis}\label{sec: resid}
 
-We first consider the level 1 \emph{marginal residuals} for each of the predictors as well as fitted values. From \Cref{fig: mar resid v fit}, we see that 
+We first consider the level 1 \emph{marginal residuals} for each of the predictors as well as fitted values. From \Cref{fig: mar resid v fit}, there are some slight curvature in the fitted values, but not a huge concern. We see a similar pattern in \texttt{Activity Levels} (\Cref{fig: mar resid v act}), but generally not a huge concern. \texttt{Time} and \texttt{Standing} looks fine (see \Cref{fig: mar resid v time} and \Cref{fig: mar resid v stand}). 
 
-\begin{figure} 
+\begin{figure}[H] 
 \centering
 \begin{subfigure}[b]{0.475\textwidth}
 \centering
@@ -740,7 +740,7 @@ We first consider the level 1 \emph{marginal residuals} for each of the predicto
 \centering
 \includegraphics[width=\textwidth]{pics/mar resid act.png}
 \caption[]%
-{{\small }}
+{{\small Level 1 Marginal Residuals vs. Activity}}
 \label{fig: mar resid v act}
 \end{subfigure}
 \vskip\baselineskip
@@ -764,7 +764,258 @@ We first consider the level 1 \emph{marginal residuals} for each of the predicto
 \label{fig: mar resid v lv1}
 \end{figure}
 
+Because we see some worry of constant variance in the fitted values, we proceed to check that assumption with the \emph{conditional residuals}. As before, \texttt{Time} and \texttt{Standing} looks fine (see \Cref{fig: cond resid v time} and \Cref{fig: cond resid v stand}). However, we see that for fitted values (\Cref{fig: cond resid v fit}) and \texttt{Activity Levels} (\Cref{fig: cond resid v act}), we have higher variations for higher values of fitted values and \texttt{Activity Levels}, respectively. The conditional residuals are, however, very heavy-tailed. 
+\begin{figure}[H] 
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/cond resid fit.png}
+    \caption[]%
+    {{\small Level 1 Conditional Residuals vs. Fitted Value}}
+    \label{fig: cond resid v fit}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/cond resid act.png}
+    \caption[]%
+    {{\small Level 1 Conditional Residuals vs. Activity Level}}
+    \label{fig: cond resid v act}
+    \end{subfigure}
+    \vskip\baselineskip
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/cond resid time.png}
+        \caption[]%
+        {{\small Level 1 Conditional Residuals vs. Time}}
+        \label{fig: cond resid v time}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/cond resid stand.png}
+        \caption[]%
+        {{\small Level 1 Conditional Residuals vs. Standing}}
+        \label{fig: cond resid v stand}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{pics/cond resid norm.png}
+            \caption[]%
+            {{\small Distribution of Level 1 Conditional Residuals}}
+            \label{fig: cond resid qq}
+            \end{subfigure}
+        
+    \caption[]
+    {\small Level 1 Conditional Residuals vs. Predictors}
+    \label{fig: cond resid v lv1}
+    \end{figure}
+
+We reach similar conclusions for \emph{least squares} (LS) residuals (\Cref{fig: ls resid v lv1}). There is still some slight curvature in the fitted values (\Cref{fig: ls resid v fit}), some worry of constant variance (see \Cref{fig: ls resid v fit} and \Cref{fig: ls resid v act}), and violation of normality (\Cref{fig: ls resid norm}, heavy-tailed). Nevertheless, when we look at LS residuals for each participant (\Cref{fig: ls resid cluster}), we see that residuals across participants have more or less similar within cluster variation, which suggests that our constant variance might not be as severe as we imagined. 
+    \begin{figure}[H] 
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/ls resid fit.png}
+        \caption[]%
+        {{\small Level 1 LS Residuals vs. Fitted Value}}
+        \label{fig: ls resid v fit}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/ls resid act.png}
+        \caption[]%
+        {{\small Level 1 LS Residuals vs. Activity Level}}
+        \label{fig: ls resid v act}
+        \end{subfigure}
+        \vskip\baselineskip
+        \begin{subfigure}[b]{0.4\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{pics/ls resid time.png}
+            \caption[]%
+            {{\small Level 1 LS Residuals vs. Time}}
+            \label{fig: ls resid v time}
+            \end{subfigure}
+            \hfill
+            \begin{subfigure}[b]{0.4\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{pics/ls resid stand.png}
+            \caption[]%
+            {{\small Level 1 LS Residuals vs. Standing}}
+            \label{fig: ls resid v stand}
+            \end{subfigure}
+            \vskip\baselineskip
+            \begin{subfigure}[b]{0.4\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{pics/ls resid norm.png}
+                \caption[]%
+                {{\small Distribution of Level 1 LS Residuals}}
+                \label{fig: ls resid norm}
+                \end{subfigure}
+                \hfill
+                \begin{subfigure}[b]{0.4\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{pics/ls resid cluster.png}
+                \caption[]%
+                {{\small Level 1 LS Residuals vs. Subject}}
+                \label{fig: ls resid cluster}
+                \end{subfigure}
+        \caption[]
+        {\small Level 1 LS Residuals vs. Predictors}
+        \label{fig: ls resid v lv1}
+        \end{figure}
+
+We move on to examine level 2 residuals. We first examine the normality of the intercepts and slopes (\Cref{fig: lv2 qq}). The intercepts are right-skewed (\Cref{fig: lv2 int qq}), whereas the slopes (for \texttt{Standing}) are heavy-tailed (\Cref{fig: lv2 stand qq}). We also examine whether there is any missing variables (\Cref{fig: miss lv2}). We chose not to include \texttt{Phase} in our model because our EDA did not suggest any relationship between \texttt{Phase} and \texttt{BP}; indeed, \Cref{fig: miss phase} shows that the intercept random effect does not seem to be related to \texttt{Phase}.\footnote{\citet[][~ p. 231]{goldstein_ambulatory_2000} reached the same conclusion.} Whether the intercept random effect depends on \texttt{Age} has been tested in \Cref{sec: model selection}, and \Cref{fig: miss age} is consistent with our analysis above. That is, the intercept random effect does not seem to be dependent on age (even though the smoother suggest a very slight increasing trend).
+
+\begin{figure}[H] 
+    \centering
+    \begin{subfigure}[b]{0.39\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/lv2 resid int.png}
+    \caption[]%
+    {{\small Distribution of Level 2 Intercepts}}
+    \label{fig: lv2 int qq}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.39\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/lv2 resid stand.png}
+    \caption[]%
+    {{\small Distribution of Level 2 Slopes}}
+    \label{fig: lv2 stand qq}
+    \end{subfigure}
+    \caption[]
+    {\small Distribution of Level 2 Residuals}
+    \label{fig: lv2 qq}
+    \end{figure}
+
+    \begin{figure}[H] 
+        \centering
+        \begin{subfigure}[b]{0.39\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/ri phase.png}
+        \caption[]%
+        {{\small Level 2 Residuals by Phase}}
+        \label{fig: miss phase}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.39\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/ri age.png}
+        \caption[]%
+        {{\small Level 2 Residuals by Age}}
+        \label{fig: miss age}
+        \end{subfigure}
+        \caption[]
+        {\small Missingness of Level 2 Covariates}
+        \label{fig: miss lv2}
+        \end{figure}
+    
+
 \subsection{Influential Statistics}\label{sec: infl stat}
+
+We also examine if some of the measurements carry greater weights in our model. It is important to note first that while many cases have been flagged, there is no \emph{a priori} reason that we should remove any of them.
+
+From \Cref{fig: cook and flagged}, we see that most flagged cases (e.g., participant 1133, 1276, 1223) in terms of Cook's Distance come from observations during a workday as opposed to non-workday. 
+\begin{figure}[H] 
+    \centering
+    \begin{subfigure}[b]{0.38\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/cook dist.png}
+    \caption[]%
+    {{\small Cook's Distance}}
+    \label{fig: cook dist}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.38\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/cook by time and bp.png}
+    \caption[]%
+    {{\small Flagged (first 3) }}
+    \label{fig: cook flagged}
+    \end{subfigure}
+    \caption[]
+    {\small Fixed Effects Influence}
+    \label{fig: cook and flagged}
+    \end{figure}
+
+For random effects influence, we see that most influential cases resuot in lower RE variation when omitted (\Cref{fig: rvc and flagged}). Specifically, most flagged cases (e.g., participant 1290) in terms of RVC for the intercept come observations during a workday from those \emph{with} family history. Similarly for slopes, most flagged cases (e.g., participant 1276, 1290) in terms of RVC for the slope come from observations during a workday.
+\begin{figure}[H] 
+    \centering
+    \begin{subfigure}[b]{0.36\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/rvc int.png}
+    \caption[]%
+    {{\small RVC for intercepts}}
+    \label{fig: rvc int}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.36\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/rvc int flagged.png}
+    \caption[]%
+    {{\small Flagged (first 3) }}
+    \label{fig: rvc int flagged}
+    \end{subfigure}
+    \vskip\baselineskip
+    \begin{subfigure}[b]{0.36\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/rvc stand.png}
+        \caption[]%
+        {{\small RVC for slopes}}
+        \label{fig: rvc stand}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.36\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/rvc stand flagged.png}
+        \caption[]%
+        {{\small Flagged (first 1) }}
+        \label{fig: rvc slope flagged}
+        \end{subfigure}
+    \caption[]
+    {\small Random Effects Influence}
+    \label{fig: rvc and flagged}
+    \end{figure}
+
+Participants 1046, 1224, and 1140 have the highest overall leverage. Participants 1046 and 1224 also have the highest fixed effects leverage. We see that these cases occur mostly during the workday and mostly for those with family history (except participant 1046, which also have the highest overall leverage). 
+
+    \begin{figure}[H] 
+        \centering
+        \begin{subfigure}[b]{0.38\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/lev overall.png}
+        \caption[]%
+        {{\small Overall Leverage}}
+        \label{fig: lev overall}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.38\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/lev fixed.png}
+        \caption[]%
+        {{\small Fixed Leverage}}
+        \label{fig: lev fixed}
+        \end{subfigure}
+        \vskip\baselineskip
+        \begin{subfigure}[b]{0.38\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{pics/lev ran.png}
+            \caption[]%
+            {{\small (Unconfounded) RE Leverage}}
+            \label{fig: lev ran}
+            \end{subfigure}
+            \hfill
+            \begin{subfigure}[b]{0.38\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{pics/lev flagged.png}
+            \caption[]%
+            {{\small Flagged (first 1) }}
+            \label{fig: lev flagged}
+            \end{subfigure}
+        \caption[]
+        {\small Leverage Influence}
+        \label{fig: lev and flagged}
+        \end{figure}
 
 \section{Results}\label{sec: results}
 

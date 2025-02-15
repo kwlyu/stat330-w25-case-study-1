@@ -858,6 +858,131 @@ INPUT ./pics/mar resid stand.png
 INPUT ./pics/mar resid stand.png
 INPUT ./pics/mar resid stand.png
 INPUT ./pics/mar resid stand.png
+INPUT ./pics/cond resid fit.png
+INPUT ./pics/cond resid fit.png
+INPUT ./pics/cond resid fit.png
+INPUT ./pics/cond resid fit.png
+INPUT ./pics/cond resid fit.png
+INPUT ./pics/cond resid act.png
+INPUT ./pics/cond resid act.png
+INPUT ./pics/cond resid act.png
+INPUT ./pics/cond resid act.png
+INPUT ./pics/cond resid act.png
+INPUT ./pics/cond resid time.png
+INPUT ./pics/cond resid time.png
+INPUT ./pics/cond resid time.png
+INPUT ./pics/cond resid time.png
+INPUT ./pics/cond resid time.png
+INPUT ./pics/cond resid stand.png
+INPUT ./pics/cond resid stand.png
+INPUT ./pics/cond resid stand.png
+INPUT ./pics/cond resid stand.png
+INPUT ./pics/cond resid stand.png
+INPUT ./pics/cond resid norm.png
+INPUT ./pics/cond resid norm.png
+INPUT ./pics/cond resid norm.png
+INPUT ./pics/cond resid norm.png
+INPUT ./pics/cond resid norm.png
+INPUT ./pics/ls resid fit.png
+INPUT ./pics/ls resid fit.png
+INPUT ./pics/ls resid fit.png
+INPUT ./pics/ls resid fit.png
+INPUT ./pics/ls resid fit.png
+INPUT ./pics/ls resid act.png
+INPUT ./pics/ls resid act.png
+INPUT ./pics/ls resid act.png
+INPUT ./pics/ls resid act.png
+INPUT ./pics/ls resid act.png
+INPUT ./pics/ls resid time.png
+INPUT ./pics/ls resid time.png
+INPUT ./pics/ls resid time.png
+INPUT ./pics/ls resid time.png
+INPUT ./pics/ls resid time.png
+INPUT ./pics/ls resid stand.png
+INPUT ./pics/ls resid stand.png
+INPUT ./pics/ls resid stand.png
+INPUT ./pics/ls resid stand.png
+INPUT ./pics/ls resid stand.png
+INPUT ./pics/ls resid norm.png
+INPUT ./pics/ls resid norm.png
+INPUT ./pics/ls resid norm.png
+INPUT ./pics/ls resid norm.png
+INPUT ./pics/ls resid norm.png
+INPUT ./pics/ls resid cluster.png
+INPUT ./pics/ls resid cluster.png
+INPUT ./pics/ls resid cluster.png
+INPUT ./pics/ls resid cluster.png
+INPUT ./pics/ls resid cluster.png
+INPUT ./pics/lv2 resid int.png
+INPUT ./pics/lv2 resid int.png
+INPUT ./pics/lv2 resid int.png
+INPUT ./pics/lv2 resid int.png
+INPUT ./pics/lv2 resid int.png
+INPUT ./pics/lv2 resid stand.png
+INPUT ./pics/lv2 resid stand.png
+INPUT ./pics/lv2 resid stand.png
+INPUT ./pics/lv2 resid stand.png
+INPUT ./pics/lv2 resid stand.png
+INPUT ./pics/ri phase.png
+INPUT ./pics/ri phase.png
+INPUT ./pics/ri phase.png
+INPUT ./pics/ri phase.png
+INPUT ./pics/ri phase.png
+INPUT ./pics/ri age.png
+INPUT ./pics/ri age.png
+INPUT ./pics/ri age.png
+INPUT ./pics/ri age.png
+INPUT ./pics/ri age.png
+INPUT ./pics/cook dist.png
+INPUT ./pics/cook dist.png
+INPUT ./pics/cook dist.png
+INPUT ./pics/cook dist.png
+INPUT ./pics/cook dist.png
+INPUT ./pics/cook by time and bp.png
+INPUT ./pics/cook by time and bp.png
+INPUT ./pics/cook by time and bp.png
+INPUT ./pics/cook by time and bp.png
+INPUT ./pics/cook by time and bp.png
+INPUT ./pics/rvc int.png
+INPUT ./pics/rvc int.png
+INPUT ./pics/rvc int.png
+INPUT ./pics/rvc int.png
+INPUT ./pics/rvc int.png
+INPUT ./pics/rvc int flagged.png
+INPUT ./pics/rvc int flagged.png
+INPUT ./pics/rvc int flagged.png
+INPUT ./pics/rvc int flagged.png
+INPUT ./pics/rvc int flagged.png
+INPUT ./pics/rvc stand.png
+INPUT ./pics/rvc stand.png
+INPUT ./pics/rvc stand.png
+INPUT ./pics/rvc stand.png
+INPUT ./pics/rvc stand.png
+INPUT ./pics/rvc stand flagged.png
+INPUT ./pics/rvc stand flagged.png
+INPUT ./pics/rvc stand flagged.png
+INPUT ./pics/rvc stand flagged.png
+INPUT ./pics/rvc stand flagged.png
+INPUT ./pics/lev overall.png
+INPUT ./pics/lev overall.png
+INPUT ./pics/lev overall.png
+INPUT ./pics/lev overall.png
+INPUT ./pics/lev overall.png
+INPUT ./pics/lev fixed.png
+INPUT ./pics/lev fixed.png
+INPUT ./pics/lev fixed.png
+INPUT ./pics/lev fixed.png
+INPUT ./pics/lev fixed.png
+INPUT ./pics/lev ran.png
+INPUT ./pics/lev ran.png
+INPUT ./pics/lev ran.png
+INPUT ./pics/lev ran.png
+INPUT ./pics/lev ran.png
+INPUT ./pics/lev flagged.png
+INPUT ./pics/lev flagged.png
+INPUT ./pics/lev flagged.png
+INPUT ./pics/lev flagged.png
+INPUT ./pics/lev flagged.png
 INPUT ./pics/bp by age and day.png
 INPUT ./pics/bp by age and day.png
 INPUT ./pics/bp by age and day.png
