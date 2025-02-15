@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  14 FEB 2025 11:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  14 FEB 2025 16:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -629,10 +629,7 @@ Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \RaggedLeftParindent=\skip88
 \RaggedRightParindent=\skip89
 \JustifyingParindent=\skip90
-)
-\numbersep=\skip91
-\statementsep=\skip92
- (./ccpaper.sty
+) (./ccpaper.sty
 Package: ccpaper 
  (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
@@ -644,8 +641,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \ttl@box=\box65
-\beforetitleunit=\skip93
-\aftertitleunit=\skip94
+\beforetitleunit=\skip91
+\aftertitleunit=\skip92
 \ttl@plus=\dimen284
 \ttl@minus=\dimen285
 \ttl@toksa=\toks36
@@ -686,18 +683,18 @@ Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count456
 \calc@Adimen=\dimen297
 \calc@Bdimen=\dimen298
-\calc@Askip=\skip95
-\calc@Bskip=\skip96
+\calc@Askip=\skip93
+\calc@Bskip=\skip94
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count457
-\calc@Cskip=\skip97
+\calc@Cskip=\skip95
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
 \g_MT_multlinerow_int=\count458
 \l_MT_multwidth_dim=\dimen299
-\origjot=\skip98
+\origjot=\skip96
 \l_MT_shortvdotswithinadjustabove_dim=\dimen300
 \l_MT_shortvdotswithinadjustbelow_dim=\dimen301
 \l_MT_above_intertext_sep=\dimen302
@@ -852,7 +849,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@dimlist=\toks47
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip99
+\labelindent=\skip97
 \enit@outerparindent=\dimen346
 \enit@toks=\toks48
 \enit@inbox=\box74
@@ -924,9 +921,9 @@ Package: matlab-prettifier 2014/06/19 v0.3 A package for prettyprinting Matlab s
 \netBracketCount@mlpr=\count522
 \blkLvl@mlpr=\count523
 \blkLvlAtClassdef@mlpr=\count524
-\emHeight@mlpr=\skip100
-\jayDepth@mlpr=\skip101
-\sectionRuleOffset@mlpr=\skip102
+\emHeight@mlpr=\skip98
+\jayDepth@mlpr=\skip99
+\sectionRuleOffset@mlpr=\skip100
 \toks@mlpr=\toks51
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/mhchem/mhchem.sty
 Package: mhchem 2024/01/29 v4.10 for typesetting chemical formulae
@@ -936,16 +933,16 @@ Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use 
 \g__chemgreek_tmpa_int=\count526
 )
 \l__mhchem_ce_distanceFromLastComma_int=\count527
-\__mhchem_arrow_extPgfLength_skip=\skip103
-\mhchem@minispace@tmp=\skip104
-\mhchem@minibackspace@tmp=\skip105
-\mhchem@bondwidth=\skip106
-\mhchem@bondheight=\skip107
-\mhchem@smallbondwidth@tmpA=\skip108
-\mhchem@smallbondwidth@tmpB=\skip109
-\mhchem@smallbondwidth=\skip110
-\mhchem@bondtmp@minussidebearingleft=\skip111
-\mhchem@bondtmp@minussidebearingright=\skip112
+\__mhchem_arrow_extPgfLength_skip=\skip101
+\mhchem@minispace@tmp=\skip102
+\mhchem@minibackspace@tmp=\skip103
+\mhchem@bondwidth=\skip104
+\mhchem@bondheight=\skip105
+\mhchem@smallbondwidth@tmpA=\skip106
+\mhchem@smallbondwidth@tmpB=\skip107
+\mhchem@smallbondwidth=\skip108
+\mhchem@bondtmp@minussidebearingleft=\skip109
+\mhchem@bondtmp@minussidebearingright=\skip110
 \l__mhchem_option_version_int=\count528
 \mhchem@option@minusmathsidebearingleft=\dimen347
 \mhchem@option@minusmathsidebearingright=\dimen348
@@ -958,9 +955,9 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headfont=\toks54
 \thm@notefont=\toks55
 \thm@headpunct=\toks56
-\thm@preskip=\skip113
-\thm@postskip=\skip114
-\thm@headsep=\skip115
+\thm@preskip=\skip111
+\thm@postskip=\skip112
+\thm@headsep=\skip113
 \dth@everypar=\toks57
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
@@ -976,9 +973,9 @@ LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip116
+\multirow@colwidth=\skip114
 \multirow@cntb=\count529
-\multirow@dima=\skip117
+\multirow@dima=\skip115
 \bigstrutjot=\dimen351
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
@@ -1024,16 +1021,16 @@ LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
 File: microtype-pdftex.def 2023/03/13 v3.1a Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 902.
 LaTeX Info: Redefining \lslig on input line 902.
-\MT@outer@space=\skip118
+\MT@outer@space=\skip116
 )
 Package microtype Info: Loading configuration file microtype.cfg.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/titling/titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
-\thanksmarkwidth=\skip119
-\thanksmargin=\skip120
-\droptitle=\skip121
+\thanksmarkwidth=\skip117
+\thanksmargin=\skip118
+\droptitle=\skip119
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.sty
@@ -1160,7 +1157,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip122
+\Hy@SectionHShift=\skip120
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
@@ -1184,43 +1181,43 @@ Package cleveref Info: no abbreviation of names on input line 7852.
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
 \c@AlgoLine=\count555
-\algocf@hangindent=\skip123
+\algocf@hangindent=\skip121
  (/usr/local/texlive/2024/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
 \c@checkoddpage=\count556
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip124
-\skiplinenumber=\skip125
-\skiprule=\skip126
-\skiphlne=\skip127
-\skiptext=\skip128
-\skiplength=\skip129
-\algomargin=\skip130
-\skipalgocfslide=\skip131
+\skiptotal=\skip122
+\skiplinenumber=\skip123
+\skiprule=\skip124
+\skiphlne=\skip125
+\skiptext=\skip126
+\skiplength=\skip127
+\algomargin=\skip128
+\skipalgocfslide=\skip129
 \algowidth=\dimen371
 \inoutsize=\dimen372
 \inoutindent=\dimen373
 \interspacetitleruled=\dimen374
 \interspacealgoruled=\dimen375
 \interspacetitleboxruled=\dimen376
-\algocf@ruledwidth=\skip132
+\algocf@ruledwidth=\skip130
 \algocf@inoutbox=\box76
 \algocf@inputbox=\box77
-\AlCapSkip=\skip133
-\AlCapHSkip=\skip134
-\algoskipindent=\skip135
+\AlCapSkip=\skip131
+\AlCapHSkip=\skip132
+\algoskipindent=\skip133
 \algocf@nlbox=\box78
 \algocf@hangingbox=\box79
 \algocf@untilbox=\box80
-\algocf@skipuntil=\skip136
+\algocf@skipuntil=\skip134
 \algocf@capbox=\box81
-\algocf@lcaptionbox=\skip137
-\algoheightruledefault=\skip138
-\algoheightrule=\skip139
-\algotitleheightruledefault=\skip140
-\algotitleheightrule=\skip141
+\algocf@lcaptionbox=\skip135
+\algoheightruledefault=\skip136
+\algoheightrule=\skip137
+\algotitleheightruledefault=\skip138
+\algotitleheightrule=\skip139
 \c@algocfline=\count557
 \c@algocfproc=\count558
 \c@algocf=\count559
@@ -1235,12 +1232,12 @@ Package: nccmath 2006/01/20 v1.3 Additional Math Commands (NCC)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphbox/graphbox.sty
 Package: graphbox 2018/01/17 v1.1 extension for graphicx to adjust containing box
 \Gin@box@box=\box84
-\Gin@box@width=\skip142
-\Gin@box@height=\skip143
-\Gin@box@raise=\skip144
-\Gin@box@hspace=\skip145
-\Gin@box@bwidth=\skip146
-\Gin@box@bheight=\skip147
+\Gin@box@width=\skip140
+\Gin@box@height=\skip141
+\Gin@box@raise=\skip142
+\Gin@box@hspace=\skip143
+\Gin@box@bwidth=\skip144
+\Gin@box@bheight=\skip145
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tikzsymbols/tikzsymbols.sty
 Package: tikzsymbols 2021/12/14 v4.12a Some symbols created using tikz and LaTeX3.
  (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
@@ -1394,10 +1391,10 @@ Package: epigraph 2020/01/02 v1.5e typesetting epigraphs
  (/usr/local/texlive/2024/texmf-dist/tex/latex/nextpage/nextpage.sty
 Package: nextpage 2009/09/03 v1.1a additional page commands
 )
-\beforeepigraphskip=\skip148
-\afterepigraphskip=\skip149
-\epigraphwidth=\skip150
-\epigraphrule=\skip151
+\beforeepigraphskip=\skip146
+\afterepigraphskip=\skip147
+\epigraphwidth=\skip148
+\epigraphrule=\skip149
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/sectsty/sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading styles
 
@@ -1673,7 +1670,6 @@ File: pics/miss.png Graphic file (type png)
 <use pics/miss.png>
 Package pdftex.def Info: pics/miss.png  used on input line 250.
 (pdftex.def)             Requested size: 469.75502pt x 260.96501pt.
- [2]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 257.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1682,6 +1678,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+ [2]
 <pics/bp by subjects.png, id=88, 4818.0pt x 2710.125pt>
 File: pics/bp by subjects.png Graphic file (type png)
 <use pics/bp by subjects.png>
@@ -1713,193 +1710,195 @@ File: pics/bp v stand.png Graphic file (type png)
 <use pics/bp v stand.png>
 Package pdftex.def Info: pics/bp v stand.png  used on input line 316.
 (pdftex.def)             Requested size: 150.32504pt x 137.91791pt.
- [4 <./pics/bp by subjects.png>] [5 <./pics/bp v time by subj.png> <./pics/BP v time LS.png> <./pics/bp v act.png> <./pics/bp v mood.png> <./pics/bp v stand.png>]
-<pics/bp v phase.png, id=129, 1071.00125pt x 982.67125pt>
+<pics/bp v phase.png, id=112, 1071.00125pt x 982.67125pt>
 File: pics/bp v phase.png Graphic file (type png)
 <use pics/bp v phase.png>
 Package pdftex.def Info: pics/bp v phase.png  used on input line 340.
 (pdftex.def)             Requested size: 225.4804pt x 206.87686pt.
-<pics/bp v day.png, id=130, 1071.00125pt x 982.67125pt>
+<pics/bp v day.png, id=113, 1071.00125pt x 982.67125pt>
 File: pics/bp v day.png Graphic file (type png)
 <use pics/bp v day.png>
 Package pdftex.def Info: pics/bp v day.png  used on input line 347.
 (pdftex.def)             Requested size: 225.4804pt x 206.87686pt.
-<pics/bp v age.png, id=131, 1071.00125pt x 982.67125pt>
+<pics/bp v age.png, id=114, 1071.00125pt x 982.67125pt>
 File: pics/bp v age.png Graphic file (type png)
 <use pics/bp v age.png>
 Package pdftex.def Info: pics/bp v age.png  used on input line 359.
 (pdftex.def)             Requested size: 225.4804pt x 206.87686pt.
-<pics/bp v fh.png, id=132, 1071.00125pt x 982.67125pt>
+<pics/bp v fh.png, id=115, 1071.00125pt x 982.67125pt>
 File: pics/bp v fh.png Graphic file (type png)
 <use pics/bp v fh.png>
 Package pdftex.def Info: pics/bp v fh.png  used on input line 366.
 (pdftex.def)             Requested size: 225.4804pt x 206.87686pt.
-<pics/bp by day and fh.png, id=137, 1071.00125pt x 982.67125pt>
+ [4 <./pics/bp by subjects.png>] [5 <./pics/bp v time by subj.png> <./pics/BP v time LS.png> <./pics/bp v act.png> <./pics/bp v mood.png> <./pics/bp v stand.png>] [6 <./pics/bp v phase.png> <./pics/bp v day.png> <./pics/bp v age.png> <./pics/bp v fh.png>]
+<pics/bp by day and fh.png, id=145, 1071.00125pt x 982.67125pt>
 File: pics/bp by day and fh.png Graphic file (type png)
 <use pics/bp by day and fh.png>
 Package pdftex.def Info: pics/bp by day and fh.png  used on input line 380.
 (pdftex.def)             Requested size: 187.89914pt x 172.38988pt.
-<pics/bp v time and day.png, id=140, 1367.1075pt x 1124.2pt>
+<pics/bp v time and day.png, id=148, 1367.1075pt x 1124.2pt>
 File: pics/bp v time and day.png Graphic file (type png)
 <use pics/bp v time and day.png>
 Package pdftex.def Info: pics/bp v time and day.png  used on input line 391.
 (pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
-<pics/bp v act and day.png, id=141, 1367.1075pt x 1124.2pt>
+<pics/bp v act and day.png, id=149, 1367.1075pt x 1124.2pt>
 File: pics/bp v act and day.png Graphic file (type png)
 <use pics/bp v act and day.png>
 Package pdftex.def Info: pics/bp v act and day.png  used on input line 398.
 (pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
-<pics/bp v stand and day.png, id=142, 1367.1075pt x 1124.2pt>
+<pics/bp v stand and day.png, id=150, 1367.1075pt x 1124.2pt>
 File: pics/bp v stand and day.png Graphic file (type png)
 <use pics/bp v stand and day.png>
 Package pdftex.def Info: pics/bp v stand and day.png  used on input line 411.
 (pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
-<pics/bp v mood and day.png, id=143, 1367.1075pt x 1124.2pt>
+<pics/bp v mood and day.png, id=151, 1367.1075pt x 1124.2pt>
 File: pics/bp v mood and day.png Graphic file (type png)
 <use pics/bp v mood and day.png>
 Package pdftex.def Info: pics/bp v mood and day.png  used on input line 418.
 (pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
-<pics/bp v time and fh.png, id=144, 1367.1075pt x 1124.2pt>
+<pics/bp v time and fh.png, id=152, 1367.1075pt x 1124.2pt>
 File: pics/bp v time and fh.png Graphic file (type png)
 <use pics/bp v time and fh.png>
 Package pdftex.def Info: pics/bp v time and fh.png  used on input line 430.
 (pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
-<pics/bp v act and fh.png, id=145, 1367.1075pt x 1124.2pt>
+<pics/bp v act and fh.png, id=153, 1367.1075pt x 1124.2pt>
 File: pics/bp v act and fh.png Graphic file (type png)
 <use pics/bp v act and fh.png>
 Package pdftex.def Info: pics/bp v act and fh.png  used on input line 437.
 (pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
-<pics/bp v stand and fh.png, id=146, 1367.1075pt x 1124.2pt>
+<pics/bp v stand and fh.png, id=154, 1367.1075pt x 1124.2pt>
 File: pics/bp v stand and fh.png Graphic file (type png)
 <use pics/bp v stand and fh.png>
 Package pdftex.def Info: pics/bp v stand and fh.png  used on input line 450.
 (pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
-<pics/bp v mood and fh.png, id=147, 1367.1075pt x 1124.2pt>
+<pics/bp v mood and fh.png, id=155, 1367.1075pt x 1124.2pt>
 File: pics/bp v mood and fh.png Graphic file (type png)
 <use pics/bp v mood and fh.png>
 Package pdftex.def Info: pics/bp v mood and fh.png  used on input line 457.
 (pdftex.def)             Requested size: 225.4804pt x 185.41638pt.
- [6 <./pics/bp v phase.png> <./pics/bp v day.png>] [7 <./pics/bp v age.png> <./pics/bp v fh.png> <./pics/bp by day and fh.png>] [8 <./pics/bp v time and day.png> <./pics/bp v act and day.png> <./pics/bp v stand and day.png> <./pics/bp v mood and day.png>] [9 <./pics/bp v time and fh.png> <./pics/bp v act and fh.png> <./pics/bp v stand and fh.png> <./pics/bp v mood and fh.png>]
-<pics/mlr int by age.png, id=189, 1367.1075pt x 1124.2pt>
+<pics/mlr int by age.png, id=162, 1367.1075pt x 1124.2pt>
 File: pics/mlr int by age.png Graphic file (type png)
 <use pics/mlr int by age.png>
 Package pdftex.def Info: pics/mlr int by age.png  used on input line 471.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
-<pics/mlr int by day.png, id=190, 1367.1075pt x 1124.2pt>
+<pics/mlr int by day.png, id=163, 1367.1075pt x 1124.2pt>
 File: pics/mlr int by day.png Graphic file (type png)
 <use pics/mlr int by day.png>
 Package pdftex.def Info: pics/mlr int by day.png  used on input line 479.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
-<pics/mlr int by fh.png, id=191, 1367.1075pt x 1124.2pt>
+<pics/mlr int by fh.png, id=164, 1367.1075pt x 1124.2pt>
 File: pics/mlr int by fh.png Graphic file (type png)
 <use pics/mlr int by fh.png>
 Package pdftex.def Info: pics/mlr int by fh.png  used on input line 487.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
-<pics/mlr time by age.png, id=192, 1367.1075pt x 1124.2pt>
+<pics/mlr time by age.png, id=165, 1367.1075pt x 1124.2pt>
 File: pics/mlr time by age.png Graphic file (type png)
 <use pics/mlr time by age.png>
 Package pdftex.def Info: pics/mlr time by age.png  used on input line 501.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
-<pics/mlr time by day.png, id=193, 1367.1075pt x 1124.2pt>
+<pics/mlr time by day.png, id=166, 1367.1075pt x 1124.2pt>
 File: pics/mlr time by day.png Graphic file (type png)
 <use pics/mlr time by day.png>
 Package pdftex.def Info: pics/mlr time by day.png  used on input line 509.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
-<pics/mlr time by fh.png, id=194, 1367.1075pt x 1124.2pt>
+<pics/mlr time by fh.png, id=167, 1367.1075pt x 1124.2pt>
 File: pics/mlr time by fh.png Graphic file (type png)
 <use pics/mlr time by fh.png>
 Package pdftex.def Info: pics/mlr time by fh.png  used on input line 517.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
-<pics/mlr act by age.png, id=195, 1367.1075pt x 1124.2pt>
+<pics/mlr act by age.png, id=168, 1367.1075pt x 1124.2pt>
 File: pics/mlr act by age.png Graphic file (type png)
 <use pics/mlr act by age.png>
 Package pdftex.def Info: pics/mlr act by age.png  used on input line 531.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
-<pics/mlr act by day.png, id=196, 1367.1075pt x 1124.2pt>
+<pics/mlr act by day.png, id=169, 1367.1075pt x 1124.2pt>
 File: pics/mlr act by day.png Graphic file (type png)
 <use pics/mlr act by day.png>
 Package pdftex.def Info: pics/mlr act by day.png  used on input line 539.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
-<pics/mlr act by fh.png, id=197, 1367.1075pt x 1124.2pt>
+<pics/mlr act by fh.png, id=170, 1367.1075pt x 1124.2pt>
 File: pics/mlr act by fh.png Graphic file (type png)
 <use pics/mlr act by fh.png>
 Package pdftex.def Info: pics/mlr act by fh.png  used on input line 547.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
-<pics/mlr stand by age.png, id=198, 1367.1075pt x 1124.2pt>
+<pics/mlr stand by age.png, id=171, 1367.1075pt x 1124.2pt>
 File: pics/mlr stand by age.png Graphic file (type png)
 <use pics/mlr stand by age.png>
 Package pdftex.def Info: pics/mlr stand by age.png  used on input line 561.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
-<pics/mlr stand by day.png, id=199, 1367.1075pt x 1124.2pt>
+<pics/mlr stand by day.png, id=172, 1367.1075pt x 1124.2pt>
 File: pics/mlr stand by day.png Graphic file (type png)
 <use pics/mlr stand by day.png>
 Package pdftex.def Info: pics/mlr stand by day.png  used on input line 569.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
-<pics/mlr stand by fh.png, id=200, 1367.1075pt x 1124.2pt>
+<pics/mlr stand by fh.png, id=173, 1367.1075pt x 1124.2pt>
 File: pics/mlr stand by fh.png Graphic file (type png)
 <use pics/mlr stand by fh.png>
 Package pdftex.def Info: pics/mlr stand by fh.png  used on input line 577.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
-<pics/mlr mood by age.png, id=201, 1367.1075pt x 1124.2pt>
+<pics/mlr mood by age.png, id=174, 1367.1075pt x 1124.2pt>
 File: pics/mlr mood by age.png Graphic file (type png)
 <use pics/mlr mood by age.png>
 Package pdftex.def Info: pics/mlr mood by age.png  used on input line 591.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
-<pics/mlr mood by day.png, id=202, 1367.1075pt x 1124.2pt>
+<pics/mlr mood by day.png, id=175, 1367.1075pt x 1124.2pt>
 File: pics/mlr mood by day.png Graphic file (type png)
 <use pics/mlr mood by day.png>
 Package pdftex.def Info: pics/mlr mood by day.png  used on input line 599.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
-<pics/mlr mood by fh.png, id=203, 1367.1075pt x 1124.2pt>
+<pics/mlr mood by fh.png, id=176, 1367.1075pt x 1124.2pt>
 File: pics/mlr mood by fh.png Graphic file (type png)
 <use pics/mlr mood by fh.png>
 Package pdftex.def Info: pics/mlr mood by fh.png  used on input line 607.
 (pdftex.def)             Requested size: 150.32504pt x 123.61092pt.
- [10{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./pics/mlr int by age.png> <./pics/mlr int by day.png> <./pics/mlr int by fh.png> <./pics/mlr time by age.png> <./pics/mlr time by day.png> <./pics/mlr time by fh.png>] [11 <./pics/mlr act by age.png> <./pics/mlr act by day.png> <./pics/mlr act by fh.png> <./pics/mlr stand by age.png> <./pics/mlr stand by day.png> <./pics/mlr stand by fh.png> <./pics/mlr mood by age.png> <./pics/mlr mood by day.png> <./pics/mlr mood by fh.png>]
-<pics/bp by age and day.png, id=238, 1071.00125pt x 982.67125pt>
+
+Underfull \vbox (badness 3612) has occurred while \output is active []
+
+ [7 <./pics/bp by day and fh.png>] [8 <./pics/bp v time and day.png> <./pics/bp v act and day.png> <./pics/bp v stand and day.png> <./pics/bp v mood and day.png>] [9 <./pics/bp v time and fh.png> <./pics/bp v act and fh.png> <./pics/bp v stand and fh.png> <./pics/bp v mood and fh.png> <./pics/mlr int by age.png> <./pics/mlr int by day.png> <./pics/mlr int by fh.png>] [10 <./pics/mlr time by age.png> <./pics/mlr time by day.png> <./pics/mlr time by fh.png> <./pics/mlr act by age.png> <./pics/mlr act by day.png> <./pics/mlr act by fh.png> <./pics/mlr stand by age.png> <./pics/mlr stand by day.png> <./pics/mlr stand by fh.png>] [11{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./pics/mlr mood by age.png> <./pics/mlr mood by day.png> <./pics/mlr mood by fh.png>]
+<pics/bp by age and day.png, id=252, 1071.00125pt x 982.67125pt>
 File: pics/bp by age and day.png Graphic file (type png)
 <use pics/bp by age and day.png>
-Package pdftex.def Info: pics/bp by age and day.png  used on input line 653.
+Package pdftex.def Info: pics/bp by age and day.png  used on input line 666.
 (pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
-<pics/bp by age and fh.png, id=239, 1071.00125pt x 982.67125pt>
+<pics/bp by age and fh.png, id=253, 1071.00125pt x 982.67125pt>
 File: pics/bp by age and fh.png Graphic file (type png)
 <use pics/bp by age and fh.png>
-Package pdftex.def Info: pics/bp by age and fh.png  used on input line 661.
+Package pdftex.def Info: pics/bp by age and fh.png  used on input line 674.
 (pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
-<pics/bp by age and phase.png, id=240, 1071.00125pt x 982.67125pt>
+<pics/bp by age and phase.png, id=254, 1071.00125pt x 982.67125pt>
 File: pics/bp by age and phase.png Graphic file (type png)
 <use pics/bp by age and phase.png>
-Package pdftex.def Info: pics/bp by age and phase.png  used on input line 669.
+Package pdftex.def Info: pics/bp by age and phase.png  used on input line 682.
 (pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
-<pics/bp by id and age.png, id=241, 4818.0pt x 2710.125pt>
+<pics/bp by id and age.png, id=255, 4818.0pt x 2710.125pt>
 File: pics/bp by id and age.png Graphic file (type png)
 <use pics/bp by id and age.png>
-Package pdftex.def Info: pics/bp by id and age.png  used on input line 683.
+Package pdftex.def Info: pics/bp by id and age.png  used on input line 696.
 (pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pics/bp by id and day.png, id=242, 4818.0pt x 2710.125pt>
+<pics/bp by id and day.png, id=256, 4818.0pt x 2710.125pt>
 File: pics/bp by id and day.png Graphic file (type png)
 <use pics/bp by id and day.png>
-Package pdftex.def Info: pics/bp by id and day.png  used on input line 695.
+Package pdftex.def Info: pics/bp by id and day.png  used on input line 708.
 (pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pics/bp by id and fh.png, id=243, 4818.0pt x 2710.125pt>
+<pics/bp by id and fh.png, id=257, 4818.0pt x 2710.125pt>
 File: pics/bp by id and fh.png Graphic file (type png)
 <use pics/bp by id and fh.png>
-Package pdftex.def Info: pics/bp by id and fh.png  used on input line 707.
+Package pdftex.def Info: pics/bp by id and fh.png  used on input line 720.
 (pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 721.
+(Font)              <10.95> on input line 734.
 
-Overfull \hbox (17.56969pt too wide) in paragraph at lines 723--723
+Overfull \hbox (17.56969pt too wide) in paragraph at lines 736--736
 \T1/lmr/m/n/10.95 (-20) ten-sion and per-son-al-ity [Pub-lisher: Tay-lor & Fran-cis _eprint: https://doi.org/10.1080/713690197].
  []
 
@@ -1919,18 +1918,18 @@ Package logreq Info: Writing requests to 'ccpaper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57798 strings out of 474116
- 1291307 string characters out of 5743682
- 2931798 words of memory out of 5000000
+ 57804 strings out of 474116
+ 1291385 string characters out of 5743682
+ 2935879 words of memory out of 5000000
  79012 multiletter control sequences out of 15000+600000
- 667586 words of font info for 238 fonts, out of 8000000 for 9000
+ 667802 words of font info for 240 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  121i,10n,126p,18415b,5370s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on ccpaper.pdf (14 pages, 11434942 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on ccpaper.pdf (14 pages, 11442085 bytes).
 PDF statistics:
- 351 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
+ 369 PDF objects out of 1000 (max. 8388607)
+ 238 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
  72498 words of extra memory for PDF output out of 74296 (max. 10000000)
 
