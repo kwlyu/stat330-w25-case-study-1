@@ -479,8 +479,7 @@ summary(nurse_lmm_RIS_stand)
 ### Random Intercept and Slope with Level 2 Covariates
 
 ```{r RIS with Age}
-nurse_lmm_RIS_age <- lmer(sys ~ timepass + mnact5 + standing + 
-                             age24 + 
+nurse_lmm_RIS_age <- lmer(sys ~ timepass + mnact5 + standing * age24 + 
                        (1 + standing | snum),
                        data = nurse_filtered)
 
@@ -502,8 +501,8 @@ nurse_lmm_RIS_day_nostand <- lmer(sys ~ day2 * (timepass) + standing + mnact5 +
 anova(nurse_lmm_RIS_day, nurse_lmm_RIS_day_nostand)
 anova(nurse_lmm_RIS_day_nostand, nurse_lmm_RIS_stand)
 
-nurse_lmm_RIS_day_nointer <- lmer(sys ~ day2 + timepass + standing + mnact5  + mood + 
-                       (1 + mood + standing | snum),
+nurse_lmm_RIS_day_nointer <- lmer(sys ~ day2 + timepass + standing + mnact5 + 
+                       (1 + standing | snum),
                        data = nurse_filtered)
 anova(nurse_lmm_RIS_day_nostand, nurse_lmm_RIS_day_nointer)
 ```

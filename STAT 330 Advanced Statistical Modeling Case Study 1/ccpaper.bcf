@@ -3069,6 +3069,8 @@
     <bcf:citekey order="8" intorder="1">weiss_modeling_2005</bcf:citekey>
     <bcf:citekey order="9" intorder="1">weiss_modeling_2005</bcf:citekey>
     <bcf:citekey order="10" intorder="1">goldstein_ambulatory_2000</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">goldstein_ambulatory_2000</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">goldstein_ambulatory_2000</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

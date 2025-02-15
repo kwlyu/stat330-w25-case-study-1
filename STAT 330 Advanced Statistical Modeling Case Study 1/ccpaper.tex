@@ -639,15 +639,88 @@ We then proceed to add in fixed effects for level 1 to investigate whether activ
 A LRT between Model \ref{eq: RI with time} and \ref{eq: RI with all lv1} reveals that the three added fixed effects are statistically significant ($\chi^2 (3) = 365.37$, $p < 2.2 \times 10^{-16}$). Naturally, one might wonder if we need all three fixed effect. Indeed, a LRT suggests that the following Model \ref{eq: RI no mood} without the covariate \texttt{Mood} ($\beta_4 = 0$) is just as good as Model \ref{eq: RI with all lv1} ($\chi^2 (1) = 0.43$, $p =0.51$). Because we are interested in \emph{whether} something is associated with elevated \texttt{BP} at all, we proceed the analysis with the simpler Model \ref{eq: RI no mood}.
 \begin{equation}\label{eq: RI no mood}
     \begin{array}{rrcll}\tag{\ref{eq: RI with all lv1}$'$}
-        \text{Level 1}: & \text{BP}_{ij} &=& a_i + \beta_1'\, \text{Time}_{ij} + \beta_2'\, \text{Activity}_{ij} + \beta_3'\, \text{Standing}_{ij} + \epsilon_{ij}, \\[0.5ex]
+        \text{Level 1}: & \text{BP}_{ij} &=& a_i' + \beta_1'\, \text{Time}_{ij} + \beta_2'\, \text{Activity}_{ij} + \beta_3'\, \text{Standing}_{ij} + \epsilon_{ij}, \\[0.5ex]
          & \epsilon_{ij} &\overset{i.i.d.}{\sim}& N(0, \sigma^2), \\[0.5ex]
         \text{Level 2}: & a_i' &=& \alpha' + u_i, \\[0.5ex]
          & u_{i} &\overset{i.i.d.}{\sim}& N(0, \sigma_u^2).
     \end{array}
 \end{equation}
-Interestingly, LRT tests also suggest that compared to Model \ref{eq: RI no mood}, a model without the \texttt{Time} term ($\beta_1' = 0$) is also just as good (($\chi^2 (1) = 0.99$, $p = 0.32$)). However, because time is such an important aspect of the longitudinal model, we think it is important that we keep \texttt{Time} as a level 1 covariate in our model.
+Interestingly, LRT tests also suggest that compared to Model \ref{eq: RI no mood}, a model without the \texttt{Time} term ($\beta_1' = 0$) is also just as good ($\chi^2 (1) = 0.99$, $p = 0.32$). However, because time is such an important aspect of the longitudinal model, we think it is important that we keep \texttt{Time} as a level 1 covariate in our model.
 
-Next we investigate what random effects are needed in our model. The most clear evidence of random slopes from our EDA comes from \texttt{Mood}, but since LRT tests suggest that the fixed effect of \texttt{Mood} is not significant, we will not consider its random effect. For the rest of the covariates, EDA do show marginal signs of varying slopes. However, only adding a random effect for \texttt{Standing} do not raise convergence issues. This leads us to 
+Next we investigate what random effects are needed in our model. The most clear evidence of random slopes from our EDA comes from \texttt{Mood}, but since LRT tests suggest that the fixed effect of \texttt{Mood} is not significant, we will not consider its random effect. For the rest of the covariates, EDA do show marginal signs of varying slopes. However, only adding a random effect for \texttt{Standing} do not raise convergence issues. This leads us to the following model with a random effect for \texttt{Standing}:
+\begin{equation}\label{eq: RIS stand}
+    \begin{array}{rrcll}
+        \text{Level 1}: & \text{BP}_{ij} &=& a_i + \gamma_1\, \text{Time}_{ij} + \gamma_2\, \text{Activity}_{ij} + b_i\, \text{Standing}_{ij} + \epsilon_{ij}, \\[0.5ex]
+         & \epsilon_{ij} &\overset{i.i.d.}{\sim}& N(0, \sigma^2), \\[0.5ex]
+        \text{Level 2}: & a_i &=& \alpha + u_i, \\[0.5ex]
+         & b_i &=& \beta + v_i, \\[1ex]
+         & \begin{bmatrix} u_i \\ v_i 
+         \end{bmatrix} &\overset{i.i.d.}{\sim}& N_2\left(\begin{bmatrix} 0 \\ 0 \end{bmatrix},\, \begin{bmatrix} \sigma_u^2 &\\ 
+         \rho_{uv}\sigma_u\sigma_v & \sigma_v^2\\
+         \end{bmatrix} \right).
+    \end{array}
+\end{equation}
+A LRT suggests that the random effect for \texttt{Standing} is significant, based on a mixture from a chi-square model with 1 and 2 degrees of freedom ($\chi^2 (1,\, 2) = 377.34.1$, $p < 2.2 \times 10^{-16}$). Interestingly, removing the correlation term ($\rho_{uv}$) between the random effect for the intercept and the random effect for \texttt{Standing} causes further convergence issues, so we preserve the it in our following analysis.
+
+We move on to consider the interaction between level 2 and level 1 covaraites. Recall that our EDA identifies \texttt{Age}, \texttt{Workday}, and \texttt{Family History} as possibly interacting with the effect for \texttt{Standing}, the effects for \texttt{Time} and \texttt{Standing}, and the effect for \texttt{Time}, respectively. We will first consider whether the intercept and the effect of \texttt{Standing} depend on \texttt{Age} (recentered at 24):
+\begin{equation}\label{eq: RIS stand age}
+    \begin{array}{rrcll}
+        \text{Level 1}: & \text{BP}_{ij} &=& a_i + \gamma_1\, \text{Time}_{ij} + \gamma_2\, \text{Activity}_{ij} + b_i\, \text{Standing}_{ij} + \epsilon_{ij}, \\[0.5ex]
+         & \epsilon_{ij} &\overset{i.i.d.}{\sim}& N(0, \sigma^2), \\[0.5ex]
+        \text{Level 2}: & a_i &=& \alpha + \alpha_1\, \text{Age}_i + u_i, \\[0.5ex]
+         & b_i &=& \beta + \beta_1\, \text{Age}_i + v_i, \\[1ex]
+         & \begin{bmatrix} u_i \\ v_i 
+         \end{bmatrix} &\overset{i.i.d.}{\sim}& N_2\left(\begin{bmatrix} 0 \\ 0 \end{bmatrix},\, \begin{bmatrix} \sigma_u^2 &\\ 
+         \rho_{uv}\sigma_u\sigma_v & \sigma_v^2\\
+         \end{bmatrix} \right).
+    \end{array}
+\end{equation}
+When compared with Model \ref{eq: RIS stand} ($\alpha_1 = \beta_1 = 0$), a LRT suggests that the smaller model without \texttt{Age} is just as good as the full model with the \texttt{Age} term ($\chi^2 (2) = 0.97$, $p = 0.61$). Because this project concerns \emph{whether} a covaraite is associated with elevated \texttt{BP}, we will proceed with the smaller model without \texttt{Age}.\footnote{Note that \citet{goldstein_ambulatory_2000} does include \texttt{Age} as a predictor because they are interested in preventative measures \emph{controlling for} age. This is not the aim of this project, even though \texttt{Age} is a meaningful and important predictor.} 
+
+Next, we consider the interaction of \texttt{Workday} between \texttt{Time} and \texttt{Standing}. 
+\begin{equation}\label{eq: RIS workday}
+    \begin{array}{rrcll}
+        \text{Level 1}: & \text{BP}_{ij} &=& a_i + b_i\, \text{Time}_{ij} + \delta \, \text{Activity}_{ij} + c_i\, \text{Standing}_{ij} + \epsilon_{ij}, \\[0.5ex]
+         & \epsilon_{ij} &\overset{i.i.d.}{\sim}& N(0, \sigma^2), \\[0.5ex]
+        \text{Level 2}: & a_i &=& \alpha_0 + \alpha_1\, \text{Workday}_i + u_i, \\[0.5ex]
+        & b_i &=& \beta_0 + \beta_1\, \text{Workday}_i \\[0.5ex]
+        & c_i &=& \gamma_0 + \gamma_1\, \text{Workday}_i + v_i, \\[1ex]
+         & \begin{bmatrix} u_i \\ v_i 
+         \end{bmatrix} &\overset{i.i.d.}{\sim}& N_2\left(\begin{bmatrix} 0 \\ 0 \end{bmatrix},\, \begin{bmatrix} \sigma_u^2 &\\ 
+         \rho_{uv}\sigma_u\sigma_v & \sigma_v^2\\
+         \end{bmatrix} \right).
+    \end{array}
+\end{equation}
+A LRT suggests that, when compared to Model \ref{eq: RIS stand} ($\alpha_1 = \beta_1 = \gamma_1 = 0$), at least one of coefficients is statistically significantly different from zero; we have some evidence to reject the Model \ref{eq: RIS stand} and prefer Model \ref{eq: RIS workday} for better model fit ($\chi^2 (3) = 8.22$, $p = 0.04$). However, when one removes the interaction between \texttt{Workday} and \texttt{Standing} ($\gamma_1 = 0$), a LRT test suggests that the smaller model is just as good ($\chi^2 (1) = 0.45$, $p = 0.50$); we drop the $\gamma_1$ for the sake of simplicity, which, when compared to the simpler Model \ref{eq: RIS stand} ($\alpha_1 = \beta_1 = 0$), still presents better explanatory power ($\chi^2 (2) = 7.77$, $p = 0.02$). Nevertheless, if we were to remove the interaction between \texttt{Time} and \texttt{Workday} ($\beta_1 = \gamma_1 = 0$ vs. $\gamma_1 = 0$), a LRT suggests that we have some evidence to prefer having the interaction between \texttt{Time} and \texttt{Workday} for a better model fit ($\chi^2 (1) = 4.46$, $p = 0.03$):
+\begin{equation}\label{eq: RIS workday no stand}
+    \begin{array}{rrcll}\tag{\ref{eq: RIS workday}$'$}
+        \text{Level 1}: & \text{BP}_{ij} &=& a_i + b_i\, \text{Time}_{ij} + \delta \, \text{Activity}_{ij} + c_i\, \text{Standing}_{ij} + \epsilon_{ij}, \\[0.5ex]
+         & \epsilon_{ij} &\overset{i.i.d.}{\sim}& N(0, \sigma^2), \\[0.5ex]
+        \text{Level 2}: & a_i &=& \alpha_0 + \alpha_1\, \text{Workday}_i + u_i, \\[0.5ex]
+        & b_i &=& \beta_0 + \beta_1\, \text{Workday}_i \\[0.5ex]
+        & c_i &=& \gamma_0 + v_i, \\[1ex]
+         & \begin{bmatrix} u_i \\ v_i 
+         \end{bmatrix} &\overset{i.i.d.}{\sim}& N_2\left(\begin{bmatrix} 0 \\ 0 \end{bmatrix},\, \begin{bmatrix} \sigma_u^2 &\\ 
+         \rho_{uv}\sigma_u\sigma_v & \sigma_v^2\\
+         \end{bmatrix} \right).
+    \end{array}
+\end{equation}
+
+Lastly, we will consider the interaction between \texttt{Family History} and \texttt{Time}:
+\begin{equation}\label{eq: RIS workday fh}
+    \begin{array}{rrcll}
+        \text{Level 1}: & \text{BP}_{ij} &=& a_i + b_i\, \text{Time}_{ij} + \delta \, \text{Activity}_{ij} + c_i\, \text{Standing}_{ij} + \epsilon_{ij}, \\[0.5ex]
+         & \epsilon_{ij} &\overset{i.i.d.}{\sim}& N(0, \sigma^2), \\[0.5ex]
+        \text{Level 2}: & a_i &=& \alpha_0 + \alpha_1\, \text{Workday}_i + \alpha_2\, \text{Family History}_i + u_i, \\[0.5ex]
+        & b_i &=& \beta_0 + \beta_1\, \text{Workday}_i+ \beta_2\, \text{Family History}_i \\[0.5ex]
+        & c_i &=& \gamma_0 + v_i, \\[1ex]
+         & \begin{bmatrix} u_i \\ v_i 
+         \end{bmatrix} &\overset{i.i.d.}{\sim}& N_2\left(\begin{bmatrix} 0 \\ 0 \end{bmatrix},\, \begin{bmatrix} \sigma_u^2 &\\ 
+         \rho_{uv}\sigma_u\sigma_v & \sigma_v^2\\
+         \end{bmatrix} \right).
+    \end{array}
+\end{equation}
+When compared with \ref{eq: RIS workday no stand} ($\alpha_2 = \beta_2 = 0$), a LRT suggests that there is strong evidence to reject the smaller model and prefer having the interaction between \texttt{Time} and \texttt{Family History} for better model fit ($\chi^2 (2) = 16.3$, $p = 0.00029$). As before, removing the correlation between random effects results in convergence issues. We will use Model \ref{eq: RIS workday fh} as our final model for interpretation.
 
 \subsection{Residual Analysis}\label{sec: resid}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  14 FEB 2025 16:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  15 FEB 2025 10:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1855,54 +1855,82 @@ Package pdftex.def Info: pics/mlr mood by fh.png  used on input line 607.
 Underfull \vbox (badness 3612) has occurred while \output is active []
 
  [7 <./pics/bp by day and fh.png>] [8 <./pics/bp v time and day.png> <./pics/bp v act and day.png> <./pics/bp v stand and day.png> <./pics/bp v mood and day.png>] [9 <./pics/bp v time and fh.png> <./pics/bp v act and fh.png> <./pics/bp v stand and fh.png> <./pics/bp v mood and fh.png> <./pics/mlr int by age.png> <./pics/mlr int by day.png> <./pics/mlr int by fh.png>] [10 <./pics/mlr time by age.png> <./pics/mlr time by day.png> <./pics/mlr time by fh.png> <./pics/mlr act by age.png> <./pics/mlr act by day.png> <./pics/mlr act by fh.png> <./pics/mlr stand by age.png> <./pics/mlr stand by day.png> <./pics/mlr stand by fh.png>] [11{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./pics/mlr mood by age.png> <./pics/mlr mood by day.png> <./pics/mlr mood by fh.png>]
-<pics/bp by age and day.png, id=252, 1071.00125pt x 982.67125pt>
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.651 \begin{equation}
+                      \label{eq: RIS stand}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.651 \begin{equation}
+                      \label{eq: RIS stand}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.651 \begin{equation}
+                      \label{eq: RIS stand}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.651 \begin{equation}
+                      \label{eq: RIS stand} [12{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+Underfull \vbox (badness 5939) has occurred while \output is active []
+
+ [13
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.724 
+      ]
+<pics/bp by age and day.png, id=279, 1071.00125pt x 982.67125pt>
 File: pics/bp by age and day.png Graphic file (type png)
 <use pics/bp by age and day.png>
-Package pdftex.def Info: pics/bp by age and day.png  used on input line 666.
+Package pdftex.def Info: pics/bp by age and day.png  used on input line 739.
 (pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
-<pics/bp by age and fh.png, id=253, 1071.00125pt x 982.67125pt>
+<pics/bp by age and fh.png, id=280, 1071.00125pt x 982.67125pt>
 File: pics/bp by age and fh.png Graphic file (type png)
 <use pics/bp by age and fh.png>
-Package pdftex.def Info: pics/bp by age and fh.png  used on input line 674.
+Package pdftex.def Info: pics/bp by age and fh.png  used on input line 747.
 (pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
-<pics/bp by age and phase.png, id=254, 1071.00125pt x 982.67125pt>
+<pics/bp by age and phase.png, id=281, 1071.00125pt x 982.67125pt>
 File: pics/bp by age and phase.png Graphic file (type png)
 <use pics/bp by age and phase.png>
-Package pdftex.def Info: pics/bp by age and phase.png  used on input line 682.
+Package pdftex.def Info: pics/bp by age and phase.png  used on input line 755.
 (pdftex.def)             Requested size: 140.92793pt x 129.29616pt.
-<pics/bp by id and age.png, id=255, 4818.0pt x 2710.125pt>
+<pics/bp by id and age.png, id=282, 4818.0pt x 2710.125pt>
 File: pics/bp by id and age.png Graphic file (type png)
 <use pics/bp by id and age.png>
-Package pdftex.def Info: pics/bp by id and age.png  used on input line 696.
+Package pdftex.def Info: pics/bp by id and age.png  used on input line 769.
 (pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pics/bp by id and day.png, id=256, 4818.0pt x 2710.125pt>
+<pics/bp by id and day.png, id=283, 4818.0pt x 2710.125pt>
 File: pics/bp by id and day.png Graphic file (type png)
 <use pics/bp by id and day.png>
-Package pdftex.def Info: pics/bp by id and day.png  used on input line 708.
+Package pdftex.def Info: pics/bp by id and day.png  used on input line 781.
 (pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pics/bp by id and fh.png, id=257, 4818.0pt x 2710.125pt>
+<pics/bp by id and fh.png, id=284, 4818.0pt x 2710.125pt>
 File: pics/bp by id and fh.png Graphic file (type png)
 <use pics/bp by id and fh.png>
-Package pdftex.def Info: pics/bp by id and fh.png  used on input line 720.
+Package pdftex.def Info: pics/bp by id and fh.png  used on input line 793.
 (pdftex.def)             Requested size: 469.75502pt x 264.20511pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 734.
+(Font)              <10.95> on input line 807.
 
-Overfull \hbox (17.56969pt too wide) in paragraph at lines 736--736
+Overfull \hbox (17.56969pt too wide) in paragraph at lines 809--809
 \T1/lmr/m/n/10.95 (-20) ten-sion and per-son-al-ity [Pub-lisher: Tay-lor & Fran-cis _eprint: https://doi.org/10.1080/713690197].
  []
 
-[12 <./pics/bp by age and day.png> <./pics/bp by age and fh.png> <./pics/bp by age and phase.png>] [13 <./pics/bp by id and age.png> <./pics/bp by id and day.png>] [14 <./pics/bp by id and fh.png>] (./ccpaper.aux)
+[14 <./pics/bp by age and day.png> <./pics/bp by age and fh.png> <./pics/bp by age and phase.png>] [15 <./pics/bp by id and age.png> <./pics/bp by id and day.png>] [16 <./pics/bp by id and fh.png>] (./ccpaper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1918,18 +1946,18 @@ Package logreq Info: Writing requests to 'ccpaper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57804 strings out of 474116
- 1291385 string characters out of 5743682
- 2935879 words of memory out of 5000000
- 79012 multiletter control sequences out of 15000+600000
- 667802 words of font info for 240 fonts, out of 8000000 for 9000
+ 57836 strings out of 474116
+ 1291887 string characters out of 5743682
+ 2938306 words of memory out of 5000000
+ 79027 multiletter control sequences out of 15000+600000
+ 668473 words of font info for 245 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 121i,10n,126p,18415b,5370s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on ccpaper.pdf (14 pages, 11442085 bytes).
+ 121i,13n,126p,18415b,5370s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on ccpaper.pdf (16 pages, 11476353 bytes).
 PDF statistics:
- 369 PDF objects out of 1000 (max. 8388607)
- 238 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
- 72498 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 405 PDF objects out of 1000 (max. 8388607)
+ 268 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 73010 words of extra memory for PDF output out of 74296 (max. 10000000)
 
